@@ -7,25 +7,27 @@ namespace Project
 {
     class HashFunctions
 	{
-		public BigInteger Multiply_shift_hashing(BigInteger x)
+		private BigInteger a1;
+		private BigInteger a2;
+		private BigInteger b;
+		private int l;
+		public HashFunctions()
 		{
 			Random rnd = new Random();
-			BigInteger a = BigInteger.Parse("11868245815727406823"); //1010010010110100011110101011000001010001011100101011111011100111 11868245815727406823
-			int l = rnd.Next(0, 63);
-			return (a * x) >> (64 - l);
+			a1 = BigInteger.Parse("11868245815727406823");
+			a2 = BigInteger.Parse("749575721744620932214764");
+			b = BigInteger.Parse("733936089202998014171360"); // Get another number
+			l = rnd.Next(1, 64);
+		}
+		public BigInteger Multiply_shift_hashing(BigInteger x)
+		{
+			return (a1 * x) >> (64 - l);
 		}
 		public BigInteger Multiply_mod_prime_hashing(BigInteger x)
 		{
-			Random rnd = new Random();
 			BigInteger p = (1 << 88) - 1;   //  011111111111111111111 want to do left shift while maintaining 
-			byte[] bytes = p.ToByteArray();
-			rnd.NextBytes(bytes);
-			bytes[bytes.Length - 1] &= (byte)0x7F;
-			BigInteger b = new BigInteger(bytes);
-			BigInteger a = BigInteger.Parse("11868245815727406823"); //1010010010110100011110101011000001010001011100101011111011100111 11868245815727406823
-			int l = rnd.Next(0, 63);
 			//Use ex 2.7 2.8
-			BigInteger y = (a * x) + b;
+			BigInteger y = (a2 * x) + b;
 			if (y >= p)
 			{
 				y -= p; //y mod p = y - p , if y >= p
