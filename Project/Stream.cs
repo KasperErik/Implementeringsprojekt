@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Project
 {
-    class Stream
-    {
+	class Stream
+	{
 		public static IEnumerable<Tuple<ulong, int>> CreateStream(int n, int l)
 		{
 			// We generate a random uint64 number .

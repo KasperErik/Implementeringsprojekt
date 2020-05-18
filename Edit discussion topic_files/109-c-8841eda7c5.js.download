@@ -1,0 +1,623 @@
+(window["canvasWebpackJsonp"]=window["canvasWebpackJsonp"]||[]).push([[109],{"+DxY":function(e,t,s){"use strict"
+s.d(t,"a",(function(){return o}))
+var a=s("yS2Q")
+var n=s("mmEa")
+class o{constructor(e,t,s){this.getDefaultDueDate=()=>this.overrides.getDefaultDueDate()
+this.overridesContainDefault=()=>this.overrides.containsDefaultDueDate()
+this.containsSectionsWithoutOverrides=()=>{if(this.overrides.containsDefaultDueDate())return false
+return this.sectionsWithOverrides().length<this.courseSectionsLength}
+this.sectionsWithOverrides=()=>this.sections.select(e=>{let t
+return(t=e.id,this._overrideSectionIDs().includes(t))&&e.id!==this.defaultDueDateSectionId})
+this.sectionsWithoutOverrides=()=>this.sections.select(e=>{let t
+return(t=e.id,!this._overrideSectionIDs().includes(t))&&e.id!==this.defaultDueDateSectionId})
+this._overrideSectionIDs=()=>this.overrides.courseSectionIDs()
+this._onlyVisibleToOverrides=()=>this.assignment.isOnlyVisibleToOverrides()
+this._addOverrideForDefaultSectionIfNeeded=()=>{if(this._onlyVisibleToOverrides())return
+const e=a["a"].defaultDueDate({due_at:this.assignment.get("due_at"),lock_at:this.assignment.get("lock_at"),unlock_at:this.assignment.get("unlock_at")})
+return this.overrides.add(e)}
+this.overrides=e
+this.sections=t
+this.assignment=s
+this.courseSectionsLength=this.sections.length
+this.sections.add(n["a"].defaultDueDateSection())
+this._addOverrideForDefaultSectionIfNeeded()}}o.prototype.defaultDueDateSectionId=n["a"].defaultDueDateSectionID},"6o7I":function(e,t,s){"use strict"
+var a=s("VTBJ")
+var n=s("FIFq")
+var o=s.n(n)
+function i(e){const t=Object(a["a"])({},o.a.Events)
+let s=e||{}
+return{setState(e){Object.assign(s,e)
+this.emitChange()},getState:()=>s,clearState(){s={}
+this.emitChange()},addChangeListener(e){t.on("change",e)},removeChangeListener(e){t.off("change",e)},emitChange(){t.trigger("change")}}}t["a"]=i},OShF:function(e,t,s){"use strict"
+var a=s("ouhR")
+var n=s.n(a)
+var o=s("5Ky4")
+s("JI1W")
+n.a.fn.fillTemplateData=function(e){if(this.length&&e){e.iterator&&this.find("*").andSelf().each((function(){const t=n()(this)
+n.a.each(["name","id","class"],(s,a)=>{t.attr(a)&&t.attr(a,t.attr(a).replace(/-iterator-/,e.iterator))})}))
+e.id&&this.attr("id",e.id)
+let a=false
+if(e.data)for(var t in e.data){if(e.except&&-1!=n.a.inArray(t,e.except))continue
+e.data[t]&&e.dataValues&&-1!=n.a.inArray(t,e.dataValues)&&this.data(t,e.data[t].toString())
+const i=this.find("."+t)
+var s=e.avoid||""
+i.each((function(){const i=n()(this)
+if(i.length>0&&0===i.closest(s).length){"undefined"!==typeof e.data[t]&&null!==e.data[t]||(e.data[t]="")
+if(e.htmlValues&&-1!=n.a.inArray(t,e.htmlValues)){i.html(n.a.raw(e.data[t].toString()))
+if(i.hasClass("user_content")){a=true
+i.removeClass("enhanced")
+i.data("unenhanced_content_html",e.data[t].toString())}}else if("INPUT"==i[0].tagName.toUpperCase())i.val(e.data[t])
+else try{const s=e.data[t].toString()
+i.html(Object(o["a"])(s))}catch(e){}}}))}e.hrefValues&&e.data&&this.find("a,span[rel]").each((function(){let t,s,a,o=n()(this)
+for(const i in e.hrefValues){if(!e.hrefValues.hasOwnProperty(i))continue
+const r=e.hrefValues[i]
+if(t=o.attr("href")){const s=n.a.replaceTags(t,r,encodeURIComponent(e.data[r]))
+const a=o.text()===o.html()?o.text():null
+if(t!==s){o.attr("href",s)
+a&&o.text(a)}}(s=o.attr("rel"))&&o.attr("rel",n.a.replaceTags(s,r,e.data[r]));(a=o.attr("name"))&&o.attr("name",n.a.replaceTags(a,r,e.data[r]))}}))
+a&&n()(document).triggerHandler("user_content_change")}return this}
+n.a.fn.fillTemplateData.defaults={htmlValues:null,hrefValues:null}
+n.a.fn.getTemplateData=function(e){if(!this.length||!e)return{}
+var t,s={}
+if(e.textValues){const t=this
+e.textValues.forEach(e=>{const o=t.find("."+e.replace(/\[/g,"\\[").replace(/\]/g,"\\]")+":first")
+a=n.a.trim(o.text())
+"&nbsp;"===o.html()&&(a="")
+1===a.length&&160===a.charCodeAt(0)&&(a="")
+s[e]=a})}if(e.dataValues)for(t in e.dataValues){var a=this.data(e.dataValues[t])
+a&&(s[e.dataValues[t]]=a)}if(e.htmlValues)for(t in e.htmlValues){const o=this.find("."+e.htmlValues[t].replace(/\[/g,"\\[").replace(/\]/g,"\\]")+":first")
+a=null
+a=o.hasClass("user_content")&&o.data("unenhanced_content_html")?o.data("unenhanced_content_html"):n.a.trim(o.html())
+s[e.htmlValues[t]]=a}return s}
+n.a.fn.getTemplateValue=function(e,t){const s=n.a.extend({},t,{textValues:[e]})
+return this.getTemplateData(s)[e]}},cPGc:function(e,t,s){"use strict"
+var a=s("ouhR")
+var n=s.n(a)
+var o=s("FIFq")
+var i=s.n(o)
+var r=s("GLiE")
+var _=s.n(r)
+var d=s("q1tI")
+var u=s.n(d)
+var l=s("i8i4")
+var c=s.n(l)
+var h=s("3O+N")
+var g=s.n(h)
+s("DfGn")
+var f=s("EvX+")
+var p=g.a.default
+var m=p.template,v=p.templates=p.templates||{}
+var y="assignments/DueDateOverride"
+v[y]=m((function(e,t,s,a,n){this.compilerInfo=[4,">= 1.0.0"]
+s=this.merge(s,e.helpers)
+n=n||{}
+return'<ul class="due-date-overrides"></ul>\n'}))
+f["a"].loadStylesheet("jst/assignments/DueDateOverride",{new_styles_normal_contrast:{combinedChecksum:"4f1128c399"},new_styles_high_contrast:{combinedChecksum:"82b4368a3b"},responsive_layout_normal_contrast:{combinedChecksum:"4f1128c399"},responsive_layout_high_contrast:{combinedChecksum:"82b4368a3b"},new_styles_normal_contrast_rtl:{combinedChecksum:"a55639575e"},new_styles_high_contrast_rtl:{combinedChecksum:"fa90fdd623"},responsive_layout_normal_contrast_rtl:{combinedChecksum:"a55639575e"},responsive_layout_high_contrast_rtl:{combinedChecksum:"fa90fdd623"}}[f["a"].getCssVariant()])
+var b=v[y]
+var k=s("4DqD")
+var S=s("fQ4S")
+var w=s("pQTu")
+var D=s("m0r6")
+Object(D["a"])(JSON.parse('{"ar":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"لا يمكنك القيام بتعيين لمجموعة خارج فئة مجموعات المهمة","you_must_have_a_student_or_section_selected_a99e45df":"يجب أن تقوم بتحديد طالب أو قسم"},"cy":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Does dim modd i chi neilltuo i grŵp sydd ddim yn rhan o set grwpiau’r aseiniad","you_must_have_a_student_or_section_selected_a99e45df":"Mae’n rhaid i chi ddewis myfyriwr neu adran"},"da":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Du kan ikke tildele en gruppe uden for opgavens studiegruppe","you_must_have_a_student_or_section_selected_a99e45df":"Du skal have valgt studerende eller sektion"},"da-x-k12":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Du kan ikke tildele en gruppe uden for opgavens studiegruppe","you_must_have_a_student_or_section_selected_a99e45df":"Du skal have valgt en elev eller sektion"},"de":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Sie können einer Gruppe nicht außerhalb des Gruppensets der Aufgabe etwas zuweisen.","you_must_have_a_student_or_section_selected_a99e45df":"Sie müssen einen Studenten oder Abschnitt ausgewählt haben."},"el":{"you_must_have_a_student_or_section_selected_a99e45df":"Θα πρέπει να έχετε επιλέξει κάποιον σπουδαστή ή κάποια ενότητα"},"en-AU":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"You cannot assign to a group outside of the assignment\'s group set","you_must_have_a_student_or_section_selected_a99e45df":"You must have a student or section selected."},"en-AU-x-unimelb":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"You cannot assign to a group outside of the assignment\'s group set","you_must_have_a_student_or_section_selected_a99e45df":"You must have a student or section selected."},"en-CA":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"You cannot assign to a group outside of the assignment\'s group set","you_must_have_a_student_or_section_selected_a99e45df":"You must have a student or section selected"},"en-GB":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"You cannot assign to a group outside of the assignment\'s group set","you_must_have_a_student_or_section_selected_a99e45df":"You must have a student or section selected"},"en-GB-x-lbs":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"You cannot assign to a group outside of the task\'s group set","you_must_have_a_student_or_section_selected_a99e45df":"You must have a student or section selected"},"en-GB-x-ukhe":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"You cannot assign to a group outside of the assignment\'s group set","you_must_have_a_student_or_section_selected_a99e45df":"You must have a student or section selected"},"es":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Usted no puede asignar a un grupo fuera del conjunto de grupos de la tarea","you_must_have_a_student_or_section_selected_a99e45df":"Debe tener un estudiante o sección seleccionada"},"fa":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"نمی توانید به یک گروه خارج از مجموعه گروه تکلیف تخصیص دهید","you_must_have_a_student_or_section_selected_a99e45df":"باید یک دانشجو یا بخش را انتخاب کنید"},"fi":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Et voi kohdistaa ryhmälle tehtävän ryhmäjoukon ulkopuolella","you_must_have_a_student_or_section_selected_a99e45df":"Sinulla täytyy olla opiskelija tai osa valittuna"},"fr":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Vous ne pouvez pas faire d\'affectation à un groupe hors de l\'ensemble de groupe du travail","you_must_have_a_student_or_section_selected_a99e45df":"Vous devez sélectionner un(e) étudiant(e) ou une section"},"fr-CA":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Vous ne pouvez pas faire d\'affectation à un groupe hors de l\'ensemble de groupe de la tâche","you_must_have_a_student_or_section_selected_a99e45df":"Vous devez sélectionner un étudiant ou une section"},"he":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"אין אפשרות לשבץ בקבוצה אשר מחוץ למערך הקבוצות של משימה","you_must_have_a_student_or_section_selected_a99e45df":"יש לבחור תלמיד או הקבצה"},"ht":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Ou paka asiyen a yob gwoup deyò ansanm gwoup sesyon an","you_must_have_a_student_or_section_selected_a99e45df":"Ou dwe chwazi yon seksyon oswa yon elèv"},"hu":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Olyan csoporthoz nem lehet hozzárendelni, ami kívül esik a hozzárendeléshez tartozó csoportkészleten","you_must_have_a_student_or_section_selected_a99e45df":"Ki kell választania egy hallgatót vagy egy szekciót"},"hy":{"you_must_have_a_student_or_section_selected_a99e45df":"Անհրաժեշտ է ունենալ ընտրված ունկնդիր կամ բաժին"},"is":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Þú getur ekki úthlutað í hóp fyrir utan skipan hópasetts verkefnisins","you_must_have_a_student_or_section_selected_a99e45df":"Þú verður að velja nemanda eða hluta"},"it":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Non puoi assegnare a un gruppo al di fuori del set di gruppi del compito","you_must_have_a_student_or_section_selected_a99e45df":"Devi selezionare uno studente o una sezione"},"ja":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"外部に設定されている課題のグループに割り当てることはできません","you_must_have_a_student_or_section_selected_a99e45df":"選択された受講生かセクションを有している必要があります"},"mi":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"e kore e taea e koe te tautapa ki te rōpū i waho o te huinga rōpū o te whakataunga","you_must_have_a_student_or_section_selected_a99e45df":"Me whai koe i te ākonga wāhanga rānei kua kōwhiria"},"nb":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Du kan ikke tildele til en gruppe utenfor oppgavens bestemte gruppe","you_must_have_a_student_or_section_selected_a99e45df":"Du må ha en student eller seksjon valgt"},"nb-x-k12":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Du kan ikke tildele til en gruppe utenfor oppgavens bestemte gruppe","you_must_have_a_student_or_section_selected_a99e45df":"Du må ha en elev eller seksjon valgt"},"nl":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Je kunt niet aan een groep buiten de opdrachtgroep toewijzen.","you_must_have_a_student_or_section_selected_a99e45df":"Je moet een cursist of sectie geselecteerd hebben"},"nn":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Du kan ikkje tilordne ei gruppe utanfor oppgåva sitt gruppesett","you_must_have_a_student_or_section_selected_a99e45df":"Du må velje ein student eller ein seksjon"},"pl":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Nie możesz przypisywać do grupy poza ustaloną grupą przydziału","you_must_have_a_student_or_section_selected_a99e45df":"Musisz wybrać uczestnika lub sekcję"},"pt":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Não pode designar um grupo fora do conjunto de grupos de tarefas","you_must_have_a_student_or_section_selected_a99e45df":"Tem de ter um estudante ou seção selecionada"},"pt-BR":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Você não pode atribuir para um grupo fora do conjunto de grupo da tarefa","you_must_have_a_student_or_section_selected_a99e45df":"Você deve ter um aluno ou seção selecionado"},"ru":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Вы не можете назначить для группы вне набора заданий группы.","you_must_have_a_student_or_section_selected_a99e45df":"Вы должны выбрать студента или раздел"},"sl":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Skupini zunaj nabora skupin naloge ne morete dodeljevati.","you_must_have_a_student_or_section_selected_a99e45df":"Izbrana morata biti študent ali sekcija."},"sv":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Du kan inte tilldela en grupp utanför uppgiftens gruppuppsättning","you_must_have_a_student_or_section_selected_a99e45df":"Du måste ha en student eller en sektion vald"},"sv-x-k12":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Du kan inte tilldela en grupp utanför uppgiftens gruppuppsättning","you_must_have_a_student_or_section_selected_a99e45df":"Du måste ha en elev eller en sektion vald"},"tr":{"you_must_have_a_student_or_section_selected_a99e45df":"Bir öğrenci veya kısım seçmelisiniz"},"uk":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"Ви не можете призначити зовнішній групі набір групових завдань","you_must_have_a_student_or_section_selected_a99e45df":"Ви повинні обрати студента чи розділ"},"zh-Hans":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"您不能指定一个作业小组集外的小组","you_must_have_a_student_or_section_selected_a99e45df":"您必须选择一个学生或班级"},"zh-Hant":{"you_cannot_assign_to_a_group_outside_of_the_assign_7869eb3b":"您無法為作業的群組集合之外的群組指派成員","you_must_have_a_student_or_section_selected_a99e45df":"您必須選中一個學生或分班"}}'))
+s("jQeR")
+s("0sPK")
+var O=w["default"].scoped("DueDateOverrideView")
+var A=s("An8g")
+s("17x9")
+var T=s("6o7I")
+var x=s("fPNa")
+var j=s("+PF/")
+const I={students:{},searchedNames:{},currentlySearching:false,allStudentsFetched:false,requestedStudentsForCourse:false}
+const N=Object(T["a"])(n.a.extend(true,{},I))
+function E(e){return _.a.filter(e.enrollments,e=>"StudentEnrollment"===e.type||"StudentViewEnrollment"===e.type)}function C(e){return _.a.map(e,e=>e.course_section_id)}N.fetchStudentsByID=function(e){if("undefined"===typeof e||0===e.length)return null
+const t=this.getContextPath()+"/users"
+n.a.getJSON(t,{user_ids:e.join(","),enrollment_type:"student",include:["enrollments","group_ids"]},this._fetchStudentsByIDSuccessHandler.bind(this,{}))}
+N._fetchStudentsByIDSuccessHandler=function(e,t,s,a){this.addStudents(t)
+const o=Object(j["a"])(a)
+o.next&&n.a.getJSON(o.next,{},this._fetchStudentsByIDSuccessHandler.bind(this,{}))}
+N.fetchStudentsByName=function(e){if(""===n.a.trim(e)||this.allStudentsFetched()||this.alreadySearchedForName(e))return true
+const t=this.getContextPath()+"/search_users"
+this.setState({currentlySearching:true})
+n.a.getJSON(t,{search_term:e,enrollment_type:"student",include_inactive:false,include:["enrollments","group_ids"]},this._fetchStudentsByNameSuccessHandler.bind(this,{nameString:e}),this._fetchStudentsByNameErrorHandler.bind(this,{nameString:e}))}
+N.allStudentsFetched=function(){return this.getState().allStudentsFetched}
+N._fetchStudentsByNameSuccessHandler=function(e,t,s,a){this.doneSearching()
+this.markNameSearched(e.nameString)
+this.addStudents(t)}
+N._fetchStudentsByNameErrorHandler=function(e){this.doneSearching()}
+const z=4
+const R=50
+N.fetchStudentsForCourse=function(){if(this.getState().requestedStudentsForCourse)return
+this.setState({requestedStudentsForCourse:true})
+const e=this.getContextPath()+"/users"
+n.a.getJSON(e,{per_page:R,enrollment_type:"student",include_inactive:false,include:["enrollments","group_ids"]},this._fetchStudentsForCourseSuccessHandler.bind(this,{pageNumber:1}))}
+N._fetchStudentsForCourseSuccessHandler=function(e,t,s,a){let o=e.pageNumber
+this.addStudents(t)
+const i=Object(j["a"])(a)
+i.next?o<z&&n.a.getJSON(i.next,{},this._fetchStudentsForCourseSuccessHandler.bind(this,{pageNumber:o+1})):this.setState({allStudentsFetched:true})}
+N.getStudents=function(){return N.getState().students}
+N.addStudents=function(e){_.a.each(e,e=>{e.enrollments=E(e)
+e.sections=C(e.enrollments)})
+const t=_.a.keyBy(e,e=>e.id)
+const s=_.a.extend(t,this.getState().students)
+this.setState({students:s})}
+N.doneSearching=function(){this.setState({currentlySearching:false})}
+N.currentlySearching=function(){return this.getState().currentlySearching}
+N.getContextPath=function(){return"/api/v1/"+x["a"]._contextPath()}
+N.reset=function(){this.setState(n.a.extend(true,{},I))}
+N.alreadySearchedForName=function(e){return!!this.getState().searchedNames[e]}
+N.alreadySearchingForName=function(e){return _.a.includes(this.getState().activeNameSearches,e)}
+N.markNameSearched=function(e){const t=this.getState().searchedNames
+t[e]=true
+this.setState({searchedNames:t})}
+var F=N
+var G=s("yS2Q")
+var M=s("CvKf")
+var B=s.n(M)
+Object(D["a"])(JSON.parse('{"ar":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"إضافة الطلاب من خلال البحث بالاسم أو قسم المساق أو المجموعة. بعد إدخال النص، تنقل بين النتائج باستخدام مفتاح السهم لأسفل. حدد النتائج باستخدام مفتاح Enter.","assign_to_c46e21":"تعيين إلى","continue_typing_to_find_additional_sections_or_stu_49786085":"استمر في الكتابة للعثور على المزيد من الأقسام الإضافية أو الطلاب","course_section_7a988066":"قسم المساق","currently_assigned_to_tokenname_click_to_remove_5a853a84":"معيَّن حاليًا إلى %{tokenName}، انقر للإزالة","group_a8f5ed9c":"المجموعة","mastery_paths_cc4096c2":"مسارات الإتقان","no_results_found_58717065":"لم يتم العثور على نتائج","searching_b0207e7f":"يتم الآن البحث","student_5da6bfd1":"الطالب","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"استخدم هذه القائمة لإزالة الطلاب المعينين. أضف طلابًا جددًا من خلال مربع تحرير وسرد بعد القائمة."},"cy":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Ychwanegu myfyrwyr drwy chwilio yn ôl enw, grŵp neu adran cwrs. Ar ôl rhoi’r testun, gallwch ddefnyddio’r fysell saeth i lawr i symud rhwng y canlyniadau. Dewiswch ganlyniad drwy ddefnyddio’r fysell Enter.","assign_to_c46e21":"Dyrannu i","continue_typing_to_find_additional_sections_or_stu_49786085":"Mae angen i chi barhau i deipio er mwyn dod o hyd i fyfyrwyr neu adrannau ychwanegol.","course_section_7a988066":"Adran Cwrs","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Wedi’i neilltuo i %{tokenName} ar hyn o bryd, cliciwch i dynnu","group_a8f5ed9c":"Grŵp","mastery_paths_cc4096c2":"Llwybrau Meistroli","no_results_found_58717065":"Heb ddod o hyd i ganlyniadau","searching_b0207e7f":"Wrthi\'n chwilio","student_5da6bfd1":"Myfyriwr","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Defnyddiwch y rhestr hon i dynnu myfyrwyr sydd wedi’u neilltuo. Ychwanegwch fyfyrwyr newydd gyda blwch cyfun ar ôl y rhestr."},"da":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Tilføj studerende ved at søge efter navn, fagsektion eller gruppe. Når du har indtastet tekst, kan du navigere resultater ved at bruge pil ned. Vælg et resultat ved at bruge Enter-tasten.","assign_to_c46e21":"Udpeg til","continue_typing_to_find_additional_sections_or_stu_49786085":"Fortsæt med at indtaste for at finde yderligere sektioner eller studerende.","course_section_7a988066":"Fagsektion","currently_assigned_to_tokenname_click_to_remove_5a853a84":"I øjeblikket tildelt til %{tokenName}, klik for at fjerne","group_a8f5ed9c":"Gruppe","mastery_paths_cc4096c2":"Læringsstier","no_results_found_58717065":"Der blev ikke fundet resultater","searching_b0207e7f":"Søger","student_5da6bfd1":"Studerende","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Brug denne liste til at fjerne tildelte studerende. Tilføj nye studerende med kombinationsfelt efter listen."},"da-x-k12":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Tilføj elever ved at søge efter navn, fagsektion eller gruppe. Når du har indtastet tekst, kan du navigere resultater ved at bruge pil ned. Vælg et resultat ved at bruge Enter-tasten.","assign_to_c46e21":"Udpeg til","continue_typing_to_find_additional_sections_or_stu_49786085":"Fortsæt med at indtaste for at finde yderligere sektioner eller elever.","course_section_7a988066":"Fagsektion","currently_assigned_to_tokenname_click_to_remove_5a853a84":"I øjeblikket tildelt til %{tokenName}, klik for at fjerne","group_a8f5ed9c":"Gruppe","mastery_paths_cc4096c2":"Læringsstier","no_results_found_58717065":"Der blev ikke fundet resultater","searching_b0207e7f":"Søger","student_5da6bfd1":"Elev","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Brug denne liste til at fjerne tildelte elever. Tilføj nye elever med kombinationsfelt efter listen."},"de":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Hinzufügen von Studenten per Suche nach Name, Kursabschnitt oder Gruppe. Navigieren Sie nach der Eingabe von Text in den Ergebnissen mithilfe der Pfeil-nach-unten-Taste. Durch Drücken der Eingabetaste wählen Sie ein Ergebnis aus.","assign_to_c46e21":"Zuweisen an","continue_typing_to_find_additional_sections_or_stu_49786085":"Bitte mit der Eingabe fortfahren, um zusätzliche Bereiche oder Studenten zu finden.","course_section_7a988066":"Kursabschnitt","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Derzeit %{tokenName} zugewiesen. Zum Entfernen klicken Sie darauf.","group_a8f5ed9c":"Gruppe","mastery_paths_cc4096c2":"Leistungsziel-Pfade","no_results_found_58717065":"Keine Ergebnisse gefunden","searching_b0207e7f":"Wird gesucht","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Verwenden Sie diese Liste, um zugewiesene Studenten zu entfernen. Fügen Sie neue Teilnehmer anhand des Kombinationsfelds hinter der Liste hinzu."},"el":{"assign_to_c46e21":"Ανάθεση στον/στην","continue_typing_to_find_additional_sections_or_stu_49786085":"Συνεχίστε να πληκτρολογείτε για να βρείτε περισσότερους τομείς ή σπουδαστές.","course_section_7a988066":"Τμήμα Μαθήματος","group_a8f5ed9c":"Ομάδα","no_results_found_58717065":"Δεν βρέθηκαν αποτελέσματα","searching_b0207e7f":"Αναζήτηση","student_5da6bfd1":"Μαθητής "},"en-AU":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Add students by searching by name, course section or group. After entering text, navigate results by using the down arrow key. Select a result by using the Enter key.","assign_to_c46e21":"Assign to","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue typing to find additional sections or students.","course_section_7a988066":"Course Section","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Currently assigned to %{tokenName}, click to remove","group_a8f5ed9c":"Group","mastery_paths_cc4096c2":"Mastery Paths","no_results_found_58717065":"No results found","searching_b0207e7f":"Searching...","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Use this list to remove assigned students. Add new students with combo box after list."},"en-AU-x-unimelb":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Add students by searching by name, subject section or group. After entering text, navigate results by using the down arrow key. Select a result by using the Enter key.","assign_to_c46e21":"Assign to","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue typing to find additional sections or students.","course_section_7a988066":"Subject Section","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Currently assigned to %{tokenName}, click to remove","group_a8f5ed9c":"Group","mastery_paths_cc4096c2":"Mastery Paths","no_results_found_58717065":"No results found","searching_b0207e7f":"Searching...","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Use this list to remove assigned students. Add new students with combo box after list."},"en-CA":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Add students by searching by name, course section or group. After entering text, navigate results by using the down arrow key. Select a result by using the Enter key.","assign_to_c46e21":"Assign to","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue typing to find additional sections or students.","course_section_7a988066":"Course Section","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Currently assigned to %{tokenName}, click to remove","group_a8f5ed9c":"Group","mastery_paths_cc4096c2":"Mastery Paths","no_results_found_58717065":"No results found","searching_b0207e7f":"Searching","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Use this list to remove assigned students. Add new students with combo box after list."},"en-GB":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Add students by searching by name, course section or group. After entering text, navigate results by using the down arrow key. Select a result by using the Enter key.","assign_to_c46e21":"Assign to","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue typing to find additional sections or students.","course_section_7a988066":"Course section","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Currently assigned to %{tokenName}, click to remove","group_a8f5ed9c":"Group","mastery_paths_cc4096c2":"Mastery paths","no_results_found_58717065":"No results found","searching_b0207e7f":"searching...","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Use this list to remove assigned students. Add new students with combo box after list."},"en-GB-x-lbs":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Add students by searching by name, programme section or group. After entering text, navigate results by using the down arrow key. Select a result by using the Enter key.","assign_to_c46e21":"Assign to","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue typing to find additional sections or students.","course_section_7a988066":"Programme section","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Currently assigned to %{tokenName}, click to remove","group_a8f5ed9c":"Group","mastery_paths_cc4096c2":"Mastery paths","no_results_found_58717065":"No results found","searching_b0207e7f":"searching...","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Use this list to remove assigned students. Add new students with combo box after list."},"en-GB-x-ukhe":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Add students by searching by name, module section or group. After entering text, navigate results by using the down arrow key. Select a result by using the Enter key.","assign_to_c46e21":"Assign to","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue typing to find additional sections or students.","course_section_7a988066":"Module section","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Currently assigned to %{tokenName}, click to remove","group_a8f5ed9c":"Group","mastery_paths_cc4096c2":"Mastery paths","no_results_found_58717065":"No results found","searching_b0207e7f":"searching...","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Use this list to remove assigned students. Add new students with combo box after list."},"es":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Agregue estudiantes buscando por nombre, sección del curso o grupo. Después de ingresar texto, navegue a través de los resultados con la tecla de la flecha hacia abajo. Seleccione un resultado con la tecla Entrar","assign_to_c46e21":"Asignar a","continue_typing_to_find_additional_sections_or_stu_49786085":"Continúe escribiendo para encontrar secciones o estudiantes adicionales.","course_section_7a988066":"Sección del curso","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Actualmente asignado a %{tokenName}, haga clic para eliminar","group_a8f5ed9c":"Grupo","mastery_paths_cc4096c2":"Caminos de dominio","no_results_found_58717065":"No se encontraron resultados","searching_b0207e7f":"Buscando","student_5da6bfd1":"Estudiante","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Utilice esta lista para eliminar estudiantes con tareas asignadas. Agregar nuevos estudiantes con el cuadro combinado después de la lista."},"fa":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"افزودن دانشجویان با جستجوی نام، بخش یا گروه درس. پس از وارد کردن متن، نتایج را با استفاده از کلید جهت دار پایین پیمایش کنید. یک نتیجه را با استفاده از کلید Enter انتخاب کنید.","assign_to_c46e21":"اختصاص دادن به","continue_typing_to_find_additional_sections_or_stu_49786085":"تایپ کردن برای یافتن بخش ها یا دانشجویان دیگر را ادامه دهید.","course_section_7a988066":"بخش درس","currently_assigned_to_tokenname_click_to_remove_5a853a84":"در حال حاضر به %{tokenName} مرتبط شده است، برای حذف کلیک کنید","group_a8f5ed9c":"گروه","mastery_paths_cc4096c2":"مسیرهای تسلط","no_results_found_58717065":"نتیجه ای یافت نشد","searching_b0207e7f":"در حال جستجو","student_5da6bfd1":"دانشجو","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"از این فهرست برای حذف دانشحویان معین استفاده کنید. با کادر ترکیبی بعد از فهرست، دانشجویان جدید را اضافه کنید."},"fi":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Lisää opiskelijoita hakemalla nimen, kurssin osan tai ryhmän perusteella. Kun olet syöttänyt tekstin, navigoi tuloksissa alanuolinäppäimellä. Valitse tulos Enter-painikkeella.","assign_to_c46e21":"Kohdista kohteelle","continue_typing_to_find_additional_sections_or_stu_49786085":"Jatka kirjoittamista lisätäksesi lisäosia tai opiskelijoita.","course_section_7a988066":"Kurssin osa","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Kohdistettu parhaillaan kohteeseen %{tokenName}, poista napsauttamalla","group_a8f5ed9c":"Ryhmä","mastery_paths_cc4096c2":"Hallintapolut","no_results_found_58717065":"Tuloksia ei löytynyt","searching_b0207e7f":"Haetaan","student_5da6bfd1":"Opiskelija","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Poista kohdistetut opiskelijat tämän listan avulla. Lisää uusia opiskelijoita yhdistelmäruudulla listan jälkeen."},"fr":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Ajouter des élèves à l\'aide d\'une recherche par nom, groupe ou section de cours. Après avoir entré votre texte, naviguez dans les résultats à l\'aide de la touche « flèche bas ». Sélectionnez un résultat avec la touche Entrée.","assign_to_c46e21":"Attribuer à/au","continue_typing_to_find_additional_sections_or_stu_49786085":"Continuez d\'écrire pour trouver d\'autres sections ou d\'autres étudiants.","course_section_7a988066":"Section du cours","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Actuellement assigné à %{tokenName}, cliquez pour retirer","group_a8f5ed9c":"Groupe","mastery_paths_cc4096c2":"Parcours de maîtrise","no_results_found_58717065":"Aucun résultat trouvé","searching_b0207e7f":"Recherche en cours","student_5da6bfd1":"Étudiant","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Utilisez cette liste pour supprimer les élèves assignés. Ajouter des nouveaux élèves à l\'aide de la liste déroulante après la liste."},"fr-CA":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Ajouter les étudiants en recherchant par nom, section de cours ou groupe. Après avoir saisi du texte, naviguer dans les résultats en utilisant la flèche directionnelle BAS. Sélectionner un résultat en utilisant la touche Entrée.","assign_to_c46e21":"Attribuer à/au","continue_typing_to_find_additional_sections_or_stu_49786085":"Continuez d\'écrire pour trouver d\'autres sections ou d\'autres étudiants.","course_section_7a988066":"Section du cours","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Actuellement affecté à %{tokenName}, cliquer pour retirer","group_a8f5ed9c":"Groupe","mastery_paths_cc4096c2":"Parcours de maîtrise","no_results_found_58717065":"Aucun résultat trouvé","searching_b0207e7f":"Recherche en cours","student_5da6bfd1":"Étudiant","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Utiliser cette liste pour retirer les étudiants assignés Ajouter les nouveaux étudiants avec la zone de liste déroulante après la liste."},"he":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"הוספת תלמידים בעזרת חיפוש שמי, הקבצת קורס או בקבוצה. לאחר הקלדת הטקסט, הניווט בתוצאות הוא ע\\"י השימוש בחץ התחתון. בחירת תוצאה מתבצעת בעזרת מקש ה ENTER","assign_to_c46e21":"הקצאה ל-","continue_typing_to_find_additional_sections_or_stu_49786085":"המשיכו להקליד כדי למצוא הקבצות או תלמידים נוספים ","course_section_7a988066":"הקבצת קורס","currently_assigned_to_tokenname_click_to_remove_5a853a84":"כרגע משויך ל %{tokenName}, הקש/י כדי להסיר","group_a8f5ed9c":"קבוצה","mastery_paths_cc4096c2":"מסלולי התמחות","no_results_found_58717065":"לא נמצאו תוצאות","searching_b0207e7f":"מחפש","student_5da6bfd1":"תלמיד","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"השתמש/י ברשימה זו כדי להסיר תלמידים רשומים. הוספת תלמידים נעשית בתיבת קומבו בהמשך הרשימה."},"ht":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Chèche elèv pa non, seksyon kou oswa gwoup pou ajoute yo. Apre w fin antre tèks la, itilize f`lèch anba a pou navige nan rezilta yo Peze touch Enter la pou seleksyone yon rezilta.","assign_to_c46e21":"Atribye a","continue_typing_to_find_additional_sections_or_stu_49786085":"Kontinye tape pou jwenn lòt seksyon oswa elèv.","course_section_7a988066":"Seksyon Kou","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Pou kounye a asiyen a %{tokenName}, klike pou elimine","group_a8f5ed9c":"Gwoup","mastery_paths_cc4096c2":"Pakou Prensipal","no_results_found_58717065":"Nou pa jwenn rezilta","searching_b0207e7f":"Chèche","student_5da6bfd1":"Elèv","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Itilize lis sa a pou retire elèv ki asiyen yo. Ajoute nouvo elèv ak bwat combo aprè lis la."},"hu":{"assign_to_c46e21":"Feladatkiosztás a következő felhasználóknak:","continue_typing_to_find_additional_sections_or_stu_49786085":"Folytassa a gépelést ahhoz, hogy további szekciókat vagy hallgatókat találjon","course_section_7a988066":"Kurzusszekció","group_a8f5ed9c":"Csoport","mastery_paths_cc4096c2":"Jártassági útvonalak","no_results_found_58717065":"Nincs találat","searching_b0207e7f":"Keresés...","student_5da6bfd1":"Hallgató"},"hy":{"assign_to_c46e21":"Հանձնարարել ","continue_typing_to_find_additional_sections_or_stu_49786085":"Շարունակել մուտքագրել` լրացուցիչ բաժիններ կամ ունկնդիրներ գտնելու համար","course_section_7a988066":"Դասընթացի բաժին","group_a8f5ed9c":"Խումբ","no_results_found_58717065":"Արդյունքներ չեն ստացվել","searching_b0207e7f":"Որոնում է","student_5da6bfd1":"Ունկնդիր"},"is":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Bæta við nemendum með leit eftir nafni, námskeiðshluta eða hópi. Eftir innfærslu texta, skoðaðu niðurstöður með lyklinum „ör niður“. Veldu niðurstöðu með Enter.","assign_to_c46e21":"Úthluta til","continue_typing_to_find_additional_sections_or_stu_49786085":"Halda áfram innslætti til að finna fleiri hluta eða nemendur.","course_section_7a988066":"Hluti námskeiðs","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Skráð á %{tokenName}, smelltu til að fjarlægja","group_a8f5ed9c":"Hópur","mastery_paths_cc4096c2":"Tileinkunarslóðir","no_results_found_58717065":"Engar niðurstöður fundust","searching_b0207e7f":"Leita","student_5da6bfd1":"Nemandi","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Notaðu listann til að fjarlægja úthlutaða nemendur. Bættu við nýjum nemendum með samsettum reit á eftir listanum."},"it":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Aggiungi studenti tramite ricerca per nome, sezione corso o gruppo. Una volta inserito il testo, accedi ai risultati utilizzando il tasto freccia giù. Seleziona un risultato utilizzando il tasto Invio.","assign_to_c46e21":"Assegna a","continue_typing_to_find_additional_sections_or_stu_49786085":"Continua a digitare per trovare sezioni o studenti aggiuntivi.","course_section_7a988066":"Sezione corso","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Attualmente assegnato %{tokenName}. Fai clic per rimuovere","group_a8f5ed9c":"Gruppo","mastery_paths_cc4096c2":"Percorsi di acquisizione della padronanza","no_results_found_58717065":"Non è stato trovato nessun risultato","searching_b0207e7f":"Ricerca in corso","student_5da6bfd1":"Studente","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Usa questo elenco per rimuovere gli studenti assegnati. Aggiungi nuovi studenti con casella combinata dopo l\'elenco."},"ja":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"名前、コースセクション、またはグループで検索して受講生を追加します。テキストを入力した後、下向き矢印キーを使用して結果をナビゲートします。Enter キーを使用して結果を選択します。","assign_to_c46e21":"割り当てられる","continue_typing_to_find_additional_sections_or_stu_49786085":"更にタイプして、追加のセクションまたは生徒を見つける","course_section_7a988066":"コース セクション","currently_assigned_to_tokenname_click_to_remove_5a853a84":"現在%{tokenName}に与えられている、クリックして削除する","group_a8f5ed9c":"グループ","mastery_paths_cc4096c2":"熟達の過程","no_results_found_58717065":"結果が見つかりません","searching_b0207e7f":"検索中","student_5da6bfd1":"受講生","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"このリストを使って、課題を与えられた受講生を削除します。コンボボックスのある受講生をリスト後に追加する。"},"ko":{"course_section_7a988066":"과목 섹션","group_a8f5ed9c":"그룹","no_results_found_58717065":"결과 없음","student_5da6bfd1":"학생"},"mi":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Tāpiri ngā ākonga mā te rapu i te ingoa, wāhanga akoranga rōpū rānei. I muri i te whakauru i te kuputuhi, whakahaere i ngā hua ma te whakamahi i te ki raro kī. Tīpako i te hua mā te whakamahi i te whakauru kī.","assign_to_c46e21":"Tohua ki","continue_typing_to_find_additional_sections_or_stu_49786085":"Pātō tonu i ki te kitea atu wāhanga ākonga rānei.","course_section_7a988066":"Wāhanga akoranga","currently_assigned_to_tokenname_click_to_remove_5a853a84":"I tēnei wā i whakaritea ki te %{tokenName}, pāwhiri ki te tango","group_a8f5ed9c":"rōpū","mastery_paths_cc4096c2":"Mana Ara","no_results_found_58717065":"Kāore he hua i kitea","searching_b0207e7f":"Rapu ana","student_5da6bfd1":"Ākonga","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Whakamahia tēnei rārangi ki te tango nga ākonga kua whakaritea Tāpiri ngā ākonga hou ki te pouaka kōwhiringa i muri i te rārangi."},"nb":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Legg til studenter ved å søke etter navn, emne seksjon eller gruppe. Etter at du har lagt inn teksten, navigerer du etter resultater ved å bruke pil ned-tasten. Velg et resultat ved bruk av Enter-tasten.","assign_to_c46e21":"Tildel til","continue_typing_to_find_additional_sections_or_stu_49786085":"Fortsett å skrive for å finne ytterligere seksjoner eller studenter.","course_section_7a988066":"Emneseksjon","currently_assigned_to_tokenname_click_to_remove_5a853a84":"For tiden tildelt %{tokenName}, klikk for å fjerne","group_a8f5ed9c":"Gruppe","mastery_paths_cc4096c2":"Læringsstier","no_results_found_58717065":"Ingen resultater funnet","searching_b0207e7f":"Søker","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Bruk denne listen til å fjerne tildelte studenter. Legg til nye studenter med komboboks ifølge liste."},"nb-x-k12":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Legg til elever ved å søke etter navn, fag seksjon eller gruppe. Etter at du har lagt inn teksten, navigerer du etter resultater ved å bruke pil ned-tasten. Velg et resultat ved bruk av Enter-tasten.","assign_to_c46e21":"Tildel til","continue_typing_to_find_additional_sections_or_stu_49786085":"Fortsett å skrive for å finne ytterligere seksjoner eller elever.","course_section_7a988066":"Fagseksjon","currently_assigned_to_tokenname_click_to_remove_5a853a84":"For tiden tildelt %{tokenName}, klikk for å fjerne","group_a8f5ed9c":"Gruppe","mastery_paths_cc4096c2":"Mål-stier","no_results_found_58717065":"Ingen resultater funnet","searching_b0207e7f":"Søker","student_5da6bfd1":"Elev","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Bruk denne listen til å fjerne tildelte elever. Legg til nye elever med komboboks ifølge liste."},"nl":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Voeg cursisten toe door te zoeken op naam, cursussectie of groep. Voer tekst in en bekijk de resultaten door de pijltoets omlaag te gebruiken. Selecteer een resultaat met de Enter-toets.","assign_to_c46e21":"Toewijzen aan","continue_typing_to_find_additional_sections_or_stu_49786085":"Ga door met typen om extra secties of studenten te vinden.","course_section_7a988066":"Sectie van de cursus","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Momenteel toegewezen aan %{tokenName}, klik om te verwijderen","group_a8f5ed9c":"Groep","mastery_paths_cc4096c2":"Meesterschapspaden","no_results_found_58717065":"Geen resultaten gevonden","searching_b0207e7f":"Bezig met zoeken...","student_5da6bfd1":"Cursist","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Gebruik deze lijst om toegewezen cursisten te verwijderen. Voeg nieuwe cursisten toe via een keuzelijst met invoervak."},"nn":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Legg til studentar ved å søkje på namn, emneseksjon eller gruppe. Etter å ha skrive inn tekst, kan du navigere i resultatet ved å bruke ned-piltasten på  tastaturet. Vel resultat ved å trykkje Enter-tasten. ","assign_to_c46e21":"Tilordne til","continue_typing_to_find_additional_sections_or_stu_49786085":"Hald fram med å skrive for å finne fleire seksjonar eller studentar.","course_section_7a988066":"Emneseksjonar","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Tilknytte %{tokenName}, klikk for å fjerne","group_a8f5ed9c":"Gruppe","mastery_paths_cc4096c2":"Meistringsstiar","no_results_found_58717065":"Finn ikkje resultat","searching_b0207e7f":"Søker","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Bruk denne lista til å fjerne påmelde studentar. Legg til nye studentar ved å bruke kombiboksen etter lista. "},"pl":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Dodaj uczestników, wyszukując wg nazwiska, sekcji kursu lub grupy. Po wpisaniu tekstu można przeglądać wyniki, używając klawisza strzałki w dół. Wybierz wynik, używając klawisza Enter.","assign_to_c46e21":"Przypisz do","continue_typing_to_find_additional_sections_or_stu_49786085":"Kontynuuj wpisywanie aby znaleźć dodatkowe sekcje lub uczniów","course_section_7a988066":"Sekcja kursu","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Obecnie przypisane do %{tokenName}, kliknij, aby usunąć","group_a8f5ed9c":"Grupa","mastery_paths_cc4096c2":"Ścieżki biegłości","no_results_found_58717065":"Nie znaleziono wyników","searching_b0207e7f":"Szukanie","student_5da6bfd1":"Uczestnik","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Użyj tej listy do usunięcia przypisanych uczestników. Dodaj nowych uczestników z polem kombi po liście."},"pt":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Adicione os alunos pesquisando por nome, seção de disciplina ou grupo. Após digitar o texto, navegue pelos resultados usando a tecla de seta para baixo. Selecione um resultado usando a tecla Enter.","assign_to_c46e21":"Atribuir a","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue a escrever para encontrar secções adicionais ou estudantes.","course_section_7a988066":"Secção da disciplina","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Atualmente atribuído a %{tokenName}, clique para remover","group_a8f5ed9c":"Grupo","mastery_paths_cc4096c2":"Circuito Principal","no_results_found_58717065":"Sem resultados","searching_b0207e7f":"Procurando","student_5da6bfd1":"Aluno","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Use esta lista para remover alunos atribuídos. Adicione novos alunos com a caixa de combinação após a lista."},"pt-BR":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Adicionar alunos ao buscar por nome, seção do curso ou grupo. Após inserir texto, navegar pelos resultados ao usar a tecla de seta para baixo. Selecionar um resultado ao usar a tecla Enter.","assign_to_c46e21":"Atribuir a","continue_typing_to_find_additional_sections_or_stu_49786085":"Continue digitando para encontrar seções ou alunos adicionais.","course_section_7a988066":"Seção do curso","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Atualmente atribuído a %{tokenName}, clique para remover","group_a8f5ed9c":"Grupo","mastery_paths_cc4096c2":"Caminhos de Domínio","no_results_found_58717065":"Nenhum resultado encontrado","searching_b0207e7f":"Realizando Busca","student_5da6bfd1":"Aluno","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Usar esta lista para remover alunos atribuídos. Adicionar novos alunos com caixa de combinação após lista."},"ru":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Добавить учащихся, выполнив поиск по имени, разделу курса или группе. После ввода текста используйте кнопку \\"стрелка вниз\\" для просмотра результатов. Выберите результат с помощью клавиши Enter.","assign_to_c46e21":"Назначить для","continue_typing_to_find_additional_sections_or_stu_49786085":"Продолжить ввод, чтобы найти дополнительные разделы или студентов.","course_section_7a988066":"Раздел курса","currently_assigned_to_tokenname_click_to_remove_5a853a84":"В настоящее время закреплено за %{tokenName}, нажмите, чтобы удалить","group_a8f5ed9c":"Группа","mastery_paths_cc4096c2":"Пути усвоения","no_results_found_58717065":"Результаты не найдены","searching_b0207e7f":"Идет поиск","student_5da6bfd1":"Студент","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Используйте данный список для удаления заданных учащихся. Добавить нового учащегося с комбинированным полем после списка."},"sl":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Dodaj študente z iskanjem po imenu, sekciji predmeta ali skupini Po vnosu besedila se premikajte po rezultatih s puščično tipko za pomik navzdol. S tipko Enter izberite rezultat.","assign_to_c46e21":"Dodeli","continue_typing_to_find_additional_sections_or_stu_49786085":"Za iskanje dodatnih sekcij ali študentov nadaljujte z vnosom.","course_section_7a988066":"Sekcija predmeta","currently_assigned_to_tokenname_click_to_remove_5a853a84":"Trenutno dodeljeno %{tokenName}; kliknite, da odstranite.","group_a8f5ed9c":"Skupina","mastery_paths_cc4096c2":"Napredovanja v odličnosti","no_results_found_58717065":"Ni najdenih rezultatov.","searching_b0207e7f":"Iskanje","student_5da6bfd1":"Študent","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"S tem seznamom odstranite dodeljene študente. Nove študente dodajajte s spustnim seznamom za seznamom."},"sv":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Lägg till studenter genom att söka efter namn, kurssektion eller grupp. Efter att texten angetts, navigera till resultaten genom att använda nedåtpilen. Välj ett resultat genom att använda Enter-knappen.","assign_to_c46e21":"Tilldelad till","continue_typing_to_find_additional_sections_or_stu_49786085":"Fortsätt skriva för att hitta fler sektioner eller studenter.","course_section_7a988066":"Kurssektion","currently_assigned_to_tokenname_click_to_remove_5a853a84":"För närvarande tilldelad till %{tokenName}, klicka för att ta bort","group_a8f5ed9c":"Grupp","mastery_paths_cc4096c2":"Måluppfyllelsevägar","no_results_found_58717065":"Inga resultat hittades","searching_b0207e7f":"Söker","student_5da6bfd1":"Student","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Använd denna lista för att ta bort tilldelade studenter. Lägg till nya studenter med kombirutan efter listan."},"sv-x-k12":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Lägg till elever genom att söka efter namn, kurssektion eller grupp. Efter att texten angetts, navigera till resultaten genom att använda nedåtpilen. Välj ett resultat genom att använda Enter-knappen.","assign_to_c46e21":"Tilldelad till","continue_typing_to_find_additional_sections_or_stu_49786085":"Fortsätt skriva för att hitta fler sektioner eller elever.","course_section_7a988066":"Kurssektion","currently_assigned_to_tokenname_click_to_remove_5a853a84":"För närvarande tilldelad till %{tokenName}, klicka för att ta bort","group_a8f5ed9c":"Grupp","mastery_paths_cc4096c2":"Måluppfyllelsevägar","no_results_found_58717065":"Inga resultat hittades","searching_b0207e7f":"Söker","student_5da6bfd1":"Elev","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Använd denna lista för att ta bort tilldelade elever. Lägg till nya elever med kombirutan efter listan."},"tr":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"İsim, ders bölümü veya gruba göre arama yaparak öğrencileri ekleyin. Metni girdikten sonra aşağı ok tuşunu kullanarak sonuçları görebilirsiniz. Enter tuşunu kullanarak bir sonucu seçebilirsiniz.","assign_to_c46e21":"Şuna Ata","continue_typing_to_find_additional_sections_or_stu_49786085":"Daha fazla bölüm veya öğrenci bulmak için yazmaya devam edin.","course_section_7a988066":"Ders Bölümü","group_a8f5ed9c":"Grup","mastery_paths_cc4096c2":"Yeterlilik Süreçleri","no_results_found_58717065":"Sonuç bulunamadı","searching_b0207e7f":"Aranıyor","student_5da6bfd1":"Öğrenci"},"uk":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"Додати студентів шляхом пошуку по імені, курсу, секції або групи. Після введення тексту, переміщайтеся по результатах, використовуючи клавішу зі стрілкою вниз. Виберіть результат за допомогою клавіші Enter.","assign_to_c46e21":"Призначити","continue_typing_to_find_additional_sections_or_stu_49786085":"Продовжуйте набирати, щоб знайти додаткові розділи або студентів.","course_section_7a988066":"Розділ курсу","currently_assigned_to_tokenname_click_to_remove_5a853a84":"В даний час призначені  %{tokenName}, натисніть, щоб видалити","group_a8f5ed9c":"Група","mastery_paths_cc4096c2":"Шляхи досягнення майстерності","no_results_found_58717065":"Результатів не знайдено","searching_b0207e7f":"Шукаємо","student_5da6bfd1":"Студент","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"Використовуйте цей список для видалення призначених студентів. Додайте нових студентів з вікна під списком."},"zh-Hans":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"搜索姓名、班级或小组来添加学生。在输入文字后，使用向下箭头导航结果。使用回车键选择一个结果。","assign_to_c46e21":"分配到","continue_typing_to_find_additional_sections_or_stu_49786085":"继续键入，寻找其他班级或学生。","course_section_7a988066":"课程班级","currently_assigned_to_tokenname_click_to_remove_5a853a84":"当前已分配给%{tokenName}，点击以移除","group_a8f5ed9c":"小组","mastery_paths_cc4096c2":"掌握路径","no_results_found_58717065":"未找到结果","searching_b0207e7f":"正在搜索","student_5da6bfd1":"学生","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"使用该列表删除已分配的学生。利用列表后的组合框添加新学生。"},"zh-Hant":{"add_students_by_searching_by_name_course_section_o_abb9e2f2":"以名字、課程班別或組別搜尋，再添加學生。輸入資料後，按「下方向」鍵確定輸入。用「Enter」鍵選擇結果。","assign_to_c46e21":"分配至","continue_typing_to_find_additional_sections_or_stu_49786085":"請鍵入更多資訊，以查找其他班別或學生","course_section_7a988066":"課程班別","currently_assigned_to_tokenname_click_to_remove_5a853a84":"目前已分到 %{tokenName}，再按以移除","group_a8f5ed9c":"群組","mastery_paths_cc4096c2":"掌握歷程","no_results_found_58717065":"找不到結果","searching_b0207e7f":"搜索","student_5da6bfd1":"學生","use_this_list_to_remove_assigned_students_add_new__ad6205ad":"以此列表去移除已點選學生。使用列表下方的組合框添加新學生。"}}'))
+var P=w["default"].scoped("DueDateTokenWrapper")
+var U=s("LL36")
+const L={list:{backgroundColor:"#eeeeee"},label:{backgroundColor:"white",borderRadius:"3px"}}
+class H extends u.a.Component{renderTokens(){return _.a.map(this.props.tokens,(e,t)=>Object(A["a"])("li",{className:"ic-token inline-flex"},"token-".concat(t),Object(A["a"])("span",{className:"ic-token-label",style:L.label},void 0,e)))}render(){return Object(A["a"])("ul",{tabIndex:"0","aria-labelledby":"assign-to-label",className:"ic-tokens flex",style:L.list},void 0,this.renderTokens())}}var V=H
+const W={MINIMUM_SEARCH_LENGTH:3,MAXIMUM_STUDENTS_TO_SHOW:7,MAXIMUM_GROUPS_TO_SHOW:5,MAXIMUM_SECTIONS_TO_SHOW:3,MS_TO_DEBOUNCE_SEARCH:800}
+var K=Object(A["a"])("div",{className:"tokenInputThrobber"})
+class J extends u.a.Component{constructor(){super(...arguments)
+this.MINIMUM_SEARCH_LENGTH=W.MINIMUM_SEARCH_LENGTH
+this.MAXIMUM_STUDENTS_TO_SHOW=W.MAXIMUM_STUDENTS_TO_SHOW
+this.MAXIMUM_SECTIONS_TO_SHOW=W.MAXIMUM_SECTIONS_TO_SHOW
+this.MAXIMUM_GROUPS_TO_SHOW=W.MAXIMUM_GROUPS_TO_SHOW
+this.MS_TO_DEBOUNCE_SEARCH=W.MS_TO_DEBOUNCE_SEARCH
+this.state={userInput:"",currentlyTyping:false}
+this.removeTimingSafeties=()=>{this.safetiesOff=true}
+this.handleFocus=()=>{F.fetchStudentsForCourse()}
+this.handleInput=e=>{if(this.props.disabled)return
+this.setState({userInput:e,currentlyTyping:true},(function(){this.safetiesOff?this.fetchStudents():this.safeFetchStudents()}))}
+this.fetchStudents=()=>{try{this.setState({currentlyTyping:false})}catch(e){console.error("tried to set state in unmounted DueDateTokenWrapper",e)}""!==n.a.trim(this.state.userInput)&&this.state.userInput.length>=this.MINIMUM_SEARCH_LENGTH&&F.fetchStudentsByName(n.a.trim(this.state.userInput))}
+this.safeFetchStudents=_.a.debounce(this.fetchStudents,W.MS_TO_DEBOUNCE_SEARCH)
+this.handleTokenAdd=(e,t)=>{if(this.props.disabled)return
+const s=this.findMatchingOption(e,t)
+this.props.handleTokenAdd(s)
+this.clearUserInput()}
+this.overrideTokenAriaLabel=e=>P.t("Currently assigned to %{tokenName}, click to remove",{tokenName:e})
+this.handleTokenRemove=e=>{if(this.props.disabled)return
+this.props.handleTokenRemove(e)}
+this.suppressKeys=e=>{const t=e.keyCode||e.which
+13===t&&e.preventDefault()}
+this.clearUserInput=()=>{this.setState({userInput:""})}
+this.findMatchingOption=(e,t)=>t?_.a.findWhere(this.props.potentialOptions,t.props.set_props):this.sortedMatches(e)[0]
+this.sortedMatches=e=>{const t=_.a.groupBy(this.props.potentialOptions,t=>{if(U["a"].exactMatchRegex(e).test(t.name))return"exact"
+if(U["a"].startOfStringRegex(e).test(t.name))return"start"
+if(U["a"].substringMatchRegex(e).test(t.name))return"substring"})
+return _.a.union(t.exact,t.start,t.substring)}
+this.filteredTags=()=>{if(""===this.state.userInput)return this.props.potentialOptions
+return this.sortedMatches(this.state.userInput)}
+this.filteredTagsForType=e=>{const t=this.groupByTagType(this.filteredTags())
+return t&&t[e]||[]}
+this.groupByTagType=e=>_.a.groupBy(e,e=>e.course_section_id?"course_section":e.group_id?"group":e.noop_id?"noop":"student")
+this.userSearchingThisInput=()=>this.state.userInput&&""!==n.a.trim(this.state.userInput)
+this.rowIdentifier=()=>"tokenInputFor".concat(this.props.rowKey)
+this.currentlySearching=()=>{if(this.props.allStudentsFetched||""===n.a.trim(this.state.userInput))return false
+return this.props.currentlySearching||this.state.currentlyTyping}
+this.optionsForMenu=()=>{const e=this.promptText()?_.a.union([this.promptOption()],this.optionsForAllTypes()):this.optionsForAllTypes()
+return e}
+this.optionsForAllTypes=()=>_.a.union(this.conditionalReleaseOptions(),this.sectionOptions(),this.groupOptions(),this.studentOptions())
+this.studentOptions=()=>this.optionsForType("student")
+this.groupOptions=()=>this.optionsForType("group")
+this.sectionOptions=()=>this.optionsForType("course_section")
+this.conditionalReleaseOptions=()=>{if(!ENV.CONDITIONAL_RELEASE_SERVICE_ENABLED)return[]
+const e=_.a.includes(this.filteredTagsForType("noop"),G["a"].conditionalRelease)
+return e?[this.headerOption("conditional_release",G["a"].conditionalRelease)]:[]}
+this.optionsForType=e=>{const t=this.headerOption(e)
+const s=this.selectableOptions(e)
+return _.a.some(s)?_.a.union([t],s):[]}
+this.headerOption=(e,t)=>{const s={get student(){return P.t("Student")},get course_section(){return P.t("Course Section")},get group(){return P.t("Group")},get conditional_release(){return P.t("Mastery Paths")}}[e]
+const a="conditional_release"===e
+return Object(A["a"])(M["Option"],{isFocusable:a,className:"ic-tokeninput-header",value:e,set_props:t},e,s)}
+this.selectableOptions=e=>{const t={student:this.MAXIMUM_STUDENTS_TO_SHOW,course_section:this.MAXIMUM_SECTIONS_TO_SHOW,group:this.MAXIMUM_GROUPS_TO_SHOW}[e]||0
+return _.a.chain(this.filteredTagsForType(e)).take(t).map((e,t)=>this.selectableOption(e,t)).value()}
+this.selectableOption=(e,t)=>{const s=e.name||this.props.defaultSectionNamer(e.course_section_id)
+return Object(A["a"])(M["Option"],{value:e.name,set_props:e},e.key||"".concat(s,"-").concat(t),s,e.pronouns&&" (".concat(e.pronouns,")"))}
+this.promptOption=()=>Object(A["a"])(M["Option"],{value:this.promptText()},"promptText",Object(A["a"])("i",{},void 0,this.promptText()),this.throbber())
+this.promptText=()=>{if(this.currentlySearching())return P.t("Searching")
+if(this.state.userInput.length<this.MINIMUM_SEARCH_LENGTH&&!this.props.allStudentsFetched||this.hidingValidMatches())return P.t("Continue typing to find additional sections or students.")
+if(_.a.isEmpty(this.filteredTags()))return P.t("No results found")}
+this.throbber=()=>{if(this.currentlySearching()&&this.userSearchingThisInput())return K}
+this.hidingValidMatches=()=>{const e=this.filteredTagsForType("course_section")
+const t=e&&e.length>this.MAXIMUM_SECTIONS_TO_SHOW
+const s=this.filteredTagsForType("student")
+const a=s&&s.length>this.MAXIMUM_STUDENTS_TO_SHOW
+const n=this.filteredTagsForType("group")
+const o=n&&n.length>this.MAXIMUM_GROUPS_TO_SHOW
+return t||a||o}
+this.renderTokenInput=()=>{if(this.props.disabled)return u.a.createElement(V,{tokens:_.a.pluck(this.props.tokens,"name"),ref:"DisabledTokenInput"})
+const e=P.t("Add students by searching by name, course section or group. After entering text, navigate results by using the down arrow key. Select a result by using the Enter key.")
+return Object(A["a"])("div",{},void 0,Object(A["a"])("div",{id:"ic-tokeninput-description",className:"screenreader-only"},void 0,P.t("Use this list to remove assigned students. Add new students with combo box after list.")),u.a.createElement(B.a,{menuContent:this.optionsForMenu(),selected:this.props.tokens,onFocus:this.handleFocus,onInput:this.handleInput,onSelect:this.handleTokenAdd,tokenAriaFunc:this.overrideTokenAriaLabel,onRemove:this.handleTokenRemove,"combobox-aria-label":e,value:true,showListOnFocus:!this.props.disabled,ref:"TokenInput"}))}}render(){return Object(A["a"])("div",{className:"ic-Form-control","data-row-identifier":this.rowIdentifier(),onKeyDown:this.suppressKeys},void 0,Object(A["a"])("div",{id:"assign-to-label",className:"ic-Label",title:"Assign to","aria-label":"Assign to"},void 0,P.t("Assign to")),this.renderTokenInput())}}var q=J
+var Y=s("4oM7")
+Object(D["a"])(JSON.parse('{"ar":{"available_from_f84e4611":"متوفر بدءًا من","due_a73610f6":"الاستحقاق","until_4a1f8cda":"الموعد النهائي"},"cy":{"available_from_f84e4611":"Ar gael o","due_a73610f6":"Erbyn","until_4a1f8cda":"Tan"},"da":{"available_from_f84e4611":"Tilgængelig fra","due_a73610f6":"Forfalder","until_4a1f8cda":"Indtil"},"da-x-k12":{"available_from_f84e4611":"Tilgængelig fra","due_a73610f6":"Forfalder","until_4a1f8cda":"Indtil"},"de":{"available_from_f84e4611":"Verfügbar von","due_a73610f6":"Fällig","until_4a1f8cda":"Bis"},"el":{"available_from_f84e4611":"Διαθέσιμο από","due_a73610f6":"Καταληκτική Ημερομηνία"},"en-AU":{"available_from_f84e4611":"Available from","due_a73610f6":"Due","until_4a1f8cda":"Until"},"en-AU-x-unimelb":{"available_from_f84e4611":"Available from","due_a73610f6":"Due","until_4a1f8cda":"Until"},"en-CA":{"available_from_f84e4611":"Available from","due_a73610f6":"Due","until_4a1f8cda":"Until"},"en-GB":{"available_from_f84e4611":"Available from","due_a73610f6":"Due","until_4a1f8cda":"Until"},"en-GB-x-lbs":{"available_from_f84e4611":"Available from","due_a73610f6":"Due","until_4a1f8cda":"Until"},"en-GB-x-ukhe":{"available_from_f84e4611":"Available from","due_a73610f6":"Due","until_4a1f8cda":"Until"},"es":{"available_from_f84e4611":"Disponible desde","due_a73610f6":"Fecha de entrega","until_4a1f8cda":"Hasta"},"fa":{"available_from_f84e4611":"قابل دسترسی از","due_a73610f6":"مهلت","until_4a1f8cda":"تا"},"fi":{"available_from_f84e4611":"Saatavissa alkaen","due_a73610f6":"Määräpäivä","until_4a1f8cda":"Asti"},"fr":{"available_from_f84e4611":"Disponibles depuis le","due_a73610f6":"À rendre le","until_4a1f8cda":"Jusqu’au"},"fr-CA":{"available_from_f84e4611":"Disponible depuis","due_a73610f6":"Échéance","until_4a1f8cda":"Jusqu’au"},"he":{"available_from_f84e4611":"זמין מ","due_a73610f6":"תאריך יעד","until_4a1f8cda":"עד אשר"},"ht":{"available_from_f84e4611":"Disponib depi","due_a73610f6":"Delè","until_4a1f8cda":"Jiska"},"hu":{"available_from_f84e4611":"Elérhető ettől","due_a73610f6":"Határidő","until_4a1f8cda":"Eddig"},"hy":{"available_from_f84e4611":"Հասանելի է սկսված","due_a73610f6":"Մինչև"},"is":{"available_from_f84e4611":"Tiltækt frá","due_a73610f6":"Skilafrestur","until_4a1f8cda":"Þar til"},"it":{"available_from_f84e4611":"Disponibile da","due_a73610f6":"Scadenza","until_4a1f8cda":"Fino a"},"ja":{"available_from_f84e4611":"次から使用可能","due_a73610f6":"締切日","until_4a1f8cda":"次の日時から"},"ko":{"available_from_f84e4611":"다음부터 사용 가능","due_a73610f6":"기한"},"mi":{"available_from_f84e4611":"wātea mai","due_a73610f6":"E tika ana","until_4a1f8cda":"tae noa ki"},"nb":{"available_from_f84e4611":"Tilgjengelig fra","due_a73610f6":"Forfall","until_4a1f8cda":"Inntil"},"nb-x-k12":{"available_from_f84e4611":"Tilgjengelig fra","due_a73610f6":"Forfall","until_4a1f8cda":"Inntil"},"nl":{"available_from_f84e4611":"Beschikbaar vanaf","due_a73610f6":"Inleverdatum","until_4a1f8cda":"Tot"},"nn":{"available_from_f84e4611":"Tilgjengeleg frå","due_a73610f6":"Frist","until_4a1f8cda":"Til"},"pl":{"available_from_f84e4611":"Dostępne od","due_a73610f6":"Termin","until_4a1f8cda":"Do"},"pt":{"available_from_f84e4611":"Disponível de","due_a73610f6":"Vencimento","until_4a1f8cda":"Até"},"pt-BR":{"available_from_f84e4611":"Disponível a partir de","due_a73610f6":"Entrega","until_4a1f8cda":"Até"},"ru":{"available_from_f84e4611":"Доступно с","due_a73610f6":"Срок","until_4a1f8cda":"До"},"sl":{"available_from_f84e4611":"Na voljo od","due_a73610f6":"Rok","until_4a1f8cda":"Do"},"sv":{"available_from_f84e4611":"Tillgänglig från","due_a73610f6":"Inlämningsdatum","until_4a1f8cda":"Till"},"sv-x-k12":{"available_from_f84e4611":"Tillgänglig från","due_a73610f6":"Inlämningsdatum","until_4a1f8cda":"Till"},"tr":{"available_from_f84e4611":"Tarihinden itibaren kullanılabilir","due_a73610f6":"Bitiş","until_4a1f8cda":"Şu zamana kadar"},"uk":{"available_from_f84e4611":"Доступно з","due_a73610f6":"Очікується","until_4a1f8cda":"До тих пір"},"zh-Hans":{"available_from_f84e4611":"开始时间","due_a73610f6":"截止","until_4a1f8cda":"直至"},"zh-Hant":{"available_from_f84e4611":"可用起始時間：","due_a73610f6":"截止","until_4a1f8cda":"結束"}}'))
+var X=w["default"].scoped("DueDateCalendars")
+var Q=s("TSYQ")
+var Z=s.n(Q)
+class $ extends u.a.Component{constructor(){super(...arguments)
+this.labelledByForType=e=>"label-for-".concat(e,"-").concat(this.props.rowKey)
+this.datePicker=(e,t,s,a)=>{const n="unlock_at"!==e
+return Object(A["a"])(Y["a"],{dateType:e,handleUpdate:this.props.replaceDate.bind(this,e),rowKey:this.props.rowKey,labelledBy:this.labelledByForType(e),dateValue:this.props.dates[e],inputClasses:this.inputClasses(e),disabled:s,labelText:t,isFancyMidnight:n,readonly:a})}
+this.inputClasses=e=>Z()({date_field:true,datePickerDateField:true,DueDateInput:"due_at"===e,UnlockLockInput:"due_at"!==e})}render(){return Object(A["a"])("div",{},void 0,Object(A["a"])("div",{className:"ic-Form-group"},void 0,Object(A["a"])("div",{className:"ic-Form-control"},void 0,this.datePicker("due_at",X.t("Due"),this.props.disabled,this.props.dueDatesReadonly))),Object(A["a"])("div",{className:"ic-Form-group"},void 0,Object(A["a"])("div",{className:"ic-Form-control"},void 0,Object(A["a"])("div",{className:"Available-from-to"},void 0,Object(A["a"])("div",{className:"from"},void 0,this.datePicker("unlock_at",X.t("Available from"),this.props.disabled,this.props.availabilityDatesReadonly)),Object(A["a"])("div",{className:"to"},void 0,this.datePicker("lock_at",X.t("Until"),this.props.disabled,this.props.availabilityDatesReadonly))))))}}var ee=$
+Object(D["a"])(JSON.parse('{"ar":{"remove_these_dates_48453a81":"إزالة هذه التواريخ"},"cy":{"remove_these_dates_48453a81":"Tynnu’r dyddiadau hyn"},"da":{"remove_these_dates_48453a81":"Fjern disse datoer"},"da-x-k12":{"remove_these_dates_48453a81":"Fjern disse datoer"},"de":{"remove_these_dates_48453a81":"Diese Daten entfernen"},"el":{"remove_these_dates_48453a81":"Αφαίρεση αυτων των ημερομηνιών"},"en-AU":{"remove_these_dates_48453a81":"Remove These Dates"},"en-AU-x-unimelb":{"remove_these_dates_48453a81":"Remove These Dates"},"en-CA":{"remove_these_dates_48453a81":"Remove These Dates"},"en-GB":{"remove_these_dates_48453a81":"Remove these dates"},"en-GB-x-lbs":{"remove_these_dates_48453a81":"Remove these dates"},"en-GB-x-ukhe":{"remove_these_dates_48453a81":"Remove these dates"},"es":{"remove_these_dates_48453a81":"Eliminar estas fechas"},"fa":{"remove_these_dates_48453a81":"حذف این تاریخ ها"},"fi":{"remove_these_dates_48453a81":"Poista nämä päivämäärät"},"fr":{"remove_these_dates_48453a81":"Supprimer ces dates"},"fr-CA":{"remove_these_dates_48453a81":"Retirer ces dates"},"he":{"remove_these_dates_48453a81":"הסרת תאריכים אלו"},"ht":{"remove_these_dates_48453a81":"Elimine Dat Sa yo"},"hu":{"remove_these_dates_48453a81":"Ezen dátumok törlése"},"hy":{"remove_these_dates_48453a81":"Հեռացնել այս ամսաթվերը"},"is":{"remove_these_dates_48453a81":"Fjarlægja þessar dagsetningar"},"it":{"remove_these_dates_48453a81":"Rimuovi queste date"},"ja":{"remove_these_dates_48453a81":"これらの日付を削除"},"ko":{"remove_these_dates_48453a81":"이 날짜 제거"},"mi":{"remove_these_dates_48453a81":"Tangohia enei Rā"},"nb":{"remove_these_dates_48453a81":"Fjern disse datoene"},"nb-x-k12":{"remove_these_dates_48453a81":"Fjern disse datoene"},"nl":{"remove_these_dates_48453a81":"Deze datums verwijderen"},"nn":{"remove_these_dates_48453a81":"Fjern desse datoane"},"pl":{"remove_these_dates_48453a81":"Usuń te daty"},"pt":{"remove_these_dates_48453a81":"Remover estas datas"},"pt-BR":{"remove_these_dates_48453a81":"Remover Essas Datas"},"ru":{"remove_these_dates_48453a81":"Удалить эти даты"},"sl":{"remove_these_dates_48453a81":"Odstrani te datume"},"sv":{"remove_these_dates_48453a81":"Radera dessa datum"},"sv-x-k12":{"remove_these_dates_48453a81":"Radera dessa datum"},"tr":{"remove_these_dates_48453a81":"Bu Tarihleri Sil"},"uk":{"remove_these_dates_48453a81":"Видалити ці дати"},"zh-Hans":{"remove_these_dates_48453a81":"删除这些日期"},"zh-Hant":{"remove_these_dates_48453a81":"刪除這些日期"}}'))
+var te=w["default"].scoped("DueDateRemoveRowLink")
+var se=Object(A["a"])("i",{className:"icon-x",role:"presentation"})
+class ae extends u.a.Component{render(){return Object(A["a"])("div",{className:"DueDateRow__RemoveRow"},void 0,u.a.createElement("button",{className:"Button Button--link",onClick:this.props.handleClick,ref:"removeRowIcon",href:"#",title:te.t("Remove These Dates"),"aria-label":te.t("Remove These Dates"),type:"button"},se))}}var ne=ae
+Object(D["a"])(JSON.parse('{"ar":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"يقع تاريخ الاستحقاق في فترة مغلقة لمنح العلامات","due_date_set_1c6364db":"تعيين تاريخ الاستحقاق","loading_25990131":"جارٍ التحميل..."},"cy":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Mae’r dyddiad erbyn o fewn Cyfnod Graddio sydd wedi dod i ben","due_date_set_1c6364db":"Dyddiad Erbyn wedi’i osod","loading_25990131":"Wrthi’n llwytho..."},"da":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Forfaldsdato falder i en lukket karakterperiode","due_date_set_1c6364db":"Afleveringsdato indstillet","loading_25990131":"Indlæser ..."},"da-x-k12":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Forfaldsdato falder i en lukket vurderingsperiode","due_date_set_1c6364db":"Afleveringsdato indstillet","loading_25990131":"Indlæser ..."},"de":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Das Fälligkeitsdatum liegt innerhalb eines abgeschlossenen Benotungszeitraums.","due_date_set_1c6364db":"Fälligkeitstermin festgelegt","loading_25990131":"Wird geladen ..."},"el":{"due_date_set_1c6364db":"Έχει καθοριστεί Καταληκτική Ημερομηνία","loading_25990131":"Φόρτωση..."},"en-AU":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Due date falls in a closed Grading Period","due_date_set_1c6364db":"Due Date Set","loading_25990131":"Loading..."},"en-AU-x-unimelb":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Due date falls in a closed Grading Period","due_date_set_1c6364db":"Due Date Set","loading_25990131":"Loading..."},"en-CA":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Due date falls in a closed Grading Period","due_date_set_1c6364db":"Due Date Set","loading_25990131":"Loading..."},"en-GB":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Due date falls in a closed grading period","due_date_set_1c6364db":"Due Date Set","loading_25990131":"Loading..."},"en-GB-x-lbs":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Due date falls in a closed grading period","due_date_set_1c6364db":"Due Date Set","loading_25990131":"Loading..."},"en-GB-x-ukhe":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Due date falls in a closed grading period","due_date_set_1c6364db":"Due Date Set","loading_25990131":"Loading..."},"es":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"La fecha de entrega cae en un período de calificación cerrado","due_date_set_1c6364db":"Fecha de entrega establecida","loading_25990131":"Cargando..."},"fa":{"due_date_falls_in_a_closed_grading_period_e447ff2f":" تاریخ سررسید در یک دوره‌ نمره‌گذاری بسته شده قرار دارد","due_date_set_1c6364db":"تاریخ مهلت تعیین شد","loading_25990131":"در حال بارگذاری..."},"fi":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Määräpäivä osuu suljetulle arvosanojen antojaksolle","due_date_set_1c6364db":"Määräpäivää määritetty","loading_25990131":"Ladataan..."},"fr":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Cette date limite se trouve dans une période non ouverte à la notation","due_date_set_1c6364db":"Fixer la date d\'échéance","loading_25990131":"Chargement..."},"fr-CA":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"La date d’échéance tombe dans une période de notation fermée","due_date_set_1c6364db":"Fixer la date d\'échéance","loading_25990131":"En cours de chargement..."},"he":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"תאריך יעד נופל בתחום של תקופת הערכה סגורה","due_date_set_1c6364db":"תאריך יעד הוגדר","loading_25990131":"טוען..."},"ht":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Delè a tonbe nan yon Peryòd Klasman ki fèmen","due_date_set_1c6364db":"Delè Defini","loading_25990131":"Chajman..."},"hu":{"due_date_set_1c6364db":"Határidő beállítása","loading_25990131":"Töltődik..."},"hy":{"due_date_set_1c6364db":"Վերջնաժամկետի սահմանում","loading_25990131":"Բեռնում է..."},"is":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Skiladagur lendir á lokuðu matstímabili","due_date_set_1c6364db":"Skiladagur ákveðinn","loading_25990131":"Hleð inn..."},"it":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"La data di scadenza cade in un periodo di valutazione chiuso","due_date_set_1c6364db":"Impostazione data di scadenza","loading_25990131":"Caricamento in corso..."},"ja":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"締め切り日が終了した採点期間内にあります","due_date_set_1c6364db":"期日が設定されました","loading_25990131":"読み込み中・・・"},"ko":{"loading_25990131":"로드하는 중..."},"mi":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"E taka ana te rā e tika ana i roto i te wāhanga kōeke kua katia","due_date_set_1c6364db":"Rā e tika ana whakatau","loading_25990131":"E uta ana ...."},"nb":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Forfallsdatoen er innenfor en stengt vurderingsperiode","due_date_set_1c6364db":"Forfallsdato satt","loading_25990131":"Laster..."},"nb-x-k12":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Forfallsdatoen er innenfor en stengt vurderingsperiode","due_date_set_1c6364db":"Forfallsdato satt","loading_25990131":"Laster..."},"nl":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Inleverdatum valt binnen een afgesloten beoordelingsperiode","due_date_set_1c6364db":"Inleverdatum ingesteld","loading_25990131":"Bezig met laden..."},"nn":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Innleveringsfristen er innanfor ein lukka karaktersetjingsperiode","due_date_set_1c6364db":"Innleveringsfrist oppgitt","loading_25990131":"Lastar..."},"pl":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Termin przypada na zamknięty okres oceniania","due_date_set_1c6364db":"Termin dostarczenia ustawiony","loading_25990131":"Wczytywanie..."},"pt":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"A data de vencimento cai em um Período de Classificação fechado","due_date_set_1c6364db":"Definir data final","loading_25990131":"A carregar..."},"pt-BR":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"O prazo de entrega está em um período de avaliação fechado","due_date_set_1c6364db":"Prazo de entrega definido","loading_25990131":"Carregando..."},"ru":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Дата истечения срока выполнения не может наступать в закрытом периоде оценки успеваемости","due_date_set_1c6364db":"Установленная дата выполнения","loading_25990131":"Выполняется загрузка..."},"sl":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Rok je v zaprtem ocenjevalnem obdobju.","due_date_set_1c6364db":"Rok je nastavljen.","loading_25990131":"Nalaganje ..."},"sv":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Inlämningsdatum infaller i en stängd bedömningsperiod","due_date_set_1c6364db":"Inlämningsdatum inställt","loading_25990131":"Läser in ..."},"sv-x-k12":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Inlämningsdatum infaller i en stängd bedömningsperiod","due_date_set_1c6364db":"Inlämningsdatum inställt","loading_25990131":"Läser in ..."},"tr":{"due_date_set_1c6364db":"Bitiş Tarih Seti","loading_25990131":"Yükleniyor..."},"uk":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"Очікувана дата припадає на закритий період оцінювання","due_date_set_1c6364db":"Налаштування очікуваної дати","loading_25990131":"Завантаження..."},"zh-Hans":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"截止日期处在关闭评分周期内","due_date_set_1c6364db":"截止日期设置","loading_25990131":"加载中……"},"zh-Hant":{"due_date_falls_in_a_closed_grading_period_e447ff2f":"到期日可設於封閉評分期內","due_date_set_1c6364db":"截止日期已設置","loading_25990131":"正在載入……"}}'))
+var oe=w["default"].scoped("DueDateRow")
+class ie extends u.a.Component{constructor(){super(...arguments)
+this.tokenizedOverrides=()=>{const e=_.a.groupBy(this.props.overrides,e=>e.get("course_section_id")?"sectionOverrides":e.get("group_id")?"groupOverrides":e.get("noop_id")?"noopOverrides":"adhocOverrides"),t=e.sectionOverrides,s=e.groupOverrides,a=e.adhocOverrides,n=e.noopOverrides
+return _.a.union(this.tokenizedSections(t),this.tokenizedGroups(s),this.tokenizedAdhoc(a),this.tokenizedNoop(n))}
+this.tokenizedSections=e=>{e=e||[]
+return _.a.map(e,(e,t)=>({id:"section-key-".concat(t),type:"section",course_section_id:e.get("course_section_id"),name:this.nameForCourseSection(e.get("course_section_id"))}))}
+this.tokenizedGroups=e=>{e=e||[]
+return _.a.map(e,(e,t)=>({id:"group-key-".concat(t),type:"group",group_id:e.get("group_id"),name:this.nameForGroup(e.get("group_id"))}))}
+this.tokenizedAdhoc=e=>{e=e||[]
+return _.a.reduce(e,(e,t)=>{const s=_.a.map(t.get("student_ids"),this.tokenFromStudentId.bind(this))
+return e.concat(s)},[])}
+this.tokenizedNoop=e=>{e=e||[]
+return _.a.map(e,(e,t)=>({id:"noop-key-".concat(t),noop_id:e.get("noop_id"),name:e.get("title")}))}
+this.tokenFromStudentId=(e,t)=>({id:"student-key-".concat(t),type:"student",student_id:e,name:this.nameForStudentToken(e)})
+this.nameForCourseSection=e=>{const t=this.props.defaultSectionNamer(e)
+if(t)return t
+return this.nameOrLoading(this.props.sections,e)}
+this.nameForGroup=e=>this.nameOrLoading(this.props.groups,e)
+this.nameForStudentToken=e=>this.nameOrLoading(this.props.students,e)
+this.nameOrLoading=(e,t)=>{const s=e[t]
+return s?s.pronouns?"".concat(s.name," (").concat(s.pronouns,")"):s.name:oe.t("Loading...")}
+this.removeLinkIfNeeded=()=>{if(this.props.canDelete&&!this.props.inputsDisabled)return Object(A["a"])(ne,{handleClick:this.props.handleDelete})}
+this.renderClosedGradingPeriodNotification=()=>{if(this.props.inputsDisabled)return Object(A["a"])("span",{},void 0,oe.t("Due date falls in a closed Grading Period"))}}render(){return Object(A["a"])("div",{className:"Container__DueDateRow-item",role:"region","aria-label":oe.t("Due Date Set"),"data-row-key":this.props.rowKey},void 0,this.removeLinkIfNeeded(),Object(A["a"])(q,{tokens:this.tokenizedOverrides(),disabled:this.props.inputsDisabled,handleTokenAdd:this.props.handleTokenAdd,handleTokenRemove:this.props.handleTokenRemove,potentialOptions:this.props.validDropdownOptions,rowKey:this.props.rowKey,defaultSectionNamer:this.props.defaultSectionNamer,currentlySearching:this.props.currentlySearching,allStudentsFetched:this.props.allStudentsFetched}),Object(A["a"])(ee,{dates:this.props.dates,disabled:this.props.inputsDisabled,rowKey:this.props.rowKey,overrides:this.props.overrides,replaceDate:this.props.replaceDate,sections:this.props.sections,dueDatesReadonly:this.props.dueDatesReadonly,availabilityDatesReadonly:this.props.availabilityDatesReadonly}),this.renderClosedGradingPeriodNotification())}}var re=ie
+Object(D["a"])(JSON.parse('{"ar":{"add_8523c19b":"إضافة","add_new_set_of_due_dates_e8e240f":"إضافة مجموعة جديدة من تواريخ الاستحقاق"},"cy":{"add_8523c19b":"Ychwanegu","add_new_set_of_due_dates_e8e240f":"Ychwanegu set newydd o ddyddiadau erbyn"},"da":{"add_8523c19b":"Tilføj","add_new_set_of_due_dates_e8e240f":"Tilføj nyt sæt med deadlines"},"da-x-k12":{"add_8523c19b":"Tilføj","add_new_set_of_due_dates_e8e240f":"Tilføj nyt sæt med deadlines"},"de":{"add_8523c19b":"Hinzufügen","add_new_set_of_due_dates_e8e240f":"Neue Reihe von Abgabeterminen hinzufügen"},"el":{"add_8523c19b":"Πρόσθεση","add_new_set_of_due_dates_e8e240f":"Προσθέστε νέο σύνολο απο καταληκτικές ημερομηνίες"},"en-AU":{"add_8523c19b":"Add","add_new_set_of_due_dates_e8e240f":"Add a new set of due dates"},"en-AU-x-unimelb":{"add_8523c19b":"Add","add_new_set_of_due_dates_e8e240f":"Add a new set of due dates"},"en-CA":{"add_8523c19b":"Add","add_new_set_of_due_dates_e8e240f":"Add new set of due dates"},"en-GB":{"add_8523c19b":"Add","add_new_set_of_due_dates_e8e240f":"Add new set of due dates"},"en-GB-x-lbs":{"add_8523c19b":"Add","add_new_set_of_due_dates_e8e240f":"Add new set of due dates"},"en-GB-x-ukhe":{"add_8523c19b":"Add","add_new_set_of_due_dates_e8e240f":"Add new set of due dates"},"es":{"add_8523c19b":"Agregar","add_new_set_of_due_dates_e8e240f":"Agregar nuevo conjunto de fechas de entrega"},"fa":{"add_8523c19b":"افزودن","add_new_set_of_due_dates_e8e240f":"افزودن مجموعه جدید تاریخ های مهلت"},"fi":{"add_8523c19b":"Lisää","add_new_set_of_due_dates_e8e240f":"Lisää uusi määräpäivien joukko"},"fr":{"add_8523c19b":"Ajouter","add_new_set_of_due_dates_e8e240f":"Ajouter une nouvelle sélection de dates échéances"},"fr-CA":{"add_8523c19b":"Ajouter","add_new_set_of_due_dates_e8e240f":"Ajouter une nouvelle sélection de dates échéances"},"he":{"add_8523c19b":"הוסף","add_new_set_of_due_dates_e8e240f":"הוספת סט של תאריכי יעד חדשים"},"ht":{"add_8523c19b":"Ajoute","add_new_set_of_due_dates_e8e240f":"Ajoute nouvo seri delè"},"hu":{"add_8523c19b":"Hozzáadás","add_new_set_of_due_dates_e8e240f":"Új határidők hozzáadása"},"hy":{"add_8523c19b":"Ավելացնել","add_new_set_of_due_dates_e8e240f":"Ավելացնել կատարման ժամկետների նոր խմբեր"},"is":{"add_8523c19b":"Bæta við","add_new_set_of_due_dates_e8e240f":"Bæta við nýju setti skiladaga"},"it":{"add_8523c19b":"Aggiungi","add_new_set_of_due_dates_e8e240f":"Aggiungi nuovo set di scadenze"},"ja":{"add_8523c19b":"追加","add_new_set_of_due_dates_e8e240f":"新しい期日を追加"},"ko":{"add_8523c19b":"추가"},"mi":{"add_8523c19b":"Tāpiri","add_new_set_of_due_dates_e8e240f":"Tāpiri huinga hou o ngā rā e tika ana"},"nb":{"add_8523c19b":"Legg til","add_new_set_of_due_dates_e8e240f":"Legg til nytt sett av forfallsdatoer"},"nb-x-k12":{"add_8523c19b":"Legg til","add_new_set_of_due_dates_e8e240f":"Legg til nytt sett av forfallsdatoer"},"nl":{"add_8523c19b":"Toevoegen","add_new_set_of_due_dates_e8e240f":"Nieuwe set van inleverdatums toevoegen"},"nn":{"add_8523c19b":"Legg til","add_new_set_of_due_dates_e8e240f":"Legg til nye fristar"},"pl":{"add_8523c19b":"Dodaj","add_new_set_of_due_dates_e8e240f":"Dodaj nowy zestaw terminów"},"pt":{"add_8523c19b":"Adicionar","add_new_set_of_due_dates_e8e240f":"Adicionar nova definição depois das datas marcadas"},"pt-BR":{"add_8523c19b":"Adicionar","add_new_set_of_due_dates_e8e240f":"Adicionar novo conjunto de prazos de entrega"},"ru":{"add_8523c19b":"Добавить","add_new_set_of_due_dates_e8e240f":"Добавить новый набор установленных сроков"},"sl":{"add_8523c19b":"Dodaj","add_new_set_of_due_dates_e8e240f":"Dodaj nov nabor rokov"},"sv":{"add_8523c19b":"Lägg till","add_new_set_of_due_dates_e8e240f":"Lägg till en ny uppsättning inlämningsdatum"},"sv-x-k12":{"add_8523c19b":"Lägg till","add_new_set_of_due_dates_e8e240f":"Lägg till en ny uppsättning inlämningsdatum"},"tr":{"add_8523c19b":"Ekle","add_new_set_of_due_dates_e8e240f":"Son tarih dizesi ekleyin"},"uk":{"add_8523c19b":"Додати","add_new_set_of_due_dates_e8e240f":"Додати новий набір фіксованих дат"},"zh-Hans":{"add_8523c19b":"添加","add_new_set_of_due_dates_e8e240f":"添加新的截止日期"},"zh-Hant":{"add_8523c19b":"添加","add_new_set_of_due_dates_e8e240f":"添加新的截止日期"}}'))
+var _e=w["default"].scoped("assignDueDateAddRowButtonments")
+var de=Object(A["a"])("i",{className:"icon-plus",role:"presentation"})
+class ue extends u.a.Component{render(){if(!this.props.display)return null
+return u.a.createElement("button",{id:"add_due_date",ref:"addButton",className:"Button Button--add-row",onClick:this.props.handleAdd,type:"button"},de,Object(A["a"])("span",{className:"screenreader-only"},void 0,_e.t("Add new set of due dates")),Object(A["a"])("span",{"aria-hidden":"true"},void 0," ",_e.t("Add")))}}var le=ue
+var ce=s("tM9k")
+var he=s("mmEa")
+const ge={handleTokenAdd(e,t,s,a){this.setOverrideInitializer(s,a)
+return e.course_section_id?this.handleSectionTokenAdd(e,t):e.group_id?this.handleGroupTokenAdd(e,t):e.noop_id?this.handleNoopTokenAdd(e,t):this.handleStudentTokenAdd(e,t)},handleSectionTokenAdd(e,t){const s=this.newOverrideForRow({course_section_id:e.course_section_id,title:e.name})
+return _.a.union(t,[s])},handleGroupTokenAdd(e,t){const s=this.newOverrideForRow({group_id:e.group_id,title:e.name})
+return _.a.union(t,[s])},handleStudentTokenAdd(e,t){const s=this.findAdhoc(t)
+return s?this.addStudentToExistingAdhocOverride(e,s,t):this.createNewAdhocOverrideForRow(e,t)},addStudentToExistingAdhocOverride(e,t,s){const a=t.get("student_ids").concat(e.id)
+const n=t.set("student_ids",a)
+n.unset("title",{silent:true})
+return _.a.chain(s).difference([t]).union([n]).value()},createNewAdhocOverrideForRow(e,t){const s=this.newOverrideForRow({student_ids:[]})
+return this.addStudentToExistingAdhocOverride(e,s,t)},handleNoopTokenAdd(e,t){const s=this.newOverrideForRow({noop_id:e.noop_id,title:e.name})
+e==G["a"].conditionalRelease&&(t=this.removeDefaultSection(t))
+return _.a.union(t,[s])},handleTokenRemove(e,t){return e.course_section_id?this.handleSectionTokenRemove(e,t):e.group_id?this.handleGroupTokenRemove(e,t):e.noop_id?this.handleNoopTokenRemove(e,t):this.handleStudentTokenRemove(e,t)},handleSectionTokenRemove(e,t){return this.removeForType("course_section_id",e,t)},handleGroupTokenRemove(e,t){return this.removeForType("group_id",e,t)},handleNoopTokenRemove(e,t){return this.removeForType("noop_id",e,t)},removeForType(e,t,s){const a=_.a.find(s,s=>s.get(e)==t[e])
+return _.a.difference(s,[a])},removeDefaultSection(e){return this.handleTokenRemove({course_section_id:he["a"].defaultDueDateSectionID},e)},handleStudentTokenRemove(e,t){const s=this.findAdhoc(t,e.student_id)
+const a=_.a.difference(s.get("student_ids"),[e.student_id])
+if(_.a.isEmpty(a))return _.a.difference(t,[s])
+const n=s.set("student_ids",a)
+n.unset("title",{silent:true})
+return _.a.chain(t).difference([s]).union([n]).value()},setOverrideInitializer(e,t){t||(t={})
+const s={due_at:t.due_at,due_at_overridden:!!t.due_at,lock_at:t.lock_at,lock_at_overridden:!!t.lock_at,unlock_at:t.unlock_at,unlock_at_overridden:!!t.unlock_at,rowKey:e}
+this.newOverrideForRow=function(e){const t=_.a.extend(s,e)
+return new G["a"](t)}},findAdhoc:(e,t)=>_.a.find(e,e=>!!e.get("student_ids")&&(!t||_.a.includes(e.get("student_ids"),t)))}
+var fe=ge
+var pe=s("2DhO")
+function me(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[]
+return t.concat([e.id])}function ve(e){const t={}
+const s={}
+_.a.each(e,e=>{_.a.each(e.sections,s=>t[s]=me(e,t[s]))
+_.a.each(e.group_ids,t=>s[t]=me(e,s[t]))})
+return{studentIDsInSections:t,studentIDsInGroups:s}}function ye(e,t,s){return e.student_ids?e.student_ids:e.course_section_id&&t[e.course_section_id]?t[e.course_section_id]:e.group_id&&s[e.group_id]?s[e.group_id]:[]}function be(e,t){return void 0===t||null===e?e:null!==t&&e>t?e:t}function ke(e,t,s,a){const n=ye(a,e,t)
+_.a.each(n,e=>{const t=s[e]
+const n=pe["a"].parse(a.due_at)
+s[e]=be(n,t)})
+return s}function Se(e,t,s){const a=ve(s),n=a.studentIDsInSections,o=a.studentIDsInGroups
+const i=_.a.reduce(t,ke.bind(this,n,o),{})
+_.a.each(s,t=>{void 0!==i[t.id]||e.only_visible_to_overrides||(i[t.id]=pe["a"].parse(e.due_at))})
+return i}var we={effectiveDueDatesForAssignment:Se}
+Object(D["a"])(JSON.parse('{"ar":{"everyone_854554dd":"الجميع","everyone_else_6c6dc7b6":"أي شخص آخر"},"cy":{"everyone_854554dd":"Pawb","everyone_else_6c6dc7b6":"Pawb arall"},"da":{"everyone_854554dd":"Alle","everyone_else_6c6dc7b6":"Alle andre"},"da-x-k12":{"everyone_854554dd":"Alle","everyone_else_6c6dc7b6":"Alle andre"},"de":{"everyone_854554dd":"Jeder","everyone_else_6c6dc7b6":"Alle anderen"},"el":{"everyone_854554dd":"Όλοι/ες","everyone_else_6c6dc7b6":"Όλοι οι Άλλοι"},"en-AU":{"everyone_854554dd":"Everyone","everyone_else_6c6dc7b6":"Everyone Else"},"en-AU-x-unimelb":{"everyone_854554dd":"Everyone","everyone_else_6c6dc7b6":"Everyone Else"},"en-CA":{"everyone_854554dd":"Everyone","everyone_else_6c6dc7b6":"Everyone Else"},"en-GB":{"everyone_854554dd":"Everyone","everyone_else_6c6dc7b6":"Everyone else"},"en-GB-x-lbs":{"everyone_854554dd":"Everyone","everyone_else_6c6dc7b6":"Everyone else"},"en-GB-x-ukhe":{"everyone_854554dd":"Everyone","everyone_else_6c6dc7b6":"Everyone else"},"es":{"everyone_854554dd":"Todos","everyone_else_6c6dc7b6":"Todos los demás"},"fa":{"everyone_854554dd":"همه","everyone_else_6c6dc7b6":"هر کس دیگر"},"fi":{"everyone_854554dd":"Kaikki","everyone_else_6c6dc7b6":"Kaikki muut"},"fr":{"everyone_854554dd":"Tous","everyone_else_6c6dc7b6":"Tous les autres"},"fr-CA":{"everyone_854554dd":"Tous","everyone_else_6c6dc7b6":"Tous les autres"},"he":{"everyone_854554dd":"כל אחד","everyone_else_6c6dc7b6":"כל אחד אחר"},"ht":{"everyone_854554dd":"Tout Moun","everyone_else_6c6dc7b6":"Tout Lòt Moun yo"},"hu":{"everyone_854554dd":"Mindenki","everyone_else_6c6dc7b6":"Mindenki más "},"hy":{"everyone_854554dd":"Յուրաքանչյուրին","everyone_else_6c6dc7b6":"Մնացած բոլորը"},"is":{"everyone_854554dd":"Allir","everyone_else_6c6dc7b6":"Allir aðrir"},"it":{"everyone_854554dd":"Tutti","everyone_else_6c6dc7b6":"Tutti gli altri"},"ja":{"everyone_854554dd":"全員","everyone_else_6c6dc7b6":"他の全員"},"ko":{"everyone_854554dd":"모두","everyone_else_6c6dc7b6":"나머지 모든 사람"},"mi":{"everyone_854554dd":"tāngata katoa","everyone_else_6c6dc7b6":"tangata katoa atu"},"nb":{"everyone_854554dd":"Alle","everyone_else_6c6dc7b6":"Alle andre"},"nb-x-k12":{"everyone_854554dd":"Alle","everyone_else_6c6dc7b6":"Alle andre"},"nl":{"everyone_854554dd":"Iedereen","everyone_else_6c6dc7b6":"Alle anderen"},"nn":{"everyone_854554dd":"Alle","everyone_else_6c6dc7b6":"Alle andre"},"pl":{"everyone_854554dd":"Wszyscy","everyone_else_6c6dc7b6":"Wszyscy pozostali"},"pt":{"everyone_854554dd":"Todos","everyone_else_6c6dc7b6":"Todos os outros"},"pt-BR":{"everyone_854554dd":"Todo mundo","everyone_else_6c6dc7b6":"Todos os demais"},"ru":{"everyone_854554dd":"Все","everyone_else_6c6dc7b6":"Все остальные"},"sl":{"everyone_854554dd":"Vsi","everyone_else_6c6dc7b6":"Vsi ostali"},"sv":{"everyone_854554dd":"Alla","everyone_else_6c6dc7b6":"Alla andra"},"sv-x-k12":{"everyone_854554dd":"Alla","everyone_else_6c6dc7b6":"Alla andra"},"tr":{"everyone_854554dd":"Herkes","everyone_else_6c6dc7b6":"Geri kalan herkes"},"uk":{"everyone_854554dd":"Кожен","everyone_else_6c6dc7b6":"Всі інші"},"zh-Hans":{"everyone_854554dd":"所有人","everyone_else_6c6dc7b6":"其他所有人"},"zh-Hant":{"everyone_854554dd":"所有人","everyone_else_6c6dc7b6":"其他所有人"}}'))
+var De=w["default"].scoped("due_datesDueDates")
+var Oe=s("e/kD")
+s("MWZS")
+class Ae extends u.a.Component{constructor(){super(...arguments)
+this.state={students:{},sections:{},noops:{[G["a"].conditionalRelease.noop_id]:G["a"].conditionalRelease},rows:{},addedRowCount:0,defaultSectionId:null,currentlySearching:false,allStudentsFetched:false,selectedGroupSetId:null}
+this.fetchAdhocStudents=()=>{F.fetchStudentsByID(this.adhocOverrideStudentIDs())}
+this.handleStudentStoreChange=()=>{this.setState({students:F.getStudents(),currentlySearching:F.currentlySearching(),allStudentsFetched:F.allStudentsFetched()})}
+this.handleStudentGroupStoreChange=()=>{this.setState({groups:this.formattedGroupHash(ce["a"].getGroups()),selectedGroupSetId:ce["a"].getSelectedGroupSetId()})}
+this.replaceRow=(e,t,s)=>{const a={}
+const n=s||this.datesFromOverride(t[0])
+a[e]={overrides:t,dates:n,persisted:false}
+const o=_.a.extend(this.state.rows,a)
+this.setState({rows:o})}
+this.formattedSectionHash=e=>{const t=_.a.map(e,this.formatSection)
+return _.a.keyBy(t,"id")}
+this.formatSection=e=>_.a.extend(e.attributes,{course_section_id:e.id})
+this.formattedGroupHash=e=>{const t=_.a.map(e,this.formatGroup)
+return _.a.keyBy(t,"id")}
+this.formatGroup=e=>_.a.extend(e,{group_id:e.id})
+this.getAllOverrides=e=>{const t=e||this.state.rows
+return _.a.chain(t).values().map(e=>_.a.map(e.overrides,t=>{t.attributes.persisted=e.persisted
+return t})).flatten().compact().value()}
+this.adhocOverrides=()=>_.a.filter(this.getAllOverrides(),e=>e.get("student_ids"))
+this.adhocOverrideStudentIDs=()=>_.a.chain(this.adhocOverrides()).map(e=>e.get("student_ids")).flatten().uniq().value()
+this.datesFromOverride=e=>({due_at:e?e.get("due_at"):null,lock_at:e?e.get("lock_at"):null,unlock_at:e?e.get("unlock_at"):null})
+this.groupsForSelectedSet=()=>{const e=this.state.groups
+const t=this.state.selectedGroupSetId
+return _.a.chain(e).filter((e,s)=>e.group_category_id===t).keyBy("id").value()}
+this.rowsFromOverrides=e=>{const t=_.a.groupBy(e,e=>{e.set("rowKey",e.combinedDates())
+return e.get("rowKey")})
+return _.a.chain(t).map((e,t)=>{const s=this.datesFromOverride(e[0])
+return[t,{overrides:e,dates:s,persisted:true}]}).object().value()}
+this.sortedRowKeys=()=>{const e=_.a.chain(this.state.rows).keys().groupBy(e=>e.length>11?"datedKeys":"numberedKeys").value(),t=e.datedKeys,s=e.numberedKeys
+return _.a.chain([t,s]).flatten().compact().value()}
+this.rowRef=e=>"due_date_row-".concat(e)
+this.addRow=()=>{const e=this.state.addedRowCount+1
+this.replaceRow(e,[],{})
+this.setState({addedRowCount:e},(function(){this.focusRow(e)}))}
+this.removeRow=e=>{if(!this.canRemoveRow())return
+const t=_.a.indexOf(this.sortedRowKeys(),e)
+const s=_.a.omit(this.state.rows,e)
+this.setState({rows:s},(function(){const e=this.sortedRowKeys()
+const s=e[t]||e[e.length-1]
+this.focusRow(s)}))}
+this.canRemoveRow=()=>this.sortedRowKeys().length>1
+this.focusRow=e=>{c.a.findDOMNode(this.refs[this.rowRef(e)]).querySelector("input").focus()}
+this.changeRowToken=(e,t,s)=>{if(!s)return
+const a=this.state.rows[t]
+const n=e.call(fe,s,a.overrides,t,a.dates)
+this.replaceRow(t,n,a.dates)}
+this.handleInteractionStart=()=>{F.fetchStudentsForCourse()}
+this.handleTokenAdd=(e,t)=>{this.changeRowToken(fe.handleTokenAdd,e,t)}
+this.handleTokenRemove=(e,t)=>{this.changeRowToken(fe.handleTokenRemove,e,t)}
+this.replaceDate=(e,t,s)=>{const a=this.state.rows[e].overrides
+const n=this.state.rows[e].dates
+const o=_.a.map(a,e=>{e.set(t,s)
+return e})
+const i={}
+i[t]=s
+const r=_.a.extend(n,i)
+this.replaceRow(e,o,r)}
+this.defaultSectionNamer=e=>{if(e!==this.props.defaultSectionId)return null
+const t=_.a.isEqual(this.chosenSectionIds(),[e])
+const s=_.a.isEmpty(this.chosenSectionIds())
+const a=_.a.isEmpty(this.chosenGroupIds())
+const n=_.a.isEmpty(this.chosenStudentIds())
+const o=t||s
+if(o&&n&&a)return De.t("Everyone")
+return De.t("Everyone Else")}
+this.addStudentIfInClosedPeriod=(e,t,s,a)=>{const n=this.state.students[a]
+n&&e.isDateInClosedGradingPeriod(s)&&(t=t.concat(n))
+return t}
+this.studentsInClosedPeriods=()=>{const e=_.a.values(this.state.students)
+if(_.a.isEmpty(e))return e
+const t=_.a.map(this.props.overrides,e=>e.attributes)
+const s={due_at:this.props.dueAt,only_visible_to_overrides:this.props.isOnlyVisibleToOverrides}
+const a=we.effectiveDueDatesForAssignment(s,t,e)
+const n=new Oe["a"](this.props.gradingPeriods)
+return _.a.reduce(a,this.addStudentIfInClosedPeriod.bind(this,n),[])}
+this.validDropdownOptions=()=>{let e=this.valuesWithOmission({object:this.state.students,keysToOmit:this.chosenStudentIds()})
+let t=this.valuesWithOmission({object:this.groupsForSelectedSet(),keysToOmit:this.chosenGroupIds()})
+let s=this.valuesWithOmission({object:this.state.sections,keysToOmit:this.chosenSectionIds()})
+const a=this.valuesWithOmission({object:this.state.noops,keysToOmit:this.chosenNoops()})
+if(this.props.hasGradingPeriods&&!_.a.includes(ENV.current_user_roles,"admin")){var n=this.filterDropdownOptionsForMultipleGradingPeriods(e,t,s)
+e=n.validStudents
+t=n.validGroups
+s=n.validSections}return _.a.union(e,s,t,a)}
+this.extractGroupsAndSectionsFromStudent=(e,t,s)=>{_.a.each(s.group_ids,s=>{t.groupsToOmit[s]=t.groupsToOmit[s]||e[s]})
+_.a.each(s.sections,e=>{t.sectionsToOmit[e]=t.sectionsToOmit[e]||this.state.sections[e]})
+return t}
+this.groupsAndSectionsInClosedPeriods=e=>{const t=this.groupsForSelectedSet()
+const s=_.a.reduce(e,this.extractGroupsAndSectionsFromStudent.bind(this,t),{groupsToOmit:{},sectionsToOmit:{}})
+return{groupsToOmit:_.a.values(s.groupsToOmit),sectionsToOmit:_.a.values(s.sectionsToOmit)}}
+this.filterDropdownOptionsForMultipleGradingPeriods=(e,t,s)=>{const a=this.studentsInClosedPeriods()
+if(_.a.isEmpty(a))return{validStudents:e,validGroups:t,validSections:s}
+{const n=this.groupsAndSectionsInClosedPeriods(a),o=n.groupsToOmit,i=n.sectionsToOmit
+return{validStudents:_.a.difference(e,a),validGroups:_.a.difference(t,o),validSections:_.a.difference(s,i)}}}
+this.chosenIds=e=>_.a.chain(this.getAllOverrides()).map(t=>t.get(e)).compact().value()
+this.chosenSectionIds=()=>this.chosenIds("course_section_id")
+this.chosenStudentIds=()=>_.a.flatten(this.chosenIds("student_ids"))
+this.chosenGroupIds=()=>this.chosenIds("group_id")
+this.chosenNoops=()=>this.chosenIds("noop_id")
+this.valuesWithOmission=e=>_.a.chain(e.object).omit(e.keysToOmit).values().value()
+this.disableInputs=e=>{const t=!e.persisted||_.a.includes(ENV.current_user_roles,"admin")
+if(!this.props.hasGradingPeriods||t)return false
+const s=e.dates||{}
+return this.isInClosedGradingPeriod(s.due_at)}
+this.isInClosedGradingPeriod=e=>{if(void 0===e)return false
+const t=null===e?null:new Date(e)
+return new Oe["a"](this.props.gradingPeriods).isDateInClosedGradingPeriod(t)}
+this.rowsToRender=()=>_.a.map(this.sortedRowKeys(),e=>{const t=this.state.rows[e]
+const s=t.overrides||[]
+const a=t.dates||{}
+return u.a.createElement(re,{ref:this.rowRef(e),inputsDisabled:this.disableInputs(t),overrides:s,key:e,rowKey:e,dates:a,students:this.state.students,sections:this.state.sections,groups:this.state.groups,canDelete:this.canRemoveRow(),validDropdownOptions:this.validDropdownOptions(),handleDelete:this.removeRow.bind(this,e),handleTokenAdd:this.handleTokenAdd.bind(this,e),handleTokenRemove:this.handleTokenRemove.bind(this,e),defaultSectionNamer:this.defaultSectionNamer,replaceDate:this.replaceDate.bind(this,e),currentlySearching:this.state.currentlySearching,allStudentsFetched:this.state.allStudentsFetched,dueDatesReadonly:this.props.dueDatesReadonly,availabilityDatesReadonly:this.props.availabilityDatesReadonly})})}componentDidMount(){this.setState({rows:this.rowsFromOverrides(this.props.overrides),sections:this.formattedSectionHash(this.props.sections),groups:{},selectedGroupSetId:this.props.selectedGroupSetId},this.fetchAdhocStudents)
+F.addChangeListener(this.handleStudentStoreChange)
+ce["a"].setGroupSetIfNone(this.props.selectedGroupSetId)
+ce["a"].addChangeListener(this.handleStudentGroupStoreChange)
+ce["a"].fetchGroupsForCourse()}componentWillUnmount(){F.removeChangeListener(this.handleStudentStoreChange)
+ce["a"].removeChangeListener(this.handleStudentGroupStoreChange)}componentWillUpdate(e,t){const s=this.getAllOverrides(t.rows)
+this.props.syncWithBackbone(s)}render(){const e=this.rowsToRender()
+return Object(A["a"])("div",{className:"ContainerDueDate",onMouseEnter:this.handleInteractionStart},void 0,Object(A["a"])("div",{id:"bordered-wrapper",className:"Container__DueDateRow"},void 0,e),this.props.dueDatesReadonly||this.props.availabilityDatesReadonly?null:Object(A["a"])(le,{handleAdd:this.addRow,display:true}))}}Ae.defaultProps={dueDatesReadonly:false,availabilityDatesReadonly:false}
+var Te=s("c6Cm")
+s("Z+Ib")
+var xe=function(e,t){return function(){return e.apply(t,arguments)}},je=function(e,t){for(var s in t)Ie.call(t,s)&&(e[s]=t[s])
+function a(){this.constructor=e}a.prototype=t.prototype
+e.prototype=new a
+e.__super__=t.prototype
+return e},Ie={}.hasOwnProperty,Ne=[].indexOf||function(e){for(var t=0,s=this.length;t<s;t++)if(t in this&&this[t]===e)return t
+return-1}
+t["a"]=function(e){je(t,e)
+function t(){this.getAllDates=xe(this.getAllDates,this)
+this.getOverrides=xe(this.getOverrides,this)
+this.sectionsWithoutOverrides=xe(this.sectionsWithoutOverrides,this)
+this.overridesContainDefault=xe(this.overridesContainDefault,this)
+this.containsSectionsWithoutOverrides=xe(this.containsSectionsWithoutOverrides,this)
+this.getDefaultDueDate=xe(this.getDefaultDueDate,this)
+this.setNewOverridesCollection=xe(this.setNewOverridesCollection,this)
+this.showError=xe(this.showError,this)
+this.validateGroupOverrides=xe(this.validateGroupOverrides,this)
+this.validateTokenInput=xe(this.validateTokenInput,this)
+this.validateDatetimes=xe(this.validateDatetimes,this)
+this.clearExistingDueDateErrors=xe(this.clearExistingDueDateErrors,this)
+this.postToSIS=xe(this.postToSIS,this)
+this.validateBeforeSave=xe(this.validateBeforeSave,this)
+return t.__super__.constructor.apply(this,arguments)}t.mixin(S["a"])
+t.prototype.template=b
+t.prototype.render=function(){var e,t
+t=this.$el[0]
+if(!t)return
+e=u.a.createElement(Ae,{overrides:this.model.overrides.models,syncWithBackbone:this.setNewOverridesCollection,sections:this.model.sections.models,defaultSectionId:this.model.defaultDueDateSectionId,selectedGroupSetId:this.model.assignment.get("group_category_id"),gradingPeriods:this.gradingPeriods,hasGradingPeriods:this.hasGradingPeriods,isOnlyVisibleToOverrides:this.model.assignment.isOnlyVisibleToOverrides(),dueAt:pe["a"].parse(this.model.assignment.get("due_at")),dueDatesReadonly:this.options.dueDatesReadonly,availabilityDatesReadonly:this.options.availabilityDatesReadonly})
+return c.a.render(e,t)}
+t.prototype.gradingPeriods=Te["a"].deserializePeriods(ENV.active_grading_periods)
+t.prototype.hasGradingPeriods=!!ENV.HAS_GRADING_PERIODS
+t.prototype.validateBeforeSave=function(e,t){if(!e)return t
+t=this.validateDatetimes(e,t)
+t=this.validateTokenInput(e,t)
+t=this.validateGroupOverrides(e,t)
+return t}
+t.prototype.postToSIS=function(e){var t,s,a,o,i
+a=this.model.assignment.objectType()
+t=e.postToSIS
+o=false
+if("Assignment"===a||"Discussion"===a){s=n()("#assignment_grading_type").find(":selected").val()
+o="not_graded"!==s&&t}else if("Quiz"===a){s=n()("#quiz_assignment_id").find(":selected").val()
+i="practice_quiz"!==s&&"survey"!==s
+o=i&&t}return o}
+t.prototype.clearExistingDueDateErrors=function(){var e,t,s,a,o,i
+o=["due_at","unlock_at","lock_at"]
+i=[]
+for(s=0,a=o.length;s<a;s++){t=o[s]
+e=n()('[data-date-type="'+t+'"]')
+i.push(e.removeAttr("data-error-type"))}return i}
+t.prototype.validateDatetimes=function(e,t){var s,a,o,i,r,d,u,l,c,h
+this.clearExistingDueDateErrors(e)
+a=[]
+o=new k["a"]({date_range:_.a.extend({},ENV.VALID_DATE_RANGE),hasGradingPeriods:this.hasGradingPeriods,gradingPeriods:this.gradingPeriods,userIsAdmin:_.a.includes(ENV.current_user_roles,"admin"),postToSIS:this.postToSIS(e)})
+c=e.assignment_overrides
+for(r=0,d=c.length;r<d;r++){l=c[r]
+if(_.a.includes(a,l.rowKey))continue
+h=o.validateDatetimes(l)
+_.a.keys(h).forEach((function(e,t){return h[e]={message:h[e]}}))
+t=_.a.extend(t,h)
+for(i in h){if(!Ie.call(h,i))continue
+u=h[i]
+s=n()('[data-date-type="'+i+'"][data-row-key="'+l.rowKey+'"]')
+s.attr("data-error-type",i)
+u=_.a.extend(u,{element:s,showError:this.showError})}a.push(l.rowKey)}return t}
+t.prototype.validateTokenInput=function(e,t){var s,a,o,i,r,d,u,l,c,h
+h=_.a.pluck(e.assignment_overrides,"rowKey")
+o=O.t("You must have a student or section selected")
+u=n()(".Container__DueDateRow-item")
+for(i=0,d=u.length;i<d;i++){l=u[i]
+c=""+n()(l).attr("data-row-key")
+r="tokenInputFor"+c
+s=n()('[data-row-identifier="'+r+'"]')[0]
+a=n()(s).find("input")
+a.removeAttr("data-error-type")
+if(_.a.includes(h,c))continue
+t=_.a.extend(t,{blankOverrides:{message:o,element:a,showError:this.showError}})
+a.attr("data-error-type","blankOverrides")}return t}
+t.prototype.validateGroupOverrides=function(e,t){var s,a,o,i,r,d,u,l,c,h,g,f,p
+if(!ce["a"].fetchComplete())return t
+p=ce["a"].groupsFilteredForSelectedSet()
+f=_.a.pluck(p,"id")
+a=_.a.filter(e.assignment_overrides,(function(e){return!!e.group_id}))
+u=_.a.filter(a,(function(e){var t
+return t=e.group_id,Ne.call(f,t)<0}))
+d=_.a.pluck(u,"rowKey")
+r=O.t("You cannot assign to a group outside of the assignment's group set")
+c=n()(".Container__DueDateRow-item")
+for(o=0,l=c.length;o<l;o++){h=c[o]
+g=""+n()(h).attr("data-row-key")
+if(!_.a.includes(d,g))continue
+i="tokenInputFor"+g
+s=n()('[data-row-identifier="'+i+'"]').find("input")
+t=_.a.extend(t,{invalidGroupOverride:{message:r,element:s,showError:this.showError}})}return t}
+t.prototype.showError=function(e,t){if(!e)return
+return e.errorBox(t).css("z-index","20").attr("role","alert")}
+t.prototype.setNewOverridesCollection=function(e){var t
+this.model.overrides.reset(e)
+t=!this.model.overrides.containsDefaultDueDate()
+return this.model.assignment.isOnlyVisibleToOverrides(t)}
+t.prototype.getDefaultDueDate=function(){return this.model.getDefaultDueDate()}
+t.prototype.containsSectionsWithoutOverrides=function(){return this.model.containsSectionsWithoutOverrides()}
+t.prototype.overridesContainDefault=function(){return this.model.overridesContainDefault()}
+t.prototype.sectionsWithoutOverrides=function(){return this.model.sectionsWithoutOverrides()}
+t.prototype.getOverrides=function(){return this.model.overrides.toJSON()}
+t.prototype.getAllDates=function(){return this.model.overrides.datesJSON()}
+return t}(i.a.View)},iWYe:function(e,t,s){"use strict"
+var a=s("An8g")
+var n=s("ouhR")
+var o=s.n(n)
+var i=s("q1tI")
+var r=s.n(i)
+s("17x9")
+var _=s("i8i4")
+var d=s.n(_)
+var u=s("pQTu")
+var l=s("m0r6")
+Object(l["a"])(JSON.parse('{"ar":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} في نطاق مسارات الإتقان %{index}"},"cy":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} o fewn ystod llwybrau meistroli - %{index}"},"da":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} inden for læringssti-området %{index}"},"da-x-k12":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} inden for læringssti-området %{index}"},"de":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} im Bereich der Leistungsziel-Pfade %{index}"},"en-AU":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} in mastery paths range %{index}"},"en-AU-x-unimelb":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} in mastery paths range %{index}"},"en-CA":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} in mastery paths range %{index}"},"en-GB":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} in mastery paths range %{index}"},"en-GB-x-lbs":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} in mastery paths range %{index}"},"en-GB-x-ukhe":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} in mastery paths range %{index}"},"es":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} en el intervalo de las rutas de dominio %{index}"},"fa":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} در محدوده مسیرهای تسلط %{index}"},"fi":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} hallintapolkujen vaihteluvälillä %{index}"},"fr":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} en plage de Chemins de Réussite %{index}"},"fr-CA":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} en plage de Chemins de Réussite %{index}"},"he":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} בטווח מסלולי התמחות %{index}"},"ht":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} nan gam pakou metriz %{index}"},"is":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} í tileinkunarslóðasviði %{index}"},"it":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} nell\'intervallo del percorso di acquisizione della padronanza %{index}"},"ja":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} マスタリーパスの範囲内%{index}"},"mi":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} I roto i ngā wāhanga ara hinganga %{index}"},"nb":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} i mestringsveiens rekkevidde %{index}"},"nb-x-k12":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} i mestringsveiens rekkevidde %{index}"},"nl":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} In bereik van meesterschapspaden %{index}"},"nn":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} i meistringssti-spenn %{index}"},"pl":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} w zakresie ścieżek mistrzowskich %{index}"},"pt":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} na variedade mastery paths %{index}"},"pt-BR":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} na escala de caminhos de domínio %{index}"},"ru":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} в диапазоне путей усвоения %{index}"},"sl":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} v razponu napredovanja v odličnosti %{index}"},"sv":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} i intervallet för måluppfyllelsevägen %{index}"},"sv-x-k12":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} i intervallet för måluppfyllelsevägen %{index}"},"tr":{"error_in_mastery_paths_range_index_7d17ddac":"%{index}yeterlilik süreci aralığında %{error}"},"uk":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} у діапазоні шляхів до опанування  %{index}"},"zh-Hans":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} 在主路径范围内%{index}"},"zh-Hant":{"error_in_mastery_paths_range_index_7d17ddac":"%{error} 路徑範圍%{index}"}}'))
+s("jQeR")
+s("0sPK")
+var c=u["default"].scoped("conditional_release")
+var h=s("HbFp")
+s("Z+Ib")
+const g=15e3
+var f=Object(a["a"])("div",{id:"canvas-conditional-release-editor"})
+class p extends r.a.Component{constructor(){var e
+super(...arguments)
+e=this
+this.state={editor:null}
+this.validateBeforeSave=()=>{const e=[]
+const t=this.state.editor?this.state.editor.getErrors():null
+t&&t.forEach(t=>{o.a.screenReaderFlashError(c.t("%{error} in mastery paths range %{index}",{error:t.error,index:t.index+1}))
+e.push({message:t.error})})
+return 0==e.length?null:e}
+this.focusOnError=()=>{this.state.editor&&this.state.editor.focusOnError()}
+this.updateAssignment=function(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}
+if(!e.state.editor)return
+"not_graded"===t.grading_type&&(t.id=null)
+e.state.editor.updateAssignment({grading_standard_id:t.grading_standard_id,grading_type:t.grading_type,id:t.id,points_possible:t.points_possible,submission_types:t.submission_types})}
+this.save=function(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:g
+if(!e.state.editor)return o.a.Deferred().reject("mastery paths editor uninitialized")
+const s=o.a.Deferred()
+setTimeout(()=>{s.reject("timeout")},t)
+e.state.editor.saveRule().then(()=>{s.resolve()}).catch(e=>{s.reject(e)})
+return s.promise()}
+this.loadEditor=()=>{const e=this.props.env.editor_url
+o.a.ajax({url:e,dataType:"script",cache:true,success:this.createEditor})}
+this.createEditor=()=>{const e=this.props.env
+const t=new conditional_release_module.ConditionalReleaseEditor({jwt:e.jwt,assignment:e.assignment,courseId:e.context_id,locale:{locale:e.locale,parseNumber:h["a"].parse,formatNumber:c.n},gradingType:e.grading_type,baseUrl:e.base_url})
+t.attach(document.getElementById("canvas-conditional-release-editor"),document.getElementById("application"))
+this.setState({editor:t})}}componentDidMount(){this.loadEditor()}render(){return f}}p.displayName="ConditionalReleaseEditor"
+const m=function(e,t,s){const n=Object(a["a"])(p,{env:s,type:t})
+return d.a.render(n,e)}
+const v={Editor:p,attach:m}
+t["a"]=v},tM9k:function(e,t,s){"use strict"
+var a=s("GLiE")
+var n=s.n(a)
+var o=s("6o7I")
+var i=s("ouhR")
+var r=s.n(i)
+var _=s("Cf7h")
+var d=s("+PF/")
+const u={groups:{},fetchComplete:false,selectedGroupSetId:null}
+const l=Object(o["a"])(r.a.extend(true,{},u))
+l.fetchGroupsForCourse=function(e){const t=Object(_["a"])(window.ENV.context_asset_string)[1]
+const s=e||"/api/v1/courses/"+t+"/groups"
+r.a.getJSON(s,{},this.fetchGroupsCallback.bind(this))}
+l.fetchGroupsCallback=function(e,t,s){const a=Object(d["a"])(s)
+const n=e
+this.addGroups(n)
+a.next?this.fetchGroupsForCourse(a.next):this.markFetchComplete()}
+l.getGroups=function(){return l.getState().groups}
+l.getSelectedGroupSetId=function(){return l.getState().selectedGroupSetId}
+l.addGroups=function(e){const t=n.a.keyBy(e,"id")
+const s=n.a.extend(t,this.getState().groups)
+this.setState({groups:s})}
+l.setSelectedGroupSet=function(e){this.setState({selectedGroupSetId:e})}
+l.setGroupSetIfNone=function(e){this.getSelectedGroupSetId()||this.setSelectedGroupSet(e)}
+l.markFetchComplete=function(){this.setState({fetchComplete:true})}
+l.fetchComplete=function(){return this.getState().fetchComplete}
+l.reset=function(){this.setState(r.a.extend(true,{},u))}
+l.groupsFilteredForSelectedSet=function(){const e=this.getState().groups
+const t=this.getState().selectedGroupSetId
+return n.a.filter(e,(e,s)=>e.group_category_id===t)}
+t["a"]=l}}])
+
+//# sourceMappingURL=109-c-8841eda7c5.js.map

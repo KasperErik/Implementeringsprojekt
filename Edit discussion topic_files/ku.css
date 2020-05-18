@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=greek-ext,latin-ext');
+body {
+    font-family: 'Open Sans', arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', arial, sans-serif;
+}
+
+.ReactModal__Overlay.CourseWizard__modalOverlay {
+    display: none!important;
+}
+
+.notification-prefs-table [data-category="added_to_conversation"] > .comm-event-option-contents,
+.notification-prefs-table [data-category="conversation_message"] > .comm-event-option-contents {
+    visibility: hidden;
+}
+
+/*ul#section-tabs li>a.syllabus,
+.syllabus {
+    display: none!important;
+}*/
+
+.course-options .button-sidebar-wide.wizard_popup_link {
+    display: none!important;
+}
+
+#signup_teacher, #signup_parent {
+  /* Disable unauthorized signup */
+  display: none;
+}
+
+.Reminder__course-setup-body .btn.btn-primary.wizard_popup_link.auto_open {
+    display: none;
+}
+#right-side .reset_course_content_button {
+    display: none;
+}
+
+/*#edit_course_home_content_form input[value="syllabus"] {
+   display: none;
+}*/
+
+#course_locale, label[for=course_locale] {
+    display: none;
+}
+.hideThis {
+    display: none!important;
+}
+
+.fadeIn {
+    display: inline-block!important;
+    -webkit-animation: fadeIn 1s ease-out;
+    animation: fadeIn 1s ease-out;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+[data-category="conversation_message"] .event-option-selection [data-value="daily"] {
+    visibility: hidden;
+}
+
+[data-category="conversation_message"] .event-option-selection [data-value="weekly"] {
+    visibility: hidden;
+}
+
+[data-category="conversation_message"] .event-option-selection [data-value="never"] {
+    visibility: hidden;
+}
+/* #user_locale option:nth-of-type(2) ~ option {
+    display: none;
+    visibility: hidden;
+} */
+
+/* Discussion threads */
+.replies {
+ padding-left: 7px;
+ border-left: solid #f2f2f2 16px;
+}
+
+.discussion-read-state-btn {
+  top: 32px;
+}
+
+div.entry-content {
+  padding-left:0px !important;
+}
+
+/* Hide Peer grading */
+#assignment_peer_reviews_fields {
+    display: none!important;
+}
+
+/* URKUND */
+/* #similarity_detection_tools .tool_launch {
+  display: none;
+}
+#report_visibility_picker_label, #report_visibility_picker {
+  display: none;
+} */

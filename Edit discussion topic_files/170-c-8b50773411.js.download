@@ -1,0 +1,416 @@
+(window["canvasWebpackJsonp"]=window["canvasWebpackJsonp"]||[]).push([[170],{eSqh:function(e,a,n){"use strict"
+var r=n("ejBJ")
+var t=n("pQTu")
+var s=n("m0r6")
+Object(s["a"])(JSON.parse('{"ar":{"grading_standards":{"buttons":{"save":"حفظ"},"confirm":{"delete_grading_scheme":"هل ترغب بالتأكيد في حذف نظام تقييم الدرجات هذا؟","unlink_grading_scheme":"هل ترغب بالتأكيد في إلغاء ارتباط نظام تقييم الدرجات هذا؟"},"errors":{"cannot_delete_grading_scheme":"توجد مشكلة في حذف نظام تقييم الدرجات هذا","cannot_load_grading_standards":"فشل تحميل معايير تقييم الدرجات.  الرجاء إعادة المحاولة مرة أخرى","cannot_remove_grading_scheme":"توجد مشكلة في إزالة نظام تقييم الدرجات هذا.  الرجاء إعادة تحميل الصفحة والمحاولة مرة أخرى.","save_failed":"فشل الحفظ"},"grading_scheme_currently_set":"تم التعيين حاليًا","grading_scheme_not_set":"غير معيّن","no_grading_standards":"لم يتم العثور على مخططات تقييم الدرجات","status":{"loading_grading_standards":"جارٍ تحميل معايير تقييم الدرجات...","saving":"جارٍ الحفظ..."},"titles":{"grading_scheme_info":"عرض/تحرير نظام تقييم الدرجات"}}},"cy":{"grading_standards":{"buttons":{"save":"Cadw"},"confirm":{"delete_grading_scheme":"Ydych chi’n siŵr eich bod am ddileu’r cynllun graddau hwn?","unlink_grading_scheme":"Ydych chi’n siŵr eich bod am ddatgysylltu’r cynllun graddau hwn?"},"errors":{"cannot_delete_grading_scheme":"Problem wrth ddileu’r cynllun graddau hwn","cannot_load_grading_standards":"Wedi methu llwytho Safonau Graddio.  Rhowch gynnig arall arni","cannot_remove_grading_scheme":"Problem wrth dynnu’r cynllun graddau hwn.  Mae angen i chi ail-lwytho’r dudalen a rhoi cynnig arall arni.","save_failed":"Wedi methu cadw"},"grading_scheme_currently_set":"Wedi’i osod ar hyn o bryd","grading_scheme_not_set":"Heb osod","no_grading_standards":"Heb ddod o hyd i gynlluniau graddau","status":{"loading_grading_standards":"Wrthi’n llwytho Safonau Graddio...","saving":"Wrthi’n cadw..."},"titles":{"grading_scheme_info":"Gweld/Golygu Cynllun Graddau"}}},"da":{"grading_standards":{"buttons":{"save":"Gem"},"confirm":{"delete_grading_scheme":"Er du sikker på, at du vil slette denne karakterordning?","unlink_grading_scheme":"Er du sikker på, at du vil fjerne linket til denne karakterordning?"},"errors":{"cannot_delete_grading_scheme":"Der opstod et problem under sletning af denne karakterordning","cannot_load_grading_standards":"Det mislykkedes at overføre karakterstandarder. Prøv igen","cannot_remove_grading_scheme":"Der opstod et problem ved sletningen af denne karakterordning. Indlæs siden på ny og prøv igen.","save_failed":"Lagring mislykkedes"},"grading_scheme_currently_set":"Aktuelt indstillet","grading_scheme_not_set":"Ikke indstillet","no_grading_standards":"Der blev ikke fundet nogen karakterordninger","status":{"loading_grading_standards":"Indlæser karakterstandarder ...","saving":"Gemmer ..."},"titles":{"grading_scheme_info":"Vis/rediger karakterordning"}}},"da-x-k12":{"grading_standards":{"buttons":{"save":"Gem"},"confirm":{"delete_grading_scheme":"Er du sikker på, at du vil slette denne vurderingsordning?","unlink_grading_scheme":"Er du sikker på, at du vil fjerne linket til denne vurderingsordning?"},"errors":{"cannot_delete_grading_scheme":"Der opstod et problem under sletning af denne vurderingsordning","cannot_load_grading_standards":"Det mislykkedes at overføre vurderingsstandarder. Prøv igen","cannot_remove_grading_scheme":"Der opstod et problem ved sletningen af denne vurderingsordning. Indlæs siden på ny og prøv igen.","save_failed":"Lagring mislykkedes"},"grading_scheme_currently_set":"Aktuelt indstillet","grading_scheme_not_set":"Ikke indstillet","no_grading_standards":"Der blev ikke fundet nogen vurderingsordninger","status":{"loading_grading_standards":"Indlæser vurderingsstandarder ...","saving":"Gemmer ..."},"titles":{"grading_scheme_info":"Vis/rediger vurderingsordning"}}},"de":{"grading_standards":{"buttons":{"save":"Speichern"},"confirm":{"delete_grading_scheme":"Möchten Sie dieses Benotungssystem wirklich löschen?","unlink_grading_scheme":"Möchten Sie diese Verknüpfung dieses Benotungssystems wirklich entfernen?"},"errors":{"cannot_delete_grading_scheme":"Beim Löschen dieses Benotungssystems ist ein Problem aufgetreten.","cannot_load_grading_standards":"Der Ladevorgang der Benotungsstandards ist fehlgeschlagen. Versuchen Sie es erneut","cannot_remove_grading_scheme":"Beim Entfernen dieses Benotungssystems ist ein Problem aufgetreten. Bitte laden Sie die Seite erneut und versuchen Sie es ein weiteres Mal.","save_failed":"Speichern fehlgeschlagen"},"grading_scheme_currently_set":"Aktuell definiert","grading_scheme_not_set":"Nicht definiert","no_grading_standards":"Keine Benotungssysteme gefunden","status":{"loading_grading_standards":"Benotungsstandards werden geladen ...","saving":"Speichervorgang läuft ..."},"titles":{"grading_scheme_info":"Benotungssystem anzeigen/bearbeiten"}}},"el":{"grading_standards":{"buttons":{"save":"Αποθήκευση"},"confirm":{"delete_grading_scheme":"Είσαστε σίγουρος/η πως θέλετε να διαγράψετε αυτόν το κανονισμό βαθμολόγισης;","unlink_grading_scheme":"Είστε σίγουρος/η πως θέλετε να διαγράψετε αυτόν τον κανονισμό βαθμολόγησης;"},"errors":{"cannot_delete_grading_scheme":"Υπήρξε ένα πρόβλημα με τη διαγραφή αυτού του κανονισμού βαθμολόγησης","cannot_load_grading_standards":"\\u003cmrk mid=\\"1279\\" mtype=\\"seg\\"\\u003eΗ Φόρτωση των Προτύπων Βαθμολόγησης Απέτυχε.\\u003c/mrk\\u003e  \\u003cmrk mid=\\"1280\\" mtype=\\"seg\\"\\u003eΠαρακαλώ Δοκιμάστε Ξανά\\u003c/mrk\\u003e","cannot_remove_grading_scheme":"\\u003cmrk mid=\\"1281\\" mtype=\\"seg\\"\\u003eΥπήρξε ένα πρόβλημα με την αφαίρεση αυτού του κανονισμού βαθμολόγησης\\u003c/mrk\\u003e  \\u003cmrk mid=\\"1282\\" mtype=\\"seg\\"\\u003eΠαρακαλώ επαναφορτώστε τη σελίδα και δοκιμάστε ξανά.\\u003c/mrk\\u003e","save_failed":"Η αποθήκευση απέτυχε"},"grading_scheme_currently_set":"Έχει γίνει ρύθμιση","grading_scheme_not_set":"Δεν έχει οριστεί","no_grading_standards":"Δεν βρέθηκαν κανονισμοί βαθμολόγησης","status":{"loading_grading_standards":"Φόρτωση Προτύπων Βαθμολόγησης...","saving":"Αποθήκευση..."},"titles":{"grading_scheme_info":"Προβολή/Τροποποίηση Κανονισμού Βαθμολόγησης"}}},"en-AU":{"grading_standards":{"buttons":{"save":"Save"},"confirm":{"delete_grading_scheme":"Are you sure you want to delete this grading scheme?","unlink_grading_scheme":"Are you sure you want to unlink this grading scheme?"},"errors":{"cannot_delete_grading_scheme":"There was a problem deleting this grading scheme","cannot_load_grading_standards":"Loading Grading Standards Failed.  Please Try Again","cannot_remove_grading_scheme":"There was a problem removing this grading scheme.  Please reload the page and try again.","save_failed":"Save Failed"},"grading_scheme_currently_set":"Currently Set","grading_scheme_not_set":"Not Set","no_grading_standards":"No grading schemes found","status":{"loading_grading_standards":"Loading Grading Standards...","saving":"Saving..."},"titles":{"grading_scheme_info":"View/Edit Grading Scheme"}}},"en-AU-x-unimelb":{"grading_standards":{"buttons":{"save":"Save"},"confirm":{"delete_grading_scheme":"Are you sure you want to delete this grading scheme?","unlink_grading_scheme":"Are you sure you want to unlink this grading scheme?"},"errors":{"cannot_delete_grading_scheme":"There was a problem deleting this grading scheme","cannot_load_grading_standards":"Loading Grading Standards Failed.  Please Try Again","cannot_remove_grading_scheme":"There was a problem removing this grading scheme.  Please reload the page and try again.","save_failed":"Save Failed"},"grading_scheme_currently_set":"Currently Set","grading_scheme_not_set":"Not Set","no_grading_standards":"No grading schemes found","status":{"loading_grading_standards":"Loading Grading Standards...","saving":"Saving..."},"titles":{"grading_scheme_info":"View/Edit Grading Scheme"}}},"en-CA":{"grading_standards":{"buttons":{"save":"Save"},"confirm":{"delete_grading_scheme":"Are you sure you want to delete this grading scheme?","unlink_grading_scheme":"Are you sure you want to unlink this grading scheme?"},"errors":{"cannot_delete_grading_scheme":"There was a problem deleting this grading scheme","cannot_load_grading_standards":"Loading Grading Standards Failed.  Please Try Again","cannot_remove_grading_scheme":"There was a problem removing this grading scheme.  Please reload the page and try again.","save_failed":"Save Failed"},"grading_scheme_currently_set":"Currently Set","grading_scheme_not_set":"Not Set","no_grading_standards":"No grading schemes found","status":{"loading_grading_standards":"Loading Grading Standards...","saving":"Saving..."},"titles":{"grading_scheme_info":"View/Edit Grading Scheme"}}},"en-GB":{"grading_standards":{"buttons":{"save":"Save"},"confirm":{"delete_grading_scheme":"Are you sure you want to delete this grading scheme?","unlink_grading_scheme":"Are you sure you want to unlink this grading scheme?"},"errors":{"cannot_delete_grading_scheme":"There was a problem deleting this grading scheme","cannot_load_grading_standards":"Loading grading standards failed. Please try again","cannot_remove_grading_scheme":"There was a problem removing this grading scheme. Please reload the page and try again.","save_failed":"Save failed"},"grading_scheme_currently_set":"Currently set","grading_scheme_not_set":"Not set","no_grading_standards":"No grading schemes found","status":{"loading_grading_standards":"Loading grading standards...","saving":"Saving..."},"titles":{"grading_scheme_info":"View/edit grading scheme"}}},"en-GB-x-lbs":{"grading_standards":{"buttons":{"save":"Save"},"confirm":{"delete_grading_scheme":"Are you sure you want to delete this grading scheme?","unlink_grading_scheme":"Are you sure you want to unlink this grading scheme?"},"errors":{"cannot_delete_grading_scheme":"There was a problem deleting this grading scheme","cannot_load_grading_standards":"Loading grading standards failed. Please try again","cannot_remove_grading_scheme":"There was a problem removing this grading scheme. Please reload the page and try again.","save_failed":"Save failed"},"grading_scheme_currently_set":"Currently set","grading_scheme_not_set":"Not set","no_grading_standards":"No grading schemes found","status":{"loading_grading_standards":"Loading grading standards...","saving":"Saving..."},"titles":{"grading_scheme_info":"View/edit grading scheme"}}},"en-GB-x-ukhe":{"grading_standards":{"buttons":{"save":"Save"},"confirm":{"delete_grading_scheme":"Are you sure you want to delete this grading scheme?","unlink_grading_scheme":"Are you sure you want to unlink this grading scheme?"},"errors":{"cannot_delete_grading_scheme":"There was a problem deleting this grading scheme","cannot_load_grading_standards":"Loading grading standards failed. Please try again","cannot_remove_grading_scheme":"There was a problem removing this grading scheme. Please reload the page and try again.","save_failed":"Save failed"},"grading_scheme_currently_set":"Currently set","grading_scheme_not_set":"Not set","no_grading_standards":"No grading schemes found","status":{"loading_grading_standards":"Loading grading standards...","saving":"Saving..."},"titles":{"grading_scheme_info":"View/edit grading scheme"}}},"es":{"grading_standards":{"buttons":{"save":"Guardar"},"confirm":{"delete_grading_scheme":"¿Está seguro de que desea eliminar este esquema de calificaciones?","unlink_grading_scheme":"¿Está seguro de que desea desenlazar este esquema de calificación?"},"errors":{"cannot_delete_grading_scheme":"Hubo un problema eliminando este esquema de calificación","cannot_load_grading_standards":"Falló la carga de estándares de calificación.  Inténtelo de nuevo","cannot_remove_grading_scheme":"Hubo un problema removiendo este esquema de calificación.  Recargue la página e inténtelo de nuevo.","save_failed":"Guardado falló"},"grading_scheme_currently_set":"Establecido actualmente","grading_scheme_not_set":"No establecido","no_grading_standards":"No se encontraron esquemas de calificaciones","status":{"loading_grading_standards":"Cargando los estándares de calificación...","saving":"Guardando..."},"titles":{"grading_scheme_info":"Ver/Editar esquema de calificación"}}},"fa":{"grading_standards":{"buttons":{"save":"ذخیره سازی"},"confirm":{"delete_grading_scheme":"مطمئنید که می خواهید این طرح نمره گذاری حذف شود؟","unlink_grading_scheme":"مطمئنید که می خواهید پیوند این طرح نمره گذاری را لغو کنید؟"},"errors":{"cannot_delete_grading_scheme":"در هنگام حذف این طرح نمره گذاری اشکالی رخ داد","cannot_load_grading_standards":"بارگذاری استانداردهای نمره گذاری انجام نشد. لطفا دوباره سعی کنید","cannot_remove_grading_scheme":"در هنگام حذف این طرح نمره گذاری اشکالی رخ داد. لطفا صفحه را دوباره بارگذاری کنید و دوباره سعی کنید.","save_failed":"ذخیره سازی انجام نشد"},"grading_scheme_currently_set":"اخیرا تعیین شده","grading_scheme_not_set":"تعیین نشده","no_grading_standards":"هیچ طرح نمره گذاری برای نمایش موجود نیست","status":{"loading_grading_standards":"در حال بارگذاری استانداردهای نمره گذاری...","saving":"در حال ذخیره سازی..."},"titles":{"grading_scheme_info":"مشاهده/ویرایش طرح نمره گذاری"}}},"fi":{"grading_standards":{"buttons":{"save":"Tallenna"},"confirm":{"delete_grading_scheme":"Haluatko varmasti poistaa arvosanojen asteikon?","unlink_grading_scheme":"Haluatko varmasti poistaa tämän arvosanojen asteikon linkityksen?"},"errors":{"cannot_delete_grading_scheme":"Tämän arvosanojen asteikon poistamisessa ilmeni ongelma","cannot_load_grading_standards":"Arvosanojen annon standardien lataus epäonnistui.  Yritä uudelleen","cannot_remove_grading_scheme":"Arvosanojen asteikon poistamisessa ilmeni ongelma.  Lataa sivu uudelleen ja yritä uudelleen.","save_failed":"Tallennus epäonnistui"},"grading_scheme_currently_set":"Parhaillaan määritetty","grading_scheme_not_set":"Ei asetettu","no_grading_standards":"Ei löytynyt arvosanojen asteikkoa","status":{"loading_grading_standards":"Ladataan arvosanojen annon standardeja...","saving":"Tallennetaan..."},"titles":{"grading_scheme_info":"Näytä/Muokkaa arvosanojen asteikkoa"}}},"fr":{"grading_standards":{"buttons":{"save":"Enregistrer"},"confirm":{"delete_grading_scheme":"Voulez-vous vraiment supprimer ce système de notation ?","unlink_grading_scheme":"Voulez-vous vraiment annuler le lien de ce système de notation ?"},"errors":{"cannot_delete_grading_scheme":"Une erreur s’est produite lors de la suppression de ce système de notation","cannot_load_grading_standards":"Échec du chargement des critères de notation. Veuillez réessayer.","cannot_remove_grading_scheme":"Une erreur s’est produite lors de la suppression de ce système de notation. Veuillez recharger la page et réessayer.","save_failed":"L’enregistrement a échoué."},"grading_scheme_currently_set":"Actuellement défini","grading_scheme_not_set":"Non défini","no_grading_standards":"Aucun système de notation trouvé","status":{"loading_grading_standards":"Chargement des critères de notation...","saving":"Enregistrement en cours..."},"titles":{"grading_scheme_info":"Afficher/Modifier le système de notation"}}},"fr-CA":{"grading_standards":{"buttons":{"save":"Enregistrer"},"confirm":{"delete_grading_scheme":"Voulez-vous vraiment supprimer ce système de notation?","unlink_grading_scheme":"Voulez-vous vraiment annuler le lien de ce système de notation?"},"errors":{"cannot_delete_grading_scheme":"Une erreur s’est produite lors de la suppression de ce système de notation","cannot_load_grading_standards":"Échec du chargement des critères de notation. Veuillez réessayer.","cannot_remove_grading_scheme":"Une erreur s’est produite lors du retrait de ce système de notation. Veuillez recharger la page et réessayer.","save_failed":"L’enregistrement a échoué."},"grading_scheme_currently_set":"Actuellement défini","grading_scheme_not_set":"Non défini","no_grading_standards":"Aucun système de notation trouvé","status":{"loading_grading_standards":"Chargement des critères de notation...","saving":"Enregistrement..."},"titles":{"grading_scheme_info":"Afficher/Modifier le système de notation"}}},"he":{"grading_standards":{"buttons":{"save":"שמירה"},"confirm":{"delete_grading_scheme":"האם אתם בטוחים שרוצים לבטל את סכימת ההערכה הזו?","unlink_grading_scheme":"בטוח/ה שרוצה להסיר את הקישור לסכימת הערכה זו?"},"errors":{"cannot_delete_grading_scheme":"אירעה תקלה בעת ביטול סכימת הערכה זו","cannot_load_grading_standards":"טעינת תקני הערכה נכשלה. יש לנסות שוב","cannot_remove_grading_scheme":"אירעה תקלה בהסרת סכימת ההערכה הזו. יש לטעון את הדף ולנסות שוב.","save_failed":"השמירה נכשלה"},"grading_scheme_currently_set":"מוגדר כעת","grading_scheme_not_set":"טרם הוגדר","no_grading_standards":"לא נמצאו סכימות הערכה","status":{"loading_grading_standards":"טוען תקני הערכה...","saving":"שומר..."},"titles":{"grading_scheme_info":"הצגת/עריכת סכימת הערכה"}}},"ht":{"grading_standards":{"buttons":{"save":"Anrejistre"},"confirm":{"delete_grading_scheme":"Ou kwè vrèman ou vle efase sistèm klasman sa a?","unlink_grading_scheme":"Ou kwè vrèman ou vle separe sistèm klasman sa a?"},"errors":{"cannot_delete_grading_scheme":"Te gen yon pwoblèm pou efase sistèm notasyon sa a","cannot_load_grading_standards":"Echèk Chajman Klasman Estanda. Tanpri Eseye Ankò","cannot_remove_grading_scheme":"Te gen yon pwoblèm pou elimine sistèm notasyon sa a. Tanpri aktyalize paj la epi eseye ankò.","save_failed":"Anrejistre Echwe"},"grading_scheme_currently_set":"Aktyèlman Defini","grading_scheme_not_set":"Pa Defini","no_grading_standards":"Nou pa jwenn sistèm notasyon","status":{"loading_grading_standards":"Chajman Klasman Estanda...","saving":"Anrejistreman..."},"titles":{"grading_scheme_info":"Afiche/Modifye Sistèm Notasyon"}}},"hu":{"grading_standards":{"buttons":{"save":"Mentés"},"confirm":{"delete_grading_scheme":"Biztos benne, hogy törli ezt az osztályzási rendszert?","unlink_grading_scheme":"Biztos benne, hogy leválasztja ezt az osztályzási rendszert?"},"errors":{"cannot_delete_grading_scheme":"Probléma adódott az osztályzási rendszer törlése közben.","cannot_load_grading_standards":"Értékelési szabványok betöltése sikertelen. Kérjük, próbálja újra. ","cannot_remove_grading_scheme":"Probléma adódott az osztályzási rendszer eltávolítása közben. Kérjük töltse újra az oldalt és próbálja újra.","save_failed":"Sikertelen mentés"},"grading_scheme_currently_set":"Jelenleg beállított","grading_scheme_not_set":"Nincs kiválasztva","no_grading_standards":"Nem található osztályzási rendszer","status":{"loading_grading_standards":"Értékelési szabványok betöltése...","saving":"Mentés..."},"titles":{"grading_scheme_info":"Osztályzási rendszer megtekintése/szerkesztése"}}},"hy":{"grading_standards":{"buttons":{"save":"Պահպանել"},"confirm":{"delete_grading_scheme":"Դուք իսկապե՞ս ցանկանում եք ջնջել գնահատման այս սխեման:","unlink_grading_scheme":"Դուք իսկապե՞ս ցանկանում եք գնահատման այս սխեմայի հղումը հանել"},"errors":{"cannot_delete_grading_scheme":"Գնահատման այս սխեման ջնջելիս խնդիր է առաջացել","cannot_load_grading_standards":"Գնահատման ստանդարտների բեռնումը խափանվել է: Փորձեք կրկին:","cannot_remove_grading_scheme":"Գնահատման այս սխեման հանելիս խնդիր է առաջացել: Էջը կրկին բեռնեք և փորձեք նորից:","save_failed":"Չհաջողվեց պահպանել"},"grading_scheme_currently_set":"Ներկայումս սահմանված է","grading_scheme_not_set":"Չի որոշվել","no_grading_standards":"Որեւէ գնահատման համակարգ չի գտնվել","status":{"loading_grading_standards":"Գնահատման ստանդարտների բեռնում...","saving":"Պահպանվում է..."},"titles":{"grading_scheme_info":"Դիտել/խմբագրել Գնահատման համակարգը"}}},"is":{"grading_standards":{"buttons":{"save":"Vista"},"confirm":{"delete_grading_scheme":"Viltu örugglega eyða þessum einkunnakvarða?","unlink_grading_scheme":"Viltu örugglega aftengja þennan einkunnakvarða?"},"errors":{"cannot_delete_grading_scheme":"Ekki tókst að eyða einkunnakvarða","cannot_load_grading_standards":"Ekki tókst að hlaða inn einkunnaviðmiðum. Reyndu aftur.","cannot_remove_grading_scheme":"Ekki tókst að fjarlægja einkunnakvarða. Glæddu síðuna og reyndu aftur.","save_failed":"Ekki tókst að vista"},"grading_scheme_currently_set":"Núverandi stilling","grading_scheme_not_set":"Ekki stillt","no_grading_standards":"Enginn einkunnakvarði fannst","status":{"loading_grading_standards":"Sæki einkunnaviðmið...","saving":"Vista..."},"titles":{"grading_scheme_info":"Skoða/breyta einkunnakvarða"}}},"it":{"grading_standards":{"buttons":{"save":"Salva"},"confirm":{"delete_grading_scheme":"Vuoi eliminare questo schema di valutazione?","unlink_grading_scheme":"Vuoi scollegare questo schema di valutazione?"},"errors":{"cannot_delete_grading_scheme":"Si è verificato un problema durante l\'eliminazione di questo schema di valutazione","cannot_load_grading_standards":"Caricamento degli standard di valutazione non riuscito.  Riprova","cannot_remove_grading_scheme":"Si è verificato un problema durante la rimozione di questo schema di valutazione.  Ricarica la pagina e riprova.","save_failed":"Salvataggio non riuscito"},"grading_scheme_currently_set":"Attualmente impostato","grading_scheme_not_set":"Non impostato","no_grading_standards":"Nessuno schema di valutazione trovato","status":{"loading_grading_standards":"Caricamento standard di valutazione in corso...","saving":"Salvataggio in corso..."},"titles":{"grading_scheme_info":"Visualizza/Modifica schema di valutazione"}}},"ja":{"grading_standards":{"buttons":{"save":"保存"},"confirm":{"delete_grading_scheme":"この採点スキームを削除してもよろしいですか?","unlink_grading_scheme":"この採点スキームへのリンクを解除してもよろしいですか?"},"errors":{"cannot_delete_grading_scheme":"この採点スキームを削除する際に問題が発生しました","cannot_load_grading_standards":"採点基準の読み込みに失敗しました。もう一度、試してください。","cannot_remove_grading_scheme":"この採点スキームを削除する際に問題が発生しました。ページを再読み込みしてから、もう一度試してください。","save_failed":"保存に失敗しました"},"grading_scheme_currently_set":"現在設定されています","grading_scheme_not_set":"設定されていません","no_grading_standards":"採点スキームがありません","status":{"loading_grading_standards":"採点基準を読み込んでいます...","saving":"保存しています..."},"titles":{"grading_scheme_info":"採点スキームの表示/編集"}}},"ko":{"grading_standards":{"buttons":{"save":"저장"},"confirm":{"delete_grading_scheme":"이 평가 구성표를 삭제하시겠습니까?","unlink_grading_scheme":"이 평가 구성표를 연결 해제하시겠습니까?"},"errors":{"cannot_delete_grading_scheme":"평가 구성표 삭제 중 문제 발생","cannot_load_grading_standards":"평가 기준을 로드하는 데 실패했습니다. 다시 시도하시기 바랍니다.","cannot_remove_grading_scheme":"이 평가 구성표를 제거하는 데 문제가 발생했습니다. 페이지를 새로 고치고 다시 시도하시기 바랍니다.","save_failed":"저장 실패"},"grading_scheme_currently_set":"설정됨","grading_scheme_not_set":"설정 안 됨","status":{"loading_grading_standards":"평가 기준을 로드하는 중...","saving":"저장 중..."},"titles":{"grading_scheme_info":"평가 구성표 보기/편집"}}},"mi":{"grading_standards":{"buttons":{"save":"Tiaki"},"confirm":{"delete_grading_scheme":"E tino hiahia ana koe ki te muku i tēnei kaupapa kōeke?","unlink_grading_scheme":"E tino hiahia ana koe ki te tango hononga tēnei kaupapa kōeke?"},"errors":{"cannot_delete_grading_scheme":"I puta he raru te muku i tēnei kaupapa kōeke","cannot_load_grading_standards":"Uta ana kōeketanga Paerewa rahua. Tēnā koa ngana anō","cannot_remove_grading_scheme":"I puta he raru te tango i tēnei kaupapa kōeke. Tēnā koa uta anō i te whārangi, me te ngana anō.","save_failed":"Tiaki rahua"},"grading_scheme_currently_set":"Tautuhia tēnei wā","grading_scheme_not_set":"Kāore i Tautuhia","no_grading_standards":"Kāore i kitea he kaupapa māka","status":{"loading_grading_standards":"Uta ana Kōeketanga Paerewa","saving":"Kei te tiakina"},"titles":{"grading_scheme_info":"Tirohia / Whakatika Kaupapa Kōeke"}}},"nb":{"grading_standards":{"buttons":{"save":"Lagre"},"confirm":{"delete_grading_scheme":"Er du sikker på at du vil slette denne vurderingsskalaen?","unlink_grading_scheme":"Er du sikker på at du vil koble fra denne vurderingsskalaen?"},"errors":{"cannot_delete_grading_scheme":"Det oppsto et problem ved forsøk på å slette denne vurderingsskalaen","cannot_load_grading_standards":"Lasting av retningslinjer for karaktersetting feilet. Vennligst prøv igjen","cannot_remove_grading_scheme":"Det oppsto et problem ved forsøk på å fjerne denne vurderingsskalaen. Vennligst last siden på nytt og forsøk igjen.","save_failed":"Lagring mislyktes"},"grading_scheme_currently_set":"Gjeldende innstilling","grading_scheme_not_set":"Ikke satt","no_grading_standards":"Ingen vurderingsskala funnet","status":{"loading_grading_standards":"Laster retningslinjer for karaktersetting...","saving":"Lagrer…"},"titles":{"grading_scheme_info":"Se/rediger vurderingsskala"}}},"nb-x-k12":{"grading_standards":{"buttons":{"save":"Lagre"},"confirm":{"delete_grading_scheme":"Er du sikker på at du vil slette denne vurderingsskalaen?","unlink_grading_scheme":"Er du sikker på at du vil koble fra denne vurderingsskalaen?"},"errors":{"cannot_delete_grading_scheme":"Det oppsto et problem ved forsøk på å slette denne vurderingsskalaen","cannot_load_grading_standards":"Lasting av retningslinjer for vurdering feilet. Vennligst prøv igjen","cannot_remove_grading_scheme":"Det oppsto et problem ved forsøk på å fjerne denne vurderingsskalaen. Vennligst last siden på nytt og forsøk igjen.","save_failed":"Lagring mislyktes"},"grading_scheme_currently_set":"Gjeldende innstilling","grading_scheme_not_set":"Ikke satt","no_grading_standards":"Ingen vurderingsskala funnet","status":{"loading_grading_standards":"Laster retningslinjer for vurdering...","saving":"Lagrer…"},"titles":{"grading_scheme_info":"Se/rediger vurderingsskala"}}},"nl":{"grading_standards":{"buttons":{"save":"Opslaan"},"confirm":{"delete_grading_scheme":"Weet je zeker dat je dit beoordelingsschema wilt verwijderen?","unlink_grading_scheme":"Weet je zeker dat je dit beoordelingsschema wilt ontkoppelen?"},"errors":{"cannot_delete_grading_scheme":"Er is een probleem opgetreden tijdens het verwijderen van dit beoordelingsschema","cannot_load_grading_standards":"Laden van standaards voor beoordeling is mislukt, probeer het opnieuw","cannot_remove_grading_scheme":"Er is een probleem opgetreden tijdens het verwijderen van dit beoordelingsschema. Laad de pagina opnieuw en probeer het opnieuw.","save_failed":"Opslaan mislukt"},"grading_scheme_currently_set":"Momenteel ingesteld","grading_scheme_not_set":"Niet ingesteld","no_grading_standards":"Geen beoordelingsschema\'s gevonden","status":{"loading_grading_standards":"Bezig met laden van standaards voor beoordeling...","saving":"Bezig met opslaan..."},"titles":{"grading_scheme_info":"Beoordelingsschema weergeven/bewerken"}}},"nn":{"grading_standards":{"buttons":{"save":"Lagre"},"confirm":{"delete_grading_scheme":"Er du sikker på at du vil slette karaktersetjingsskjemaet?","unlink_grading_scheme":"Er du sikker på at du vil kople frå karaktersetjingsskjemaet?"},"errors":{"cannot_delete_grading_scheme":"Det oppstod eit problem under sletting av karaktersetjingsskjemaet","cannot_load_grading_standards":"Lasting av standard karaktersetjing mislukkast.  Prøv på nytt seinare","cannot_remove_grading_scheme":"Det oppstod eit problem under fjerning av karaktersetjingsskjemaet.  Last opp sida på nytt og prøv ein gong til.","save_failed":"Lagring mislukkast"},"grading_scheme_currently_set":"Innstilt no","grading_scheme_not_set":"Ikkje oppgitt","no_grading_standards":"Finn ikkje standard for karaktersetjing","status":{"loading_grading_standards":"Lastar standard for karaktersetjing...","saving":"Lagrar..."},"titles":{"grading_scheme_info":"Vis/rediger karakterskjema"}}},"pl":{"grading_standards":{"buttons":{"save":"Zapisz"},"confirm":{"delete_grading_scheme":"Czy na pewno chcesz usunąć ten schemat oceniania?","unlink_grading_scheme":"Czy na pewno chcesz usunąć łącze dla tego schematu oceniania?"},"errors":{"cannot_delete_grading_scheme":"Wystąpił problem podczas usuwania tego schematu oceniania","cannot_load_grading_standards":"Ładowanie standardów oceniania nie powiodło się.  Spróbuj ponownie","cannot_remove_grading_scheme":"Wystąpił problem podczas usuwania tego schematu oceniania.  Ponownie załaduj stronę i spróbuj jeszcze raz.","save_failed":"Zapisywanie nie powiodło się"},"grading_scheme_currently_set":"Bieżące ustawienie","grading_scheme_not_set":"Nieustawione","no_grading_standards":"Nie znaleziono schematów oceniania","status":{"loading_grading_standards":"Trwa ładowanie standardów oceniania...","saving":"Trwa zapisywanie..."},"titles":{"grading_scheme_info":"Pokaż/edytuj schemat oceniania"}}},"pt":{"grading_standards":{"buttons":{"save":"Guardar"},"confirm":{"delete_grading_scheme":"Tem certeza de que deseja excluir este esquema de avaliação?","unlink_grading_scheme":"Tem certeza de que deseja desvincular este esquema de avaliação?"},"errors":{"cannot_delete_grading_scheme":"Houve um problema com a exclusão deste esquema de avaliação.","cannot_load_grading_standards":"Falha no carregamento dos padrões de avaliação.  Tente novamente","cannot_remove_grading_scheme":"Houve um problema com a remoção deste esquema de avaliação.  Carregue novamente a página e tente novamente.","save_failed":"Falha ao guardar"},"grading_scheme_currently_set":"Atualmente definido","grading_scheme_not_set":"Não definido","no_grading_standards":"Não há esquemas de avaliação encontrados","status":{"loading_grading_standards":"Carregando padrões de avaliação...","saving":"A guardar..."},"titles":{"grading_scheme_info":"Exibir/Editar esquema de avaliação"}}},"pt-BR":{"grading_standards":{"buttons":{"save":"Salvar"},"confirm":{"delete_grading_scheme":"Tem certeza de que deseja excluir este esquema de avaliação?","unlink_grading_scheme":"Tem certeza de que deseja desvincular este esquema de avaliação?"},"errors":{"cannot_delete_grading_scheme":"Houve um problema com a exclusão deste esquema de avaliação.","cannot_load_grading_standards":"Falha no carregamento dos padrões de avaliação.  Por favor, tente novamente","cannot_remove_grading_scheme":"Houve um problema com a remoção deste esquema de avaliação.  Recarregue a página e tente novamente.","save_failed":"Falha ao salvar"},"grading_scheme_currently_set":"Atualmente definido","grading_scheme_not_set":"Não definido","no_grading_standards":"Nenhuma esquema de avaliação encontrada","status":{"loading_grading_standards":"Carregando padrões de avaliação...","saving":"Salvando..."},"titles":{"grading_scheme_info":"Visualizar/Editar esquema de avaliação"}}},"ru":{"grading_standards":{"buttons":{"save":"Сохранить"},"confirm":{"delete_grading_scheme":"Действительно хотите удалить эту схему оценки?","unlink_grading_scheme":"Действительно хотите отключить эту схему оценки?"},"errors":{"cannot_delete_grading_scheme":"При удалении этой схемы оценки возникла проблема","cannot_load_grading_standards":"Ошибка загрузки стандартов оценок.  Повторите попытку","cannot_remove_grading_scheme":"При удалении этой схемы оценки возникла проблема  Перезагрузите страницу и повторите попытку.","save_failed":"Ошибка сохранения"},"grading_scheme_currently_set":"В настоящий момент установлено","grading_scheme_not_set":"Не установлено","no_grading_standards":"Схемы оценок не найдены","status":{"loading_grading_standards":"Загрузка стандартов оценок...","saving":"Сохранение..."},"titles":{"grading_scheme_info":"Просмотр/редактирование схемы оценок"}}},"sl":{"grading_standards":{"buttons":{"save":"Shrani"},"confirm":{"delete_grading_scheme":"Ali ste prepričani, da želite izbrisati to ocenjevalno shemo?","unlink_grading_scheme":"Ali ste prepričani, da želite prekiniti povezavo s to ocenjevalno shemo?"},"errors":{"cannot_delete_grading_scheme":"Prišlo je do težave pri brisanju te ocenjevalne sheme.","cannot_load_grading_standards":"Nalaganje standardov ocenjevanja ni uspelo.  Poskusite znova.","cannot_remove_grading_scheme":"Prišlo je do težave pri odstranjevanju te ocenjevalne sheme.  Ponovno naložite stran in poskusite znova.","save_failed":"Shranjevanje ni uspelo."},"grading_scheme_currently_set":"Trenutno nastavljeno","grading_scheme_not_set":"Ni nastavljeno.","no_grading_standards":"Ni najdenih ocenjevalnih shem.","status":{"loading_grading_standards":"Nalaganje standardov ocenjevanja ...","saving":"Shranjevanje ..."},"titles":{"grading_scheme_info":"Ogled/urejanje ocenjevalne sheme"}}},"sv":{"grading_standards":{"buttons":{"save":"Spara"},"confirm":{"delete_grading_scheme":"Vill du verkligen radera det här bedömningsschemat?","unlink_grading_scheme":"Vill du verkligen ta bort det här bedömningsschemat?"},"errors":{"cannot_delete_grading_scheme":"Ett problem uppstod när det här bedömningsschemat raderades","cannot_load_grading_standards":"Laddning av bedömningsstandard misslyckades.  Försök igen","cannot_remove_grading_scheme":"Ett problem uppstod när bedömningsschemat togs bort.  Uppdatera sidan och försök igen.","save_failed":"Det gick inte att spara"},"grading_scheme_currently_set":"För närvarande inställd","grading_scheme_not_set":"Inte inställd","no_grading_standards":"Inga bedömningsscheman hittades","status":{"loading_grading_standards":"Laddar bedömningsstandarder ...","saving":"Sparar ..."},"titles":{"grading_scheme_info":"Visa/redigera bedömningsschema"}}},"sv-x-k12":{"grading_standards":{"buttons":{"save":"Spara"},"confirm":{"delete_grading_scheme":"Vill du verkligen radera det här bedömningsschemat?","unlink_grading_scheme":"Vill du verkligen ta bort det här bedömningsschemat?"},"errors":{"cannot_delete_grading_scheme":"Ett problem uppstod när det här bedömningsschemat raderades","cannot_load_grading_standards":"Laddning av bedömningsstandard misslyckades.  Försök igen","cannot_remove_grading_scheme":"Ett problem uppstod när bedömningsschemat togs bort.  Uppdatera sidan och försök igen.","save_failed":"Det gick inte att spara"},"grading_scheme_currently_set":"För närvarande inställd","grading_scheme_not_set":"Inte inställd","no_grading_standards":"Inga bedömningsscheman hittades","status":{"loading_grading_standards":"Laddar bedömningsstandarder ...","saving":"Sparar ..."},"titles":{"grading_scheme_info":"Visa/redigera bedömningsschema"}}},"tr":{"grading_standards":{"buttons":{"save":"Kaydet"},"confirm":{"delete_grading_scheme":"Bu notlandırma şemasını silmek istediğinize emin misiniz?","unlink_grading_scheme":"Bu notlandırma şemasının bağlantısını kaldırmak istediğinize emin misiniz?"},"errors":{"cannot_delete_grading_scheme":"Bu notlandırma şemasını silmede problem oldu","cannot_load_grading_standards":"Notlandırma Standartlarını Yükleme Başarısız. Lütfen Tekrar Deneyin","cannot_remove_grading_scheme":"Bu notlandırma şemasını kaldırmada problem oluştu. Lütfen sayayı yenileyip tekrar deneyin.","save_failed":"Kaydetme Başrısız"},"grading_scheme_currently_set":"Şu Anda Ayarlı Olan","grading_scheme_not_set":"Ayarlanmadı","no_grading_standards":"Notlandırma şeması bulunamadı","status":{"loading_grading_standards":"Notlandırma Standartları Yükleniyor...","saving":"Kaydediliyor..."},"titles":{"grading_scheme_info":"Notlandırma Şemasını Göster/Düzenle"}}},"uk":{"grading_standards":{"buttons":{"save":"Зберегти"},"confirm":{"delete_grading_scheme":"Ви впевнені, що хочете видалити цю схему оцінювання?","unlink_grading_scheme":"Ви впевнені, що хочете роз\'єднати цю схему оцінювання?"},"errors":{"cannot_delete_grading_scheme":"Виникла проблема з видаленням цієї схеми оцінювання","cannot_load_grading_standards":"Завантажити стандарти оцінювання не вдалося. Будь ласка, спробуйте знову.","cannot_remove_grading_scheme":"Виникла проблема з видаленням цієї схеми оцінювання. Будь ласка, завантажте цю сторінку ще раз та спробуйте знову. ","save_failed":"Зберегти не вдалося"},"grading_scheme_currently_set":"Поточні налаштування","grading_scheme_not_set":"Не встановлено","no_grading_standards":"Не знайдено жодних схем оцінювання","status":{"loading_grading_standards":"Завантаження стандартів оцінювання...","saving":"Збереження..."},"titles":{"grading_scheme_info":"Перегляд/Редагування Схеми оцінювання"}}},"zh-Hans":{"grading_standards":{"buttons":{"save":"保存"},"confirm":{"delete_grading_scheme":"是否确定要删除此评分方案?","unlink_grading_scheme":"是否确定要解链此评分方案?"},"errors":{"cannot_delete_grading_scheme":"删除此评分方案时出错","cannot_load_grading_standards":"加载评分标准失败。请重试","cannot_remove_grading_scheme":"删除此评分方案时出错。请重新加载页面，然后重试。","save_failed":"保存失败"},"grading_scheme_currently_set":"现已设置","grading_scheme_not_set":"未设置","no_grading_standards":"没有发现评分方案","status":{"loading_grading_standards":"正在加载评分标准...","saving":"正在保存..."},"titles":{"grading_scheme_info":"查看/编辑评分方案"}}},"zh-Hant":{"grading_standards":{"buttons":{"save":"保存"},"confirm":{"delete_grading_scheme":"是否確定要刪除此評分方案？","unlink_grading_scheme":"是否確定要取消此評分方案的連接？"},"errors":{"cannot_delete_grading_scheme":"刪除此評分方案時出現問題","cannot_load_grading_standards":"載入評分標準失敗。請再試一次","cannot_remove_grading_scheme":"移除此評分方案時出現問題。請重新載入頁面，然後再試一次。","save_failed":"保存失敗"},"grading_scheme_currently_set":"當前設置","grading_scheme_not_set":"未設置","no_grading_standards":"沒有找到評分方案","status":{"loading_grading_standards":"正在載入評分標準...","saving":"正在保存..."},"titles":{"grading_scheme_info":"檢視/編輯評分方案"}}}}'))
+n("jQeR")
+n("0sPK")
+var d=t["default"].scoped("grading_standards")
+var i=n("HbFp")
+var g=n("ouhR")
+var o=n.n(g)
+n("jYyc")
+n("Z+Ib")
+n("YGE8")
+n("p6Wi")
+n("MWZS")
+n("OShF")
+n("s/PJ")
+function _(e){return d.n(Object(r["a"])(e,r["a"].DEFAULT))}const l=.01
+o()(document).ready(()=>{o()(".add_standard_link").click(e=>{e.preventDefault()
+const a=o()("#grading_standard_blank").clone(true).attr("id","grading_standard_new")
+o()("#standards").append(a.show())
+a.find(".edit_grading_standard_link").click()})
+o()(".edit_letter_grades_link").click(e=>{e.preventDefault()
+o()("#edit_letter_grades_form").dialog({title:d.t("titles.grading_scheme_info","View/Edit Grading Scheme"),width:600,dialogClass:"form-inline grading-standard-dialog",resizable:false,open(){o()(".grading-standard-dialog").find(".ui-dialog-titlebar-close")[0].focus()},close(){o()(e.target).focus()}})})
+o()(".grading_standard .delete_grading_standard_link").click((function(e){e.preventDefault()
+const a=o()(this).parents(".grading_standard")
+const n=a.find(".update_grading_standard_url").attr("href")
+a.confirmDelete({url:n,message:d.t("confirm.delete_grading_scheme","Are you sure you want to delete this grading scheme?"),success(e){o()(this).slideUp((function(){o()(this).remove()}))},error(){o.a.flashError(d.t("errors.cannot_delete_grading_scheme","There was a problem deleting this grading scheme"))}})}))
+o()(".grading_standard .done_button").click(e=>{e.preventDefault()
+o()("#edit_letter_grades_form").dialog("close")})
+o()(".grading_standard .remove_grading_standard_link").click((function(e){e.preventDefault()
+const a=confirm(d.t("confirm.unlink_grading_scheme","Are you sure you want to unlink this grading scheme?"))
+if(!a)return false
+const n=o()(this).parents(".grading_standard")
+n.dim()
+let r={"assignment[grading_standard_id]":"","assignment[grading_type]":"points"}
+let t=o()("#edit_assignment_form").attr("action")
+if(o()("#update_course_url").length){r={"course[grading_standard_id]":""}
+t=o()("#update_course_url").attr("href")}else t&&t.match(/assignments$/)&&(t=null)
+function s(){o()("#edit_assignment_form .grading_standard_id").val("")
+o()("#assignment_grading_type").val("points").change()
+o()("#course_grading_standard_enabled").attr("checked",false).change()
+o()("#course_form .grading_scheme_set").text(d.t("grading_scheme_not_set","Not Set"))
+n.addClass("editing")
+n.find(".update_grading_standard_url").attr("href",o()("#update_grading_standard_url").attr("href"))
+const e=o.a.parseJSON(o()("#default_grading_standard_data").val())
+const a={title:"",id:null,data:e}
+n.fillTemplateData({data:a,id:"grading_standard_blank",avoid:".find_grading_standard",hrefValues:["id"]}).find(".edit_grading_standard_link").removeClass("read_only")
+n.triggerHandler("grading_standard_updated",a)
+o()("#edit_letter_grades_form").dialog("close")
+n.undim()}t?o.a.ajaxJSON(t,"PUT",r,s,()=>{o.a.flashError(d.t("errors.cannot_remove_grading_scheme","There was a problem removing this grading scheme.  Please reload the page and try again."))}):s()}))
+o()(".grading_standard .edit_grading_standard_link").click((function(e){e.preventDefault()
+const a=o()(this).parents(".grading_standard")
+a.addClass("editing")
+a.find(".max_score_cell").attr("tabindex","0")
+o()(this).hasClass("read_only")&&a.attr("id","grading_standard_blank")
+a.find(".grading_standard_row").each((function(){const e=o()(this).getTemplateData({textValues:["min_score","name"]})
+o()(this).find(".standard_value").val(e.min_score).end().find(".standard_name").val(e.name)}))
+o()("#standards").ifExists(()=>{o()("html,body").scrollTo(a)})
+a.find(":text:first").blur().focus().select()}))
+o()(".grading_standard .grading_standard_brief").find(".collapse_data_link,.expand_data_link").click((function(e){e.preventDefault()
+const a=o()(this).parents(".grading_standard_brief")
+a.find(".collapse_data_link,.expand_data_link").toggle()
+a.find(".details").slideToggle()}))
+o()(".grading_standard_select").live("click",(function(e){e.preventDefault()
+const a=o()(this).getTemplateData({textValues:["id"]}).id
+o()(".grading_standard .grading_standards_select .grading_standard_select").removeClass("selected_side_tab")
+o()(this).addClass("selected_side_tab")
+o()(".grading_standard .grading_standards .grading_standard_brief").hide()
+o()("#grading_standard_brief_".concat(a)).show()}))
+o()(".grading_standard").find(".find_grading_standard_link,.cancel_find_grading_standard_link").click((function(e){e.preventDefault()
+o()(this).parents(".grading_standard").find(".display_grading_standard,.find_grading_standard").toggle()
+const a=o()(this).parents(".grading_standard").find(".find_grading_standard:visible")
+if(a.length>0&&!a.hasClass("loaded")){a.find(".loading_message").text(d.t("status.loading_grading_standards","Loading Grading Standards..."))
+const e=a.find(".grading_standards_url").attr("href")
+o.a.ajaxJSON(e,"GET",{},e=>{if(0===e.length)a.find(".loading_message").text(d.t("no_grading_standards","No grading schemes found"))
+else{a.find(".loading_message").remove()
+for(const n in e){const r=e[n].grading_standard
+r.user_name=r.display_name
+const t=a.find(".grading_standards_select .grading_standard_select.blank:first").clone(true)
+t.fillTemplateData({data:r}).data("context_code",r.context_code).removeClass("blank")
+a.find(".grading_standards_select").append(t.show())
+const s=a.find(".grading_standard_brief.blank:first").clone(true)
+s.fillTemplateData({data:r,id:"grading_standard_brief_".concat(r.id)}).data("context_code",r.context_code)
+s.removeClass("blank")
+for(let e=0;e<r.data.length;e++){const a={name:r.data[e][0],value:0===e?_(100):"< ".concat(_(100*r.data[e-1][1])),next_value:_(100*r.data[e][1])}
+const n=s.find(".details_row.blank:first").clone(true)
+n.removeClass("blank")
+n.fillTemplateData({data:a})
+s.find(".details > table").append(n.show())}a.find(".grading_standards").append(s)}a.find(".grading_standards_select .grading_standard_select:visible:first a:first").click()}a.addClass("loaded")
+a.find(".grading_standards_holder").slideDown()},e=>{a.find(".loading_message").text(d.t("errors.cannot_load_grading_standards","Loading Grading Standards Failed.  Please Try Again"))})}}))
+o()(".grading_standard .grading_standard_brief .select_grading_standard_link").click((function(e){e.preventDefault()
+const a=o()(this).parents(".grading_standard_brief")
+const n=a.getTemplateData({textValues:["id","title"],dataValues:["context_code"]})
+const r=n.id
+const t=n.title
+const s=[]
+o()(this).parents(".grading_standard_brief").find(".details_row:not(.blank)").each((function(){const e=o()(this).find(".name").text()
+let a=i["a"].parse(o()(this).find(".next_value").text())/100
+isNaN(a)&&(a="")
+s.push([e,a])}))
+o()(this).parents(".grading_standard").triggerHandler("grading_standard_updated",{id:r,data:s,title:t})
+const d=o()("#edit_letter_grades_form").data().context_code
+o()(this).parents(".grading_standard").find(".edit_grading_standard_link").toggleClass("read_only",d!=n.context_code)
+o()(this).parents(".find_grading_standard").find(".cancel_find_grading_standard_link").click()}))
+o()(".grading_standard .cancel_button").click((function(e){o()(this).parents(".grading_standard").removeClass("editing").find(".insert_grading_standard").hide()
+const a=o()(this).parents(".grading_standard")
+a.find(".max_score_cell").removeAttr("tabindex")
+a.find(".to_add").remove()
+a.find(".to_delete").removeClass("to_delete").show()
+"grading_standard_new"==a.attr("id")&&a.remove()}))
+o()(".grading_standard").bind("grading_standard_updated",(function(e,a){const n=o()(this)
+n.addClass("editing")
+n.find(".update_grading_standard_url").attr("href",o()("#update_grading_standard_url").attr("href"))
+n.fillTemplateData({data:a,id:"grading_standard_".concat(a.id||"blank"),avoid:".find_grading_standard",hrefValues:["id"]}).fillFormData(a,{object_name:"grading_standard"})
+const t=n.find(".insert_grading_standard:first").clone(true)
+const s=n.find(".grading_standard_row:first").clone(true).removeClass("blank")
+const i=n.find(".grading_standard_data")
+const g=i.find("thead")
+i.empty()
+i.append(g)
+i.append(t.clone(true).show())
+i.append(s.hide())
+i.append(t.hide())
+for(const e in a.data){const n=s.clone(true)
+const g=a.data[e]
+n.removeClass("to_delete").removeClass("to_add")
+n.find(".standard_name").val(g[0]).attr("name","grading_standard[standard_data][scheme_".concat(e,"][name]")).end().find(".standard_value").val(d.n(Object(r["a"])(100*g[1],2))).attr("name","grading_standard[standard_data][scheme_".concat(e,"][value]"))
+i.append(n.show())
+i.append(t.clone(true).show())}i.find(":text:first").blur()
+n.find(".grading_standard_row").each((function(){o()(this).find(".name").text(o()(this).find(".standard_name").val()).end().find(".min_score").text(o()(this).find(".standard_value").val()).end().find(".max_score").text(o()(this).find(".edit_max_score").text())}))
+n.removeClass("editing")
+n.find(".insert_grading_standard").hide()
+if(a.id){n.find(".remove_grading_standard_link").removeClass("read_only")
+let e={"assignment[grading_standard_id]":a.id,"assignment[grading_type]":"letter_grade"}
+let r=o()("#edit_assignment_form").attr("action")
+o()("input.grading_standard_id, ").val(a.id)
+if(o()("#update_course_url").length){e={"course[grading_standard_id]":a.id}
+r=o()("#update_course_url").attr("href")}else r&&r.match(/assignments$/)&&(r=null)
+r&&o.a.ajaxJSON(r,"PUT",e,e=>{o()("#course_form .grading_scheme_set").text(e&&e.course&&e.course.grading_standard_title||d.t("grading_scheme_currently_set","Currently Set"))},()=>{})}else n.find(".remove_grading_standard_link").addClass("read_only")}))
+o()(".grading_standard .save_button").click((function(e){const a=o()(this).parents(".grading_standard")
+let n=o()("#edit_letter_grades_form .create_grading_standard_url,#create_grading_standard_url").attr("href")
+let r="POST"
+if("grading_standard_blank"!=a.attr("id")&&"grading_standard_new"!=a.attr("id")){n=o()(this).parents(".grading_standard").find(".update_grading_standard_url").attr("href")
+r="PUT"}const t=a.find(".standard_title,.grading_standard_row:visible").getFormData()
+Object.keys(t).forEach(e=>{let a
+t[e]=t[e].trim()
+if(/^grading_standard\[.*\]\[value\]$/.test(e)){a=i["a"].parse(t[e])
+isNaN(a)||(t[e]=a)}})
+a.find("button").attr("disabled",true).filter(".save_button").text(d.t("status.saving","Saving..."))
+o.a.ajaxJSON(n,r,t,e=>{const n=e.grading_standard
+a.find("button").attr("disabled",false).filter(".save_button").text(d.t("buttons.save","Save"))
+a.triggerHandler("grading_standard_updated",n)},()=>{a.find("button").attr("disabled",false).filter(".save_button").text(d.t("errors.save_failed","Save Failed"))})}))
+o()(".grading_standard thead").mouseover((function(e){if(!o()(this).parents(".grading_standard").hasClass("editing"))return
+o()(this).parents(".grading_standard").find(".insert_grading_standard").hide()
+o()(this).parents(".grading_standard").find(".insert_grading_standard:first").show()}))
+o()(".grading_standard .grading_standard_row").mouseover((function(e){if(!o()(this).parents(".grading_standard").hasClass("editing"))return
+o()(this).parents(".grading_standard").find(".insert_grading_standard").hide()
+const a=e.pageY
+const n=o()(this).offset()
+const r=o()(this).height()
+a>n.top+r/2?o()(this).next(".insert_grading_standard").show():o()(this).prev(".insert_grading_standard").show()}))
+o()(".grading_standard *").focus((function(e){o()(this).trigger("mouseover")
+o()(this).hasClass("delete_row_link")&&o()(this).parents(".grading_standard_row").nextAll(".grading_standard_row").first().trigger("mouseover")}))
+o()(".grading_standard .insert_grading_standard_link").click((function(e){e.preventDefault()
+if(o()(this).parents(".grading_standard").find(".grading_standard_row").length>40)return
+const a=o()(this).parents(".grading_standard")
+const n=a.find(".grading_standard_row:first").clone(true).removeClass("blank")
+const r=a.find(".insert_grading_standard:first").clone(true)
+let t=null
+while(!t||o()(".standard_name[name='grading_standard[standard_data][scheme_".concat(t,"][name]']")).length>0)t=Math.round(1e4*Math.random())
+n.find(".standard_name").val("-").attr("name","grading_standard[standard_data][scheme_".concat(t,"][name]"))
+n.find(".standard_value").attr("name","grading_standard[standard_data][scheme_".concat(t,"][value]"))
+o()(this).parents(".insert_grading_standard").after(n.show())
+n.after(r)
+a.find(":text:first").blur()
+n.find(":text:first").focus().select()
+n.addClass("to_add")}))
+o()(".grading_standard .delete_row_link").click((function(e){e.preventDefault()
+if(o()(this).parents(".grading_standard").find(".grading_standard_row:visible").length<2)return
+const a=o()(this).parents(".grading_standard_row")
+a.prev(".insert_grading_standard").length>0?a.prev(".insert_grading_standard").remove():a.next(".insert_grading_standard").remove()
+a.fadeOut((function(){o()(this).addClass("to_delete")
+o()(".grading_standard input[type='text']:first").triggerHandler("change")}))}))
+o()(".grading_standard input[type='text']").bind("blur change",(function(){const e=o()(this).parents(".grading_standard")
+let a=i["a"].parse(o()(this).parents(".grading_standard_row").find(".standard_value").val())
+a=Object(r["a"])(a,2)
+o()(this).parents(".grading_standard_row").find(".standard_value").val(d.n(a))
+isNaN(a)&&(a=null)
+let n=a||100
+let t=a||0
+const s=e.find(".grading_standard_row:not(.blank,.to_delete)")
+for(var g=s.index(o()(this).parents(".grading_standard_row"))+1;g<s.length;g++){var _=s.eq(g)
+var c=i["a"].parse(_.find(".standard_value").val())
+isNaN(c)&&(c=null)
+g==s.length-1?c=0:(!c||c>n-l)&&(c=parseInt(n)-1)
+_.find(".standard_value").val(d.n(c))
+n=c}for(g=s.index(o()(this).parents(".grading_standard_row"))-1;g>=0;g--){_=s.eq(g)
+c=i["a"].parse(_.find(".standard_value").val())
+isNaN(c)&&(c=null)
+g==s.length-1?c=0:(!c||c<t+l)&&(c=parseInt(t)+1)
+t=c
+_.find(".standard_value").val(d.n(c))}n=100
+s.each((function(e){let a=i["a"].parse(o()(this).find(".standard_value").val())
+e=s.index(this)
+isNaN(a)&&(a=null)
+e==s.length-1?a=0:(!a||a>n-l)&&(a=parseInt(n)-1)
+o()(this).find(".standard_value").val(d.n(a))
+n=a}))
+t=0
+for(g=s.length-1;g>=0;g--){_=s.eq(g)
+c=i["a"].parse(_.find(".standard_value").val())
+isNaN(c)&&(c=null)
+g==s.length-1?c=0:(!c||c<t+l)&&0!=c&&(c=parseInt(t)+1)
+t=c
+_.find(".standard_value").val(d.n(c))}s.each((function(e){const a=s.eq(e-1)
+let n=0
+if(a&&a.length>0){n=i["a"].parse(a.find(".standard_value").val())
+isNaN(n)&&(n=0)
+o()(this).find(".edit_max_score").text("< ".concat(d.n(n)))}}))
+s.filter(":first").find(".edit_max_score").text(d.n(100))
+s.find(".max_score_cell").each((function(){o()(this).data("label")||o()(this).data("label",o()(this).attr("aria-label"))
+const e=o()(this).data("label")
+o()(this).attr("aria-label","".concat(e," ").concat(o()(this).find(".edit_max_score").text(),"%"))}))}))})},ejBJ:function(e,a,n){"use strict"
+n.d(a,"a",(function(){return s}))
+var r=n("nc0P")
+var t=n.n(r)
+function s(e){let a=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0
+try{return parseFloat(t()(e).round(a),10)}catch(e){return NaN}}s.DEFAULT=2},nc0P:function(e,a,n){var r;(function(t){"use strict"
+var s,d=20,i=1,g=1e6,o=1e6,_=-7,l=21,c="[big.js] ",m=c+"Invalid ",u=m+"decimal places",h=m+"rounding mode",f=c+"Division by zero",v={},p=void 0,k=/^-?(\d+(\.\d*)?|\.\d+)(e[+-]?\d+)?$/i
+function b(){function e(a){var n=this
+if(!(n instanceof e))return a===p?b():new e(a)
+if(a instanceof e){n.s=a.s
+n.e=a.e
+n.c=a.c.slice()}else y(n,a)
+n.constructor=e}e.prototype=v
+e.DP=d
+e.RM=i
+e.NE=_
+e.PE=l
+e.version="5.2.2"
+return e}function y(e,a){var n,r,t
+if(0===a&&1/a<0)a="-0"
+else if(!k.test(a+=""))throw Error(m+"number")
+e.s="-"==a.charAt(0)?(a=a.slice(1),-1):1;(n=a.indexOf("."))>-1&&(a=a.replace(".",""))
+if((r=a.search(/e/i))>0){n<0&&(n=r)
+n+=+a.slice(r+1)
+a=a.substring(0,r)}else n<0&&(n=a.length)
+t=a.length
+for(r=0;r<t&&"0"==a.charAt(r);)++r
+if(r==t)e.c=[e.e=0]
+else{for(;t>0&&"0"==a.charAt(--t););e.e=n-r-1
+e.c=[]
+for(n=0;r<=t;)e.c[n++]=+a.charAt(r++)}return e}function w(e,a,n,r){var t=e.c,s=e.e+a+1
+if(s<t.length){if(1===n)r=t[s]>=5
+else if(2===n)r=t[s]>5||5==t[s]&&(r||s<0||t[s+1]!==p||1&t[s-1])
+else if(3===n)r=r||!!t[0]
+else{r=false
+if(0!==n)throw Error(h)}if(s<1){t.length=1
+if(r){e.e=-a
+t[0]=1}else t[0]=e.e=0}else{t.length=s--
+if(r)for(;++t[s]>9;){t[s]=0
+if(!s--){++e.e
+t.unshift(1)}}for(s=t.length;!t[--s];)t.pop()}}else if(n<0||n>3||n!==~~n)throw Error(h)
+return e}function j(e,a,n,r){var t,s,d=e.constructor,i=!e.c[0]
+if(n!==p){if(n!==~~n||n<(3==a)||n>g)throw Error(3==a?m+"precision":u)
+e=new d(e)
+n=r-e.e
+e.c.length>++r&&w(e,n,d.RM)
+2==a&&(r=e.e+n+1)
+for(;e.c.length<r;)e.c.push(0)}t=e.e
+s=e.c.join("")
+n=s.length
+if(2!=a&&(1==a||3==a&&r<=t||t<=d.NE||t>=d.PE))s=s.charAt(0)+(n>1?"."+s.slice(1):"")+(t<0?"e":"e+")+t
+else if(t<0){for(;++t;)s="0"+s
+s="0."+s}else if(t>0)if(++t>n)for(t-=n;t--;)s+="0"
+else t<n&&(s=s.slice(0,t)+"."+s.slice(t))
+else n>1&&(s=s.charAt(0)+"."+s.slice(1))
+return e.s<0&&(!i||4==a)?"-"+s:s}v.abs=function(){var e=new this.constructor(this)
+e.s=1
+return e}
+v.cmp=function(e){var a,n=this,r=n.c,t=(e=new n.constructor(e)).c,s=n.s,d=e.s,i=n.e,g=e.e
+if(!r[0]||!t[0])return r[0]?s:t[0]?-d:0
+if(s!=d)return s
+a=s<0
+if(i!=g)return i>g^a?1:-1
+d=(i=r.length)<(g=t.length)?i:g
+for(s=-1;++s<d;)if(r[s]!=t[s])return r[s]>t[s]^a?1:-1
+return i==g?0:i>g^a?1:-1}
+v.div=function(e){var a=this,n=a.constructor,r=a.c,t=(e=new n(e)).c,s=a.s==e.s?1:-1,d=n.DP
+if(d!==~~d||d<0||d>g)throw Error(u)
+if(!t[0])throw Error(f)
+if(!r[0])return new n(0*s)
+var i,o,_,l,c,m=t.slice(),h=i=t.length,v=r.length,k=r.slice(0,i),b=k.length,y=e,j=y.c=[],z=0,S=d+(y.e=a.e-e.e)+1
+y.s=s
+s=S<0?0:S
+m.unshift(0)
+for(;b++<i;)k.push(0)
+do{for(_=0;_<10;_++){if(i!=(b=k.length))l=i>b?1:-1
+else for(c=-1,l=0;++c<i;)if(t[c]!=k[c]){l=t[c]>k[c]?1:-1
+break}if(!(l<0))break
+for(o=b==i?t:m;b;){if(k[--b]<o[b]){c=b
+for(;c&&!k[--c];)k[c]=9;--k[c]
+k[b]+=10}k[b]-=o[b]}for(;!k[0];)k.shift()}j[z++]=l?_:++_
+k[0]&&l?k[b]=r[h]||0:k=[r[h]]}while((h++<v||k[0]!==p)&&s--)
+if(!j[0]&&1!=z){j.shift()
+y.e--}z>S&&w(y,d,n.RM,k[0]!==p)
+return y}
+v.eq=function(e){return!this.cmp(e)}
+v.gt=function(e){return this.cmp(e)>0}
+v.gte=function(e){return this.cmp(e)>-1}
+v.lt=function(e){return this.cmp(e)<0}
+v.lte=function(e){return this.cmp(e)<1}
+v.minus=v.sub=function(e){var a,n,r,t,s=this,d=s.constructor,i=s.s,g=(e=new d(e)).s
+if(i!=g){e.s=-g
+return s.plus(e)}var o=s.c.slice(),_=s.e,l=e.c,c=e.e
+if(!o[0]||!l[0])return l[0]?(e.s=-g,e):new d(o[0]?s:0)
+if(i=_-c){if(t=i<0){i=-i
+r=o}else{c=_
+r=l}r.reverse()
+for(g=i;g--;)r.push(0)
+r.reverse()}else{n=((t=o.length<l.length)?o:l).length
+for(i=g=0;g<n;g++)if(o[g]!=l[g]){t=o[g]<l[g]
+break}}if(t){r=o
+o=l
+l=r
+e.s=-e.s}if((g=(n=l.length)-(a=o.length))>0)for(;g--;)o[a++]=0
+for(g=a;n>i;){if(o[--n]<l[n]){for(a=n;a&&!o[--a];)o[a]=9;--o[a]
+o[n]+=10}o[n]-=l[n]}for(;0===o[--g];)o.pop()
+for(;0===o[0];){o.shift();--c}if(!o[0]){e.s=1
+o=[c=0]}e.c=o
+e.e=c
+return e}
+v.mod=function(e){var a,n=this,r=n.constructor,t=n.s,s=(e=new r(e)).s
+if(!e.c[0])throw Error(f)
+n.s=e.s=1
+a=1==e.cmp(n)
+n.s=t
+e.s=s
+if(a)return new r(n)
+t=r.DP
+s=r.RM
+r.DP=r.RM=0
+n=n.div(e)
+r.DP=t
+r.RM=s
+return this.minus(n.times(e))}
+v.plus=v.add=function(e){var a,n=this,r=n.constructor,t=n.s,s=(e=new r(e)).s
+if(t!=s){e.s=-s
+return n.minus(e)}var d=n.e,i=n.c,g=e.e,o=e.c
+if(!i[0]||!o[0])return o[0]?e:new r(i[0]?n:0*t)
+i=i.slice()
+if(t=d-g){if(t>0){g=d
+a=o}else{t=-t
+a=i}a.reverse()
+for(;t--;)a.push(0)
+a.reverse()}if(i.length-o.length<0){a=o
+o=i
+i=a}t=o.length
+for(s=0;t;i[t]%=10)s=(i[--t]=i[t]+o[t]+s)/10|0
+if(s){i.unshift(s);++g}for(t=i.length;0===i[--t];)i.pop()
+e.c=i
+e.e=g
+return e}
+v.pow=function(e){var a=this,n=new a.constructor(1),r=n,t=e<0
+if(e!==~~e||e<-o||e>o)throw Error(m+"exponent")
+t&&(e=-e)
+for(;;){1&e&&(r=r.times(a))
+e>>=1
+if(!e)break
+a=a.times(a)}return t?n.div(r):r}
+v.round=function(e,a){var n=this.constructor
+if(e===p)e=0
+else if(e!==~~e||e<-g||e>g)throw Error(u)
+return w(new n(this),e,a===p?n.RM:a)}
+v.sqrt=function(){var e,a,n,r=this,t=r.constructor,s=r.s,d=r.e,i=new t(.5)
+if(!r.c[0])return new t(r)
+if(s<0)throw Error(c+"No square root")
+s=Math.sqrt(r+"")
+if(0===s||s===1/0){a=r.c.join("")
+a.length+d&1||(a+="0")
+s=Math.sqrt(a)
+d=((d+1)/2|0)-(d<0||1&d)
+e=new t((s==1/0?"1e":(s=s.toExponential()).slice(0,s.indexOf("e")+1))+d)}else e=new t(s)
+d=e.e+(t.DP+=4)
+do{n=e
+e=i.times(n.plus(r.div(n)))}while(n.c.slice(0,d).join("")!==e.c.slice(0,d).join(""))
+return w(e,t.DP-=4,t.RM)}
+v.times=v.mul=function(e){var a,n=this,r=n.constructor,t=n.c,s=(e=new r(e)).c,d=t.length,i=s.length,g=n.e,o=e.e
+e.s=n.s==e.s?1:-1
+if(!t[0]||!s[0])return new r(0*e.s)
+e.e=g+o
+if(d<i){a=t
+t=s
+s=a
+o=d
+d=i
+i=o}for(a=new Array(o=d+i);o--;)a[o]=0
+for(g=i;g--;){i=0
+for(o=d+g;o>g;){i=a[o]+s[g]*t[o-g-1]+i
+a[o--]=i%10
+i=i/10|0}a[o]=(a[o]+i)%10}i?++e.e:a.shift()
+for(g=a.length;!a[--g];)a.pop()
+e.c=a
+return e}
+v.toExponential=function(e){return j(this,1,e,e)}
+v.toFixed=function(e){return j(this,2,e,this.e+e)}
+v.toPrecision=function(e){return j(this,3,e,e-1)}
+v.toString=function(){return j(this)}
+v.valueOf=v.toJSON=function(){return j(this,4)}
+s=b()
+s["default"]=s.Big=s
+r=function(){return s}.call(a,n,a,e),void 0!==r&&(e.exports=r)})()}}])
+
+//# sourceMappingURL=170-c-8b50773411.js.map
