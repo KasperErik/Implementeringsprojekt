@@ -43,7 +43,7 @@ namespace Project
 		}
 		public void TestHashtable(int size, Func<ulong, ulong> function)
 		{
-			FixedSizeGenericHashTable<ulong, ulong> hash = new FixedSizeGenericHashTable<ulong, ulong>(function, size);
+			FixedSizeGenericHashTable hash = new FixedSizeGenericHashTable(function, size);
 
 			Console.WriteLine(hash.Get(1).ToString());
 			hash.Set(1, 10);
@@ -55,5 +55,11 @@ namespace Project
 			hash.Remove(1);
 			Console.WriteLine(hash.Get(1).ToString());
 		}
+		public ulong TestSquaredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, ulong> f, int size)
+        {
+			SquaredSum fancy = new SquaredSum();
+			ulong sum = fancy.SquareSum(stream, f, size);
+            return sum;
+        }
 	}
 }

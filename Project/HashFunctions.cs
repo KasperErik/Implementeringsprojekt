@@ -5,10 +5,10 @@ namespace Project
 {
 	public class HashFunctions
 	{
-		private ulong a1;
-		private BigInteger a2;
-		private BigInteger b;
-		private int l;
+		private readonly ulong a1;
+		private readonly BigInteger a2;
+		private readonly BigInteger b;
+		private readonly int l;
 		private HashFunctions()
 		{
 			Random rnd = new Random();

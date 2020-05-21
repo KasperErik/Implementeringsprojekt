@@ -3,78 +3,78 @@ using System.Collections.Generic;
 
 namespace Project
 {
-	public struct KeyValue<K, V>
+	public struct KeyValue
 	{
-		public K Key
+		public ulong Key
 		{
 			get; set;
 		}
-		public V Value
+		public int Value
 		{
 			get; set;
 		}
 	}
 
-	public class FixedSizeGenericHashTable<K, V> where K : IComparable<K> where V : IComparable
+	public class FixedSizeGenericHashTable
 	{
 		private readonly int size;
-		private readonly LinkedList<KeyValue<K, V>>[] items;
-		private readonly Func<K, K> myHash;
-		public FixedSizeGenericHashTable(Func<K, K> myHash, int size)
+		public readonly LinkedList<KeyValue>[] items;
+		private readonly Func<ulong, ulong> myHash;
+		public FixedSizeGenericHashTable(Func<ulong, ulong> myHash, int size)
 		{
 			this.myHash = myHash;
 			this.size = size;
-			items = new LinkedList<KeyValue<K, V>>[1 << size];
+			//billedmængde 1 << size , where size = l
+			items = new LinkedList<KeyValue>[size];
 		}
 
-		public int Mod(K key, int size)
+		public int Mod(ulong key, int size)
 		{
-			return (int)(ulong.Parse(key.ToString()) % (ulong)size);
+			return (int) (key % (ulong)size);
 		}
-		public static V Add(V number1, V number2)
+		public static ulong Add(ulong number1, ulong number2)
 		{
 			dynamic a = number1;
 			dynamic b = number2;
 			return a + b;
 		}
 
-		protected int GetArrayPosition(K key)
+		protected int GetArrayPosition(ulong key)
 		{
-			int position = Mod(myHash(key), size);
-			//Console.WriteLine("Array Postion: {0}, key: {1}, size: {2}, hashcode: {3}", position, key, size, myHash);
+			ulong hashKey = myHash(key);
+			int position = (int)(hashKey % (ulong)size);
 			return int.Parse(position.ToString());
 		}
 
-		public V Get(K key)
+		public int Get(ulong key)
 		{
 			int position = GetArrayPosition(key);
-			LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
-			foreach (KeyValue<K, V> item in linkedList)
+			LinkedList<KeyValue> linkedList = GetLinkedList(position);
+			foreach (KeyValue item in linkedList)
 			{
 				if (item.Key.Equals(key))
 				{
 					return item.Value;
 				}
 			}
-
 			return default;
 		}
 
-		private void Add(K key, V value)
+		private void Add(ulong key, int value)
 		{
 			int position = GetArrayPosition(key);
-			LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
-			KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
+			LinkedList<KeyValue> linkedList = GetLinkedList(position);
+			KeyValue item = new KeyValue() { Key = key, Value = value };
 			linkedList.AddLast(item);
 		}
 
-		public void Set(K key, V value)
+		public void Set(ulong key, int value)
 		{
 			int position = GetArrayPosition(key);
-			LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
+			LinkedList<KeyValue> linkedList = GetLinkedList(position);
 			bool itemFound = false;
-			KeyValue<K, V> foundItem = default;
-			foreach (KeyValue<K, V> item in linkedList)
+			KeyValue foundItem = default;
+			foreach (KeyValue item in linkedList)
 			{
 				if (item.Key.Equals(key))
 				{
@@ -89,13 +89,13 @@ namespace Project
 			Add(key, value);
 		}
 
-		public void Increment(K key, V d)
+		public void Increment(ulong key, int d)
 		{
 			int position = GetArrayPosition(key);
-			LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
+			LinkedList<KeyValue> linkedList = GetLinkedList(position);
 			bool itemFound = false;
-			KeyValue<K, V> foundItem = default;
-			foreach (KeyValue<K, V> item in linkedList)
+			KeyValue foundItem = default;
+			foreach (KeyValue item in linkedList)
 			{
 				if (item.Key.Equals(key))
 				{
@@ -103,22 +103,22 @@ namespace Project
 					foundItem = item;
 				}
 			}
-			V value = default;
+			int value = default;
 			if (itemFound)
 			{
 				value = foundItem.Value;
 				linkedList.Remove(foundItem);
 			}
-			Add(key, Add(d, value));
+			Add(key, d + value);
 		}
 
-		public void Remove(K key)
+		public void Remove(ulong key)
 		{
 			int position = GetArrayPosition(key);
-			LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
+			LinkedList<KeyValue> linkedList = GetLinkedList(position);
 			bool itemFound = false;
-			KeyValue<K, V> foundItem = default;
-			foreach (KeyValue<K, V> item in linkedList)
+			KeyValue foundItem = default;
+			foreach (KeyValue item in linkedList)
 			{
 				if (item.Key.Equals(key))
 				{
@@ -133,12 +133,12 @@ namespace Project
 			}
 		}
 
-		protected LinkedList<KeyValue<K, V>> GetLinkedList(int position)
+		protected LinkedList<KeyValue> GetLinkedList(int position)
 		{
-			LinkedList<KeyValue<K, V>> linkedList = items[position];
+			LinkedList<KeyValue> linkedList = items[position];
 			if (linkedList == null)
 			{
-				linkedList = new LinkedList<KeyValue<K, V>>();
+				linkedList = new LinkedList<KeyValue>();
 				items[position] = linkedList;
 			}
 
@@ -147,11 +147,11 @@ namespace Project
 		public override string ToString()
 		{
 			string res = "";
-			foreach (LinkedList<KeyValue<K, V>> item in items)
+			foreach (LinkedList<KeyValue> item in items)
 			{
 				if (item != null)
 				{
-					foreach (KeyValue<K, V> j in item)
+					foreach (KeyValue j in item)
 					{
 						res += j.ToString();
 						res += "\n";
