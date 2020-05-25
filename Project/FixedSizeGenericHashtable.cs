@@ -19,8 +19,8 @@ namespace Project
 	{
 		private readonly int size;
 		public readonly LinkedList<KeyValue>[] items;
-		private readonly Func<ulong, ulong> myHash;
-		public FixedSizeGenericHashTable(Func<ulong, ulong> myHash, int size)
+		private readonly Func<ulong, int, ulong> myHash;
+		public FixedSizeGenericHashTable(Func<ulong, int, ulong> myHash, int size)
 		{
 			this.myHash = myHash;
 			this.size = size;
@@ -28,20 +28,9 @@ namespace Project
 			items = new LinkedList<KeyValue>[size];
 		}
 
-		public int Mod(ulong key, int size)
-		{
-			return (int) (key % (ulong)size);
-		}
-		public static ulong Add(ulong number1, ulong number2)
-		{
-			dynamic a = number1;
-			dynamic b = number2;
-			return a + b;
-		}
-
 		protected int GetArrayPosition(ulong key)
 		{
-			ulong hashKey = myHash(key);
+			ulong hashKey = myHash(key, size);
 			int position = (int)(hashKey % (ulong)size);
 			return int.Parse(position.ToString());
 		}

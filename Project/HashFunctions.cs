@@ -1,5 +1,6 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
+using System.Collections.Generic;
+using System;
 
 namespace Project
 {
@@ -7,15 +8,19 @@ namespace Project
 	{
 		private readonly ulong a1;
 		private readonly BigInteger a2;
+		//These are used for 4 universal hashfunktion
+		private List<BigInteger> a_values = new List<BigInteger>();
 		private readonly BigInteger b;
-		private readonly int l;
 		private HashFunctions()
 		{
-			Random rnd = new Random();
 			a1 = ulong.Parse("11868245815727406823");
 			a2 = BigInteger.Parse("749575721744620932214764");
 			b = BigInteger.Parse("733936089202998014171360"); // Get another number
-			l = rnd.Next(1, 64);
+															  //These are used for 4 universal hashfunktion
+			a_values.Add(BigInteger.Parse("365300058338701456310658672"));
+			a_values.Add(BigInteger.Parse("170518757745832412114201869"));
+			a_values.Add(BigInteger.Parse("292558019870288895792685185"));
+			a_values.Add(BigInteger.Parse("560243575461240827174015506"));
 		}
 
 		private static HashFunctions instance = null;
@@ -31,11 +36,11 @@ namespace Project
 			}
 		}
 
-		public ulong Multiply_shift_hashing(ulong x)
+		public ulong Multiply_shift_hashing(ulong x, int l)
 		{
 			return (a1 * x) >> (64 - l);
 		}
-		public ulong Multiply_mod_prime_hashing(ulong x)
+		public ulong Multiply_mod_prime_hashing(ulong x, int l)
 		{
 			BigInteger p = (1 << 89) - 1;   //  011111111111111111111 want to do left shift while maintaining 
 											//Use ex 2.7 2.8
@@ -45,8 +50,34 @@ namespace Project
 			{
 				y -= p; //y mod p = y - p , if y >= p
 			}
-			BigInteger result = y - ((y >> l) << l); //testing 1mil values, it stayed under ulong
-			return (ulong)result;
+			return (ulong)(y - ((y >> l) << l));
+		}
+
+		public ulong Four_universel_hashfunktion(ulong x, int l)
+		{
+			//q is 89
+			BigInteger p = (1 << 89) - 1;
+			//This should be a_q-1
+			BigInteger y = a_values[3];
+			//Run through the list of a values
+			for (int i = 2; i >= 0; i--)
+			{
+				y = y * x + a_values[i];
+				y = (y & p) + (y >> 89); //89 is b in the algorithm
+			}
+			if (y >= p)
+			{
+				y -= p;
+			}
+			// l most significant bits 
+			return (ulong)(y - (y >> l) << l);
+		}
+		public Tuple<BigInteger, BigInteger> Hash_func_for_count(ulong hashoutput, int l)
+		{
+			BigInteger h = hashoutput & (ulong)(l - 1);
+			BigInteger b = hashoutput >> (89 - 1);
+			BigInteger s = 1 - 2 * b;
+			return Tuple.Create(s, h);
 		}
 	}
 }

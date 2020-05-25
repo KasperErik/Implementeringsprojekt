@@ -41,7 +41,7 @@ namespace Project
 			Debug.WriteLine(sum.ToString("N0"));
 			return time;
 		}
-		public void TestHashtable(int size, Func<ulong, ulong> function)
+		public void TestHashtable(int size, Func<ulong, int, ulong> function)
 		{
 			FixedSizeGenericHashTable hash = new FixedSizeGenericHashTable(function, size);
 
@@ -55,11 +55,16 @@ namespace Project
 			hash.Remove(1);
 			Console.WriteLine(hash.Get(1).ToString());
 		}
-		public ulong TestSquaredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, ulong> f, int size)
-        {
+		public long TestSquaredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
+		{
 			SquaredSum fancy = new SquaredSum();
+			stopwatch.Start();
 			ulong sum = fancy.SquareSum(stream, f, size);
-            return sum;
-        }
+			stopwatch.Stop();
+			time = stopwatch.ElapsedMilliseconds;
+			stopwatch.Reset();
+			Debug.WriteLine(sum);
+			return time;
+		}
 	}
 }

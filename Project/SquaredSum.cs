@@ -6,7 +6,7 @@ namespace Project
 {
 	class SquaredSum
 	{
-		public ulong SquareSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, ulong> f, int size)
+		public ulong SquareSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
 		{
 			FixedSizeGenericHashTable hash = new FixedSizeGenericHashTable(f, size);
 			foreach (var x in stream)
