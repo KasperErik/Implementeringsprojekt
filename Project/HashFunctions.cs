@@ -72,11 +72,11 @@ namespace Project
 			// l most significant bits 
 			return (ulong)(y - (y >> l) << l);
 		}
-		public Tuple<BigInteger, BigInteger> Hash_func_for_count(ulong hashoutput, int l)
+		public Tuple<ulong, ulong> Hash_func_for_count(ulong hashoutput, int l)
 		{
-			BigInteger h = hashoutput & (ulong)(l - 1);
-			BigInteger b = hashoutput >> (89 - 1);
-			BigInteger s = 1 - 2 * b;
+			ulong h = hashoutput & (ulong)(l - 1);
+			ulong b = hashoutput >> (l - 1);
+			ulong s = 1 - 2 * b;
 			return Tuple.Create(s, h);
 		}
 	}

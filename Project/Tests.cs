@@ -52,8 +52,6 @@ namespace Project
 			Console.WriteLine(hash.Get(1).ToString());
 			hash.Increment(1, 20);
 			Console.WriteLine(hash.Get(1).ToString());
-			hash.Remove(1);
-			Console.WriteLine(hash.Get(1).ToString());
 		}
 		public long TestSquaredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
 		{
@@ -65,6 +63,16 @@ namespace Project
 			stopwatch.Reset();
 			Debug.WriteLine(sum);
 			return time;
+		}
+		public long TestCount(IEnumerable<Tuple<ulong, int>> stream, int l)
+		{
+			HashFunctions f = HashFunctions.Instance;
+			foreach (x in stream)
+			{
+				ulong[] something = Count_Sketch.Sketch(f.Four_universel_hashfunktion(x, l), f.Hash_func_for_count(f.Four_universel_hashfunktion(x, l), l), stream, l);
+
+			}
+			return default;
 		}
 	}
 }

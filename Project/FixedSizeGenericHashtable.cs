@@ -101,7 +101,7 @@ namespace Project
 			Add(key, d + value);
 		}
 
-		public void Remove(ulong key)
+		private void Remove(ulong key)
 		{
 			int position = GetArrayPosition(key);
 			LinkedList<KeyValue> linkedList = GetLinkedList(position);

@@ -19,6 +19,10 @@ namespace Project
 			float b1 = (float)b;
 			Console.WriteLine(b1 / a1);
 			*/
+
+			/*
+			Opgave 3
+			*/
 			HashFunctions f = HashFunctions.Instance;
 			for (int i = 1; i < 30; i++)
 			{
