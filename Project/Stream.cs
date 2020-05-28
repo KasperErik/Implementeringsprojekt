@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Project
 {
-	class Stream
+	internal class Stream
 	{
 		public static IEnumerable<Tuple<ulong, int>> CreateStream(int n, int l)
 		{

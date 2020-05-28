@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Christian\\Dropbox\\RAD\\Implementeringsprojekt\\Project\\Project.csproj": {}
+    "C:\\Users\\Kaspito\\Dropbox\\KU\\4.sem\\RAD\\Projekt\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Christian\\Dropbox\\RAD\\Implementeringsprojekt\\Project\\Project.csproj": {
+    "C:\\Users\\Kaspito\\Dropbox\\KU\\4.sem\\RAD\\Projekt\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Christian\\Dropbox\\RAD\\Implementeringsprojekt\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\Kaspito\\Dropbox\\KU\\4.sem\\RAD\\Projekt\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\Christian\\Dropbox\\RAD\\Implementeringsprojekt\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Christian\\Dropbox\\RAD\\Implementeringsprojekt\\Project\\obj\\",
+        "projectPath": "C:\\Users\\Kaspito\\Dropbox\\KU\\4.sem\\RAD\\Projekt\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\Kaspito\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kaspito\\Dropbox\\KU\\4.sem\\RAD\\Projekt\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kaspito\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

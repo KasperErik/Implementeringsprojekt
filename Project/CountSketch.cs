@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Numerics;
 using System.Collections.Generic;
 
-public class Count_Sketch
+public class CountSketch
 {
 	public static ulong[] Sketch(Func<ulong, int, ulong> g, Func<ulong, int, Tuple<ulong, ulong>> hAndS, IEnumerable<Tuple<ulong, int>> stream, int l)
 	{

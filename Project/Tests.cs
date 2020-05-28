@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Numerics;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Numerics;
 
 namespace Project
 {
-	class Tests
+	internal class Tests
 	{
-		readonly IEnumerable<Tuple<ulong, int>> stream;
-		readonly List<ulong> values = new List<ulong>();
-		readonly Stopwatch stopwatch = new Stopwatch();
-		long time;
-		BigInteger sum = 0;
+		private readonly IEnumerable<Tuple<ulong, int>> stream;
+		private readonly List<ulong> values = new List<ulong>();
+		private readonly Stopwatch stopwatch = new Stopwatch();
+		private long time;
+		private BigInteger sum = 0;
+
 		public Tests(int n, int l)
 		{
 			stream = Stream.CreateStream(n, l);
@@ -21,6 +22,7 @@ namespace Project
 				values.Add(i.Item1);
 			}
 		}
+
 		public long HashFunctionTest(Func<ulong, ulong> f)
 		{
 			List<ulong> hashValues = new List<ulong>();
@@ -41,6 +43,7 @@ namespace Project
 			Debug.WriteLine(sum.ToString("N0"));
 			return time;
 		}
+
 		public void TestHashtable(int size, Func<ulong, int, ulong> function)
 		{
 			FixedSizeGenericHashTable hash = new FixedSizeGenericHashTable(function, size);
@@ -53,24 +56,23 @@ namespace Project
 			hash.Increment(1, 20);
 			Console.WriteLine(hash.Get(1).ToString());
 		}
-		public long TestSquaredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
+
+		public long TestSqredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
 		{
-			SquaredSum fancy = new SquaredSum();
 			stopwatch.Start();
-			ulong sum = fancy.SquareSum(stream, f, size);
+			ulong sum = SquaredSum.SquareSum(stream, f, size);
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
 			Debug.WriteLine(sum);
 			return time;
 		}
+
 		public long TestCount(IEnumerable<Tuple<ulong, int>> stream, int l)
 		{
-			HashFunctions f = HashFunctions.Instance;
-			foreach (x in stream)
+			foreach (var item in stream)
 			{
-				ulong[] something = Count_Sketch.Sketch(f.Four_universel_hashfunktion(x, l), f.Hash_func_for_count(f.Four_universel_hashfunktion(x, l), l), stream, l);
-
+				//var something = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count(HashFuncts.FourUniversal(item.Item1, l), l), stream, l);
 			}
 			return default;
 		}

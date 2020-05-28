@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Numerics;
 
 namespace Project
 {
-	class Program
+	internal class Program
 	{
-		static void Main()
+		private static void Main()
 		{
 			Tests tests = new Tests(10000000, 25);
 			/*
-			tests.TestHashtable(20, HashFunctions.Instance.Multiply_shift_hashing);
-			long a = tests.HashFunctionTest(HashFunctions.Instance.Multiply_shift_hashing);
-			long b = tests.HashFunctionTest(HashFunctions.Instance.Multiply_mod_prime_hashing);
+			tests.TestHashtable(20, HashFuncts.Instance.MultiShift);
+			long a = tests.HashFunctionTest(HashFuncts.Instance.MultiShift);
+			long b = tests.HashFunctionTest(HashFuncts.Instance.MultiModPrime);
 			Console.WriteLine(a);
 			Console.WriteLine(b);
 			float a1 = (float)a;
@@ -23,7 +22,6 @@ namespace Project
 			/*
 			Opgave 3
 			*/
-			HashFunctions f = HashFunctions.Instance;
 			for (int i = 1; i < 30; i++)
 			{
 				Console.WriteLine("\n-----------------------------------");
@@ -31,11 +29,13 @@ namespace Project
 				Console.WriteLine("-----------------------------------\n");
 
 				IEnumerable<Tuple<ulong, int>> stream = Stream.CreateStream(1000000, i);
-				long res1 = tests.TestSquaredSum(stream, f.Multiply_shift_hashing, i);
+				long res1 = tests.TestSqredSum(stream, HashFuncts.MultiShift, i);
+
 				Console.WriteLine("Shift time: " + res1.ToString());
 
 				stream = Stream.CreateStream(1000000, i);
-				long res2 = tests.TestSquaredSum(stream, f.Multiply_mod_prime_hashing, i);
+				long res2 = tests.TestSqredSum(stream, HashFuncts.MultiModPrime, i);
+
 				Console.WriteLine("Mod p time: " + res2.ToString());
 
 				float res = (float)res2 / (float)res1;

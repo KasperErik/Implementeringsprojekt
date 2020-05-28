@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Project
 {
-	class SquaredSum
+	internal class SquaredSum
 	{
-		public ulong SquareSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
+		public static ulong SquareSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
 		{
 			FixedSizeGenericHashTable hash = new FixedSizeGenericHashTable(f, size);
 			foreach (var x in stream)

@@ -9,6 +9,7 @@ namespace Project
 		{
 			get; set;
 		}
+
 		public int Value
 		{
 			get; set;
@@ -20,6 +21,7 @@ namespace Project
 		private readonly int size;
 		public readonly LinkedList<KeyValue>[] items;
 		private readonly Func<ulong, int, ulong> myHash;
+
 		public FixedSizeGenericHashTable(Func<ulong, int, ulong> myHash, int size)
 		{
 			this.myHash = myHash;
@@ -133,6 +135,7 @@ namespace Project
 
 			return linkedList;
 		}
+
 		public override string ToString()
 		{
 			string res = "";
