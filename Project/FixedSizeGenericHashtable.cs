@@ -27,14 +27,13 @@ namespace Project
 			this.myHash = myHash;
 			this.size = size;
 			//billedmængde 1 << size , where size = l
-			items = new LinkedList<KeyValue>[size];
+			items = new LinkedList<KeyValue>[1 << size];
 		}
 
 		protected int GetArrayPosition(ulong key)
 		{
 			ulong hashKey = myHash(key, size);
-			int position = (int)(hashKey % (ulong)size);
-			return int.Parse(position.ToString());
+			return (int)hashKey;
 		}
 
 		public int Get(ulong key)

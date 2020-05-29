@@ -19,7 +19,7 @@ namespace Project
 				{
 					foreach (KeyValue item in hash.items[i])
 					{
-						S += (ulong)Math.Pow(item.Value, 2);
+						S += (ulong)(item.Value * item.Value);
 					}
 				}
 			}

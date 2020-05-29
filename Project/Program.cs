@@ -31,7 +31,7 @@ namespace Project
 				IEnumerable<Tuple<ulong, int>> stream = Stream.CreateStream(1000000, i);
 				long res1 = tests.TestSqredSum(stream, HashFuncts.MultiShift, i);
 
-				Console.WriteLine("Shift time: " + res1.ToString());
+				Console.WriteLine("Shift time: " + res1.ToString() + "\n");
 
 				stream = Stream.CreateStream(1000000, i);
 				long res2 = tests.TestSqredSum(stream, HashFuncts.MultiModPrime, i);

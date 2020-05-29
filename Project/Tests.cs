@@ -64,7 +64,7 @@ namespace Project
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
-			Debug.WriteLine(sum);
+			Console.WriteLine("Sqred  sum: " + sum);
 			return time;
 		}
 
