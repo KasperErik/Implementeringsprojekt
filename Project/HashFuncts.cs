@@ -35,7 +35,7 @@ namespace Project
 			return (ulong)(y - ((y >> l) << l));
 		}
 
-		public static ulong FourUniversal(ulong x, int l)
+		public static BigInteger FourUniversal(ulong x, int l)
 		{
 			//q is 89
 			BigInteger p = (1 << 89) - 1;
@@ -52,15 +52,15 @@ namespace Project
 				y -= p;
 			}
 			// l most significant bits
-			return (ulong)(y - (y >> l) << l);
+			return y;
 		}
 
-		public static Tuple<ulong, ulong> Hash4Count(ulong hashoutput, int l)
+		public static Tuple<ulong, ulong> Hash4Count(BigInteger hashoutput, int l)
 		{
-			ulong h = hashoutput & (ulong)(l - 1);
-			ulong b = hashoutput >> (l - 1);
-			ulong s = 1 - 2 * b;
-			return Tuple.Create(s, h);
+			BigInteger h = hashoutput & ((1UL << l) - 1UL);
+			BigInteger b = hashoutput >> (89 - 1); // b is either 0 or 1, its the first bit
+			BigInteger s = 1 - 2 * b;
+			return Tuple.Create((ulong)s, (ulong)h);
 		}
 	}
 }

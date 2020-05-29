@@ -27,13 +27,14 @@ namespace Project
 			this.myHash = myHash;
 			this.size = size;
 			//billedmængde 1 << size , where size = l
-			items = new LinkedList<KeyValue>[1 << size];
+			items = new LinkedList<KeyValue>[size];
 		}
 
 		protected int GetArrayPosition(ulong key)
 		{
 			ulong hashKey = myHash(key, size);
-			return (int)hashKey;
+			int position = (int)(hashKey % (ulong)size);
+			return position;
 		}
 
 		public int Get(ulong key)

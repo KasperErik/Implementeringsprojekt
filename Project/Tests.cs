@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Numerics;
+using System.Xml;
 
 namespace Project
 {
@@ -57,24 +58,22 @@ namespace Project
 			Console.WriteLine(hash.Get(1).ToString());
 		}
 
-		public long TestSqredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
+		public ulong TestSqredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
 		{
 			stopwatch.Start();
 			ulong sum = SquaredSum.SquareSum(stream, f, size);
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
-			Console.WriteLine("Sqred  sum: " + sum);
-			return time;
+			Console.WriteLine("Time used: " + time);
+			return sum;
 		}
 
-		public long TestCount(IEnumerable<Tuple<ulong, int>> stream, int l)
+		public ulong TestCount(IEnumerable<Tuple<ulong, int>> stream, int l)
 		{
-			foreach (var item in stream)
-			{
-				//var something = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count(HashFuncts.FourUniversal(item.Item1, l), l), stream, l);
-			}
-			return default;
+			ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, l);
+			ulong result = CountSketch.Estimate(arr);
+			return result;
 		}
 	}
 }
