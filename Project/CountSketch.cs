@@ -7,14 +7,15 @@ public class CountSketch
 {
 	public static ulong[] Sketch(Func<ulong, int, BigInteger> g, Func<BigInteger, int, Tuple<ulong, ulong>> hAndS, IEnumerable<Tuple<ulong, int>> stream, int l)
 	{
-		ulong[] SketchArr = new ulong[1 << l];
-		foreach (var item in stream)
+		ulong[] SketchArr = new ulong[1UL << l];
+		foreach (Tuple<ulong, int> item in stream)
 		{
 			BigInteger x = g(item.Item1, l);
+			//Console.WriteLine(x.ToString("N0"));
 			Tuple<ulong, ulong> res = hAndS(x, l);
 			ulong s = res.Item1;
 			ulong h = res.Item2;
-			SketchArr[h] = SketchArr[h] + s * (ulong)item.Item2;
+			SketchArr[h] = SketchArr[h] + (s * (ulong)item.Item2);
 		}
 		return SketchArr;
 	}
@@ -30,7 +31,7 @@ public class CountSketch
 	public static float MSE(ulong[] Xarr, ulong S)
 	{
 		float MSE = default;
-		foreach (var item in Xarr)
+		foreach (ulong item in Xarr)
 		{
 			ulong temp = item - S;
 			MSE += (float)(temp * temp) / (float)Xarr.Length;

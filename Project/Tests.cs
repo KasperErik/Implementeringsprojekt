@@ -13,6 +13,7 @@ namespace Project
 		private readonly Stopwatch stopwatch = new Stopwatch();
 		private long time;
 		private BigInteger sum = 0;
+		private RandGen randGen = new RandGen();
 
 		public Tests(int n, int l)
 		{
@@ -71,6 +72,7 @@ namespace Project
 
 		public ulong TestCount(IEnumerable<Tuple<ulong, int>> stream, int l)
 		{
+			HashFuncts.ChangeRandArray(randGen);
 			ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, l);
 			ulong result = CountSketch.Estimate(arr);
 			return result;
