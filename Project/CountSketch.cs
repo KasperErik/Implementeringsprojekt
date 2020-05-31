@@ -5,17 +5,18 @@ using System.ComponentModel.DataAnnotations;
 
 public class CountSketch
 {
-	public static ulong[] Sketch(Func<ulong, int, BigInteger> g, Func<BigInteger, int, Tuple<ulong, ulong>> hAndS, IEnumerable<Tuple<ulong, int>> stream, int l)
+	public static ulong[] Sketch(Func<ulong, BigInteger> g, Func<BigInteger, int, Tuple<int, ulong>> sAndH, IEnumerable<Tuple<ulong, int>> stream, int m)
 	{
-		ulong[] SketchArr = new ulong[1UL << l];
+		ulong[] SketchArr = new ulong[m];
 		foreach (Tuple<ulong, int> item in stream)
 		{
-			BigInteger x = g(item.Item1, l);
+			BigInteger x = g(item.Item1);
+			int d = item.Item2;
 			//Console.WriteLine(x.ToString("N0"));
-			Tuple<ulong, ulong> res = hAndS(x, l);
-			ulong s = res.Item1;
+			Tuple<int, ulong> res = sAndH(x, m);
+			int s = res.Item1;
 			ulong h = res.Item2;
-			SketchArr[h] = SketchArr[h] + (s * (ulong)item.Item2);
+			SketchArr[h] = SketchArr[h] + (ulong)(s * d);
 		}
 		return SketchArr;
 	}
@@ -30,15 +31,14 @@ public class CountSketch
 	}
 	public static float MSE(ulong[] Xarr, ulong S)
 	{
-		float MSE = default;
+		ulong sqrSum = 0;
 		foreach (ulong item in Xarr)
 		{
-			ulong temp = item - S;
-			MSE += (float)(temp * temp) / (float)Xarr.Length;
+			sqrSum += (item - S) * (item - S);
 		}
-		return MSE;
+		return (float)sqrSum / (float)Xarr.Length;
 	}
-	public static float Var(ulong S, ulong m)
+	public static float Var(ulong S, int m)
 	{
 		return (float)(S * S * 2) / (float)m;
 	}

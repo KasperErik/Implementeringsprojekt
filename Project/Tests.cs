@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Numerics;
-using System.Xml;
 
 namespace Project
 {
@@ -66,14 +65,14 @@ namespace Project
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
-			Console.WriteLine("Time used: " + time);
+			Console.WriteLine(size + ", " + time);
 			return sum;
 		}
 
-		public ulong TestCount(IEnumerable<Tuple<ulong, int>> stream, int l)
+		public ulong TestCount(IEnumerable<Tuple<ulong, int>> stream, int m)
 		{
 			HashFuncts.ChangeRandArray(randGen);
-			ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, l);
+			ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, m);
 			ulong result = CountSketch.Estimate(arr);
 			return result;
 		}
