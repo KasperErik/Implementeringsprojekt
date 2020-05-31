@@ -13,7 +13,7 @@ namespace Project
 				hash.Increment(x.Item1, x.Item2);
 			}
 			ulong S = 0;
-			for (int i = 0; i < size; i++)
+			for (ulong i = 0; i < (1UL << size); i++)
 			{
 				if (hash.items[i] != null)
 				{

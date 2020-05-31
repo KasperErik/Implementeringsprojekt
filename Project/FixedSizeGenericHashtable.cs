@@ -27,19 +27,17 @@ namespace Project
 			this.myHash = myHash;
 			this.size = size;
 			//billedmængde 1 << size , where size = l
-			items = new LinkedList<KeyValue>[size];
+			items = new LinkedList<KeyValue>[1 << size];
 		}
 
-		protected int GetArrayPosition(ulong key)
+		protected ulong GetArrayPosition(ulong key)
 		{
-			ulong hashKey = myHash(key, size);
-			int position = (int)(hashKey % (ulong)size);
-			return position;
+			return myHash(key, size);
 		}
 
 		public int Get(ulong key)
 		{
-			int position = GetArrayPosition(key);
+			ulong position = GetArrayPosition(key);
 			LinkedList<KeyValue> linkedList = GetLinkedList(position);
 			foreach (KeyValue item in linkedList)
 			{
@@ -53,7 +51,7 @@ namespace Project
 
 		private void Add(ulong key, int value)
 		{
-			int position = GetArrayPosition(key);
+			ulong position = GetArrayPosition(key);
 			LinkedList<KeyValue> linkedList = GetLinkedList(position);
 			KeyValue item = new KeyValue() { Key = key, Value = value };
 			linkedList.AddLast(item);
@@ -61,7 +59,7 @@ namespace Project
 
 		public void Set(ulong key, int value)
 		{
-			int position = GetArrayPosition(key);
+			ulong position = GetArrayPosition(key);
 			LinkedList<KeyValue> linkedList = GetLinkedList(position);
 			bool itemFound = false;
 			KeyValue foundItem = default;
@@ -82,7 +80,7 @@ namespace Project
 
 		public void Increment(ulong key, int d)
 		{
-			int position = GetArrayPosition(key);
+			ulong position = GetArrayPosition(key);
 			LinkedList<KeyValue> linkedList = GetLinkedList(position);
 			bool itemFound = false;
 			KeyValue foundItem = default;
@@ -103,28 +101,7 @@ namespace Project
 			Add(key, d + value);
 		}
 
-		private void Remove(ulong key)
-		{
-			int position = GetArrayPosition(key);
-			LinkedList<KeyValue> linkedList = GetLinkedList(position);
-			bool itemFound = false;
-			KeyValue foundItem = default;
-			foreach (KeyValue item in linkedList)
-			{
-				if (item.Key.Equals(key))
-				{
-					itemFound = true;
-					foundItem = item;
-				}
-			}
-
-			if (itemFound)
-			{
-				linkedList.Remove(foundItem);
-			}
-		}
-
-		protected LinkedList<KeyValue> GetLinkedList(int position)
+		protected LinkedList<KeyValue> GetLinkedList(ulong position)
 		{
 			LinkedList<KeyValue> linkedList = items[position];
 			if (linkedList == null)

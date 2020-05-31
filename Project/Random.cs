@@ -40,6 +40,7 @@ namespace Project
 				random_number = (random_number << 31) + rand.Next();
 			return random_number % max;
 		}
+
 		static Random random = new Random();
 
 		// returns a evenly distributed random BigInteger from 1 to N.

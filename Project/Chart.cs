@@ -10,7 +10,7 @@
 //
 // compile: \net4.0\csc.exe /t:winexe /debug+ /R:\net4.0\System.Windows.Forms.DataVisualization.dll FakeChart.cs
 //
-
+/*
 using System;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -111,3 +111,4 @@ namespace Dino.Tools.WebMonitor
         }
     }
 }
+*/

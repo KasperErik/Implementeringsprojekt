@@ -20,6 +20,7 @@ public class CountSketch
 		}
 		return SketchArr;
 	}
+
 	public static ulong Estimate(ulong[] SketchArr)
 	{
 		ulong res = 0;
@@ -29,6 +30,7 @@ public class CountSketch
 		}
 		return res;
 	}
+
 	public static float MSE(ulong[] Xarr, ulong S)
 	{
 		ulong sqrSum = 0;
