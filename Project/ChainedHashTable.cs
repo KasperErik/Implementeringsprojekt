@@ -16,18 +16,18 @@ namespace Project
 		}
 	}
 
-	public class FixedSizeGenericHashTable
+	public class ChainedHashTable
 	{
 		private readonly int size;
 		public readonly LinkedList<KeyValue>[] items;
 		private readonly Func<ulong, int, ulong> myHash;
 
-		public FixedSizeGenericHashTable(Func<ulong, int, ulong> myHash, int size)
+		public ChainedHashTable(Func<ulong, int, ulong> myHash, int size)
 		{
 			this.myHash = myHash;
 			this.size = size;
 			//billedmængde 1 << size , where size = l
-			items = new LinkedList<KeyValue>[1 << size];
+			items = new LinkedList<KeyValue>[1UL << size];
 		}
 
 		protected ulong GetArrayPosition(ulong key)
@@ -82,8 +82,10 @@ namespace Project
 		{
 			ulong position = GetArrayPosition(key);
 			LinkedList<KeyValue> linkedList = GetLinkedList(position);
+
 			bool itemFound = false;
 			KeyValue foundItem = default;
+
 			foreach (KeyValue item in linkedList)
 			{
 				if (item.Key.Equals(key))
@@ -92,6 +94,7 @@ namespace Project
 					foundItem = item;
 				}
 			}
+
 			int value = default;
 			if (itemFound)
 			{
@@ -104,6 +107,7 @@ namespace Project
 		protected LinkedList<KeyValue> GetLinkedList(ulong position)
 		{
 			LinkedList<KeyValue> linkedList = items[position];
+
 			if (linkedList == null)
 			{
 				linkedList = new LinkedList<KeyValue>();

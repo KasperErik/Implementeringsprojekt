@@ -36,14 +36,22 @@ namespace Project
 				PrettyPrint.SubSect("Using L = " + i);
 
 				stream = Stream.CreateStream(n, i);
-				ulong res1 = Tests.TestSqredSum(stream, HashFuncts.MultiShift, i);
 
-				PrettyPrint.Body("Shift sum  : ", res1.ToString(""));
+				(ulong sum1, long time1) = Tests.TestSqredSum(stream, HashFuncts.MultiShift, i);
+
+				PrettyPrint.Body("Shift sum  : ", sum1.ToString(""));
+				PrettyPrint.Body("Time in ms :", time1.ToString());
 				PrettyPrint.Spacer();
 
-				ulong res2 = Tests.TestSqredSum(stream, HashFuncts.MultiModPrime, i);
+				(ulong sum2, long time2) = Tests.TestSqredSum(stream, HashFuncts.MultiModPrime, i);
 
-				PrettyPrint.Body("Mod p sum  : ", res2.ToString());
+				PrettyPrint.Body("Mod p sum  : ", sum2.ToString());
+				PrettyPrint.Body("Time in ms :", time2.ToString());
+				PrettyPrint.Spacer();
+
+				float dif = (float)time2 / (float)time1;
+
+				PrettyPrint.Body("Difference :", dif.ToString("F"));
 			}
 
 			PrettyPrint.Footer("Assignment 3 Is Done");
@@ -59,7 +67,9 @@ namespace Project
 			ulong[] Xarr = Tests.TestCount(stream, m);
 
 			//Our S value from our MultiModPrime
-			ulong S = Tests.TestSqredSum(stream, HashFuncts.MultiShift, l);
+			Tests.verbatim = false; //this is just to stop it from printing the time.
+			ulong S = Tests.TestSqredSum(stream, HashFuncts.MultiShift, l).sum;
+			Tests.verbatim = true;
 
 			//Mean Square Error
 			float MSE = CountSketch.MSE(Xarr, S);

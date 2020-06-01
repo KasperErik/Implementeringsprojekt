@@ -10,6 +10,7 @@ namespace Project
 		private static readonly Stopwatch stopwatch = new Stopwatch();
 		private static long time;
 		private static readonly RandGen randGen = new RandGen();
+		public static bool verbatim = true;
 
 
 		public static long HashFunctionTest(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int l)
@@ -38,7 +39,7 @@ namespace Project
 			return time;
 		}
 
-		public static ulong TestSqredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
+		public static (ulong sum, long time) TestSqredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
 		{
 			stopwatch.Start();
 			ulong sum = SquaredSum.SquareSum(stream, f, size);
@@ -46,9 +47,7 @@ namespace Project
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
 
-			PrettyPrint.Body("Time in ms :", time.ToString());
-
-			return sum;
+			return (sum, time);
 		}
 
 		public static ulong[] TestCount(IEnumerable<Tuple<ulong, int>> stream, int m)
@@ -62,8 +61,15 @@ namespace Project
 				ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, m);
 				res[j] = CountSketch.Estimate(arr);
 
-				string str = String.Format("Count Sketch Estimate : {0,10}", res[j]);
-				PrettyPrint.Body(str);
+				if (verbatim)
+				{
+					string str = String.Format("Count Sketch Estimate : {0,10}", res[j]);
+					PrettyPrint.Body(str);
+				}
+				else
+				{
+					//insert loadingbar
+				}
 			}
 
 			return res;
