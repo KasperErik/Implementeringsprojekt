@@ -59,4 +59,28 @@ public class CountSketch
 		}
 		return res;
 	}
+
+	public static float[] GetMediaArray(ulong[] Xarr)
+	{
+		List<ulong[]> List = DivideIntoSubArr(Xarr);
+
+		float[] MedianArr = new float[9];
+
+		//calculate median for all the Arrays
+		int count = 0;
+		foreach (ulong[] arr in List)
+		{
+			Array.Sort(arr);
+			//Find median in Arr by selection algorithm
+			//Assign value to MedianArr
+			float temp = (float)arr[(10 - 1) / 2] + (float)arr[10 / 2];
+			MedianArr[count] = temp / 2.0f;
+			count++;
+		}
+
+		//Sort the array into ascending order
+		Array.Sort(MedianArr);
+
+		return MedianArr;
+	}
 }

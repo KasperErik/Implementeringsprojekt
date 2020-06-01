@@ -45,16 +45,28 @@ namespace Project
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
-			Console.WriteLine(size + ", " + time);
+
+			PrettyPrint.Body("Time in ms :", time.ToString());
+
 			return sum;
 		}
 
-		public static ulong TestCount(IEnumerable<Tuple<ulong, int>> stream, int m)
+		public static ulong[] TestCount(IEnumerable<Tuple<ulong, int>> stream, int m)
 		{
-			HashFuncts.ChangeRandArray(randGen);
-			ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, m);
-			ulong result = CountSketch.Estimate(arr);
-			return result;
+			ulong[] res = new ulong[100];
+
+			for (int j = 0; j < 100; j++)
+			{
+				//Countsketch
+				HashFuncts.ChangeRandArray(randGen);
+				ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, m);
+				res[j] = CountSketch.Estimate(arr);
+
+				string str = String.Format("Count Sketch Estimate : {0,10}", res[j]);
+				PrettyPrint.Body(str);
+			}
+
+			return res;
 		}
 	}
 }

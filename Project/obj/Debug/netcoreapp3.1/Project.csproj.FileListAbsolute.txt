@@ -37,3 +37,4 @@ C:\Users\Christian\Dropbox\RAD\Implementeringsprojekt\Project\obj\Debug\netcorea
 C:\Users\Christian\Dropbox\RAD\Implementeringsprojekt\Project\obj\Debug\netcoreapp3.1\Project.dll
 C:\Users\Christian\Dropbox\RAD\Implementeringsprojekt\Project\obj\Debug\netcoreapp3.1\Project.pdb
 C:\Users\Christian\Dropbox\RAD\Implementeringsprojekt\Project\obj\Debug\netcoreapp3.1\Project.genruntimeconfig.cache
+C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\obj\Debug\netcoreapp3.1\Project.csproj.ResolveComReference.cache
