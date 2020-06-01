@@ -43,13 +43,15 @@ namespace Project
 			str = CenterWithSpace(str, 34);
 			Console.WriteLine(" ╔════════════════════════════════════╗");
 			Console.WriteLine(" ║ {0,-34} ║", str);
-			Console.WriteLine(" ╠════════════════════════════════════╣");
+			Splitter();
+			Spacer();
 		}
 
 		public static void Footer(string str)
 		{
 			str = CenterWithSpace(str, 34);
-			Console.WriteLine(" ╠════════════════════════════════════╣");
+			Spacer();
+			Splitter();
 			Console.WriteLine(" ║ {0,-34} ║", str);
 			Console.WriteLine(" ╚════════════════════════════════════╝\n");
 		}
@@ -57,6 +59,11 @@ namespace Project
 		public static void Spacer()
 		{
 			Console.WriteLine(" ║                                    ║");
+		}
+
+		public static void Splitter()
+		{
+			Console.WriteLine(" ╠════════════════════════════════════╣");
 		}
 
 		public static void SubSect(string str)
@@ -81,6 +88,34 @@ namespace Project
 		public static void Body(int i)
 		{
 			Console.WriteLine(" ║ {0,34} ║", i);
+		}
+
+		public static void ProgressBar(string title, int progress, int max)
+		{
+			if (progress == 1)
+			{
+				Console.SetCursorPosition(0, Console.CursorTop);
+				PrettyPrint.Body(title);
+			}
+			else
+			{
+				Console.SetCursorPosition(0, Console.CursorTop - 1);
+				PrettyPrint.Body(title);
+			}
+			if (progress == max)
+			{
+				Console.WriteLine(" ║  [■■■■■■■■■■■■■■■■■■■■■■■■■] 100%  ║");
+			}
+			else
+			{
+				string bar = "";
+				int pct = (int)(((float)progress / (float)max) * 100.0);
+				for (int i = 0; i < pct/4; i++)
+				{
+					bar += "■";
+				}
+				Console.Write(" ║  [{0,-25}]  {1,2}%  ║", bar, pct);
+			}
 		}
 	}
 }

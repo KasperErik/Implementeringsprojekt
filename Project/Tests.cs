@@ -68,7 +68,8 @@ namespace Project
 				}
 				else
 				{
-					//insert loadingbar
+					string str = "Count Sketch Estimates";
+					PrettyPrint.ProgressBar(str, j + 1, 100);
 				}
 			}
 

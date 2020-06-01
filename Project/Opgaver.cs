@@ -63,13 +63,14 @@ namespace Project
 
 			IEnumerable<Tuple<ulong, int>> stream = Stream.CreateStream(n, l);
 
+
+			Tests.verbatim = false; //this is just to stop it from printing the time.
+
 			//Estimate values from count sketch
 			ulong[] Xarr = Tests.TestCount(stream, m);
 
 			//Our S value from our MultiModPrime
-			Tests.verbatim = false; //this is just to stop it from printing the time.
 			ulong S = Tests.TestSqredSum(stream, HashFuncts.MultiShift, l).sum;
-			Tests.verbatim = true;
 
 			//Mean Square Error
 			float MSE = CountSketch.MSE(Xarr, S);
@@ -88,6 +89,8 @@ namespace Project
 				PrettyPrint.Body("MedianArr : ", item.ToString());
 			}
 
+			PrettyPrint.Spacer();
+			PrettyPrint.Body("Median    :", MedianArr[4].ToString());
 			PrettyPrint.Spacer();
 			PrettyPrint.Body("Real sum  :", S.ToString());
 			PrettyPrint.Footer("Assignment 7 Is Done");
