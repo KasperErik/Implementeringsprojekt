@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Project
 {
 	class PrettyPrint
 	{
-		/*
-		 * ╔═════╗
-		 * ║65001║
-		 * ╠═════╣
-		 * ╚═════╝
-		 * 
-		 */
 		private static string CenterWithSpace(string s, int width)
 		{
 			if (s.Length >= width)
@@ -42,7 +33,7 @@ namespace Project
 		{
 			str = CenterWithSpace(str, 34);
 			Console.WriteLine(" ╔════════════════════════════════════╗");
-			Console.WriteLine(" ║ {0,-34} ║", str);
+			Console.WriteLine(" ║ {0} ║", str);
 			Splitter();
 			Spacer();
 		}
@@ -52,7 +43,7 @@ namespace Project
 			str = CenterWithSpace(str, 34);
 			Spacer();
 			Splitter();
-			Console.WriteLine(" ║ {0,-34} ║", str);
+			Console.WriteLine(" ║ {0} ║", str);
 			Console.WriteLine(" ╚════════════════════════════════════╝\n");
 		}
 
@@ -70,7 +61,7 @@ namespace Project
 		{
 			str = CenterWithLine(str, 34);
 			Spacer();
-			Console.WriteLine(" ╠═{0,-34}═╣", str);
+			Console.WriteLine(" ╠═{0}═╣", str);
 			Spacer();
 		}
 
@@ -82,7 +73,7 @@ namespace Project
 		public static void Body(string str)
 		{
 			str = CenterWithSpace(str, 34);
-			Console.WriteLine(" ║ {0,-34} ║", str);
+			Console.WriteLine(" ║ {0} ║", str);
 		}
 
 		public static void Body(int i)
@@ -99,23 +90,17 @@ namespace Project
 			}
 			else
 			{
-				Console.SetCursorPosition(0, Console.CursorTop - 1);
+				Console.SetCursorPosition(0, Console.CursorTop - 2);
 				PrettyPrint.Body(title);
 			}
-			if (progress == max)
+
+			string bar = "";
+			int pct = (int)(((float)progress / (float)max) * 100.0);
+			for (int i = 0; i < pct / 4; i++)
 			{
-				Console.WriteLine(" ║  [■■■■■■■■■■■■■■■■■■■■■■■■■] 100%  ║");
+				bar += "■";
 			}
-			else
-			{
-				string bar = "";
-				int pct = (int)(((float)progress / (float)max) * 100.0);
-				for (int i = 0; i < pct/4; i++)
-				{
-					bar += "■";
-				}
-				Console.Write(" ║  [{0,-25}]  {1,2}%  ║", bar, pct);
-			}
+			Console.WriteLine(" ║  [{0,-25}] {1,3}%  ║", bar, pct);
 		}
 	}
 }
