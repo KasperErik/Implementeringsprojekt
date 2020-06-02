@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iqYrPrXksshaXLFS8Iub3IQTRz+oVaMW3ugN0usScbkcjfshXy3IjFFD5w5vYwod5wAf3SwdG6fTrf8VfGCDow==",
+  "dgSpecHash": "jZ5Pnx6FmByY8Igd+CXnz6JOjyTBf8MJ3hW+nC1DVizvvoTXl948YbOtakt4Tjvl82YzmVgzvf4/LAu5IuhUsw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kaspito\\Dropbox\\KU\\4.sem\\RAD\\Projekt\\Project\\Project.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Christian\\Dropbox\\RAD\\Implementeringsprojekt\\Project\\Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Christian\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }
