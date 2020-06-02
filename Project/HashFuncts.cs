@@ -65,13 +65,13 @@ namespace Project
 			return y >= p ? (y -= p) : y;
 		}
 
-		public static Tuple<int, ulong> Hash4Count(BigInteger hashoutput, int m)
+		public static Tuple<int, int> Hash4Count(BigInteger hashoutput, int m)
 		{
-			ulong h = (ulong)(hashoutput & (BigInteger)(m - 1));    //hashoutput & (k-1)
+			int h = (int)(hashoutput & (BigInteger)(m - 1));    //hashoutput & (k-1)
 																	//89 is the power in p = 2**89 - 1
 			int b = (int)(hashoutput >> (89 - 1));              // b is either 0 or 1, its the first bit
 			int s = 1 - (2 * b);
-			return Tuple.Create(s, (ulong)h);
+			return Tuple.Create(s, h);
 		}
 	}
 }

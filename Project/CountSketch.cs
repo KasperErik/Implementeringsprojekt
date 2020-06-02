@@ -4,28 +4,27 @@ using System.Collections.Generic;
 
 public class CountSketch
 {
-	public static ulong[] Sketch(Func<ulong, BigInteger> g, Func<BigInteger, int, Tuple<int, ulong>> sAndH, IEnumerable<Tuple<ulong, int>> stream, int m)
+	public static int[] Sketch(Func<ulong, BigInteger> g, Func<BigInteger, int, Tuple<int, int>> sAndH, IEnumerable<Tuple<ulong, int>> stream, int m)
 	{
-		ulong[] SketchArr = new ulong[m];
+		int[] SketchArr = new int[m];
 		foreach (Tuple<ulong, int> item in stream)
 		{
 			BigInteger x = g(item.Item1);
 			int d = item.Item2;
-			//Console.WriteLine(x.ToString("N0"));
-			Tuple<int, ulong> res = sAndH(x, m);
+			Tuple<int, int> res = sAndH(x, m);
 			int s = res.Item1;
-			ulong h = res.Item2;
-			SketchArr[h] = SketchArr[h] + (ulong)(s * d);
+			int h = res.Item2;
+			SketchArr[h] = SketchArr[h] + (s * d);
 		}
 		return SketchArr;
 	}
 
-	public static ulong Estimate(ulong[] SketchArr)
+	public static ulong Estimate(int[] SketchArr)
 	{
 		ulong res = 0;
-		foreach (ulong item in SketchArr)
+		foreach (int item in SketchArr)
 		{
-			res += item * item;
+			res += (ulong)(item * item);
 		}
 		return res;
 	}

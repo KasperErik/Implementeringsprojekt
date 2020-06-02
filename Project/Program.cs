@@ -4,11 +4,12 @@
 	{
 		private static void Main()
 		{
-			//Opgaver.Opgave1(100000, 16);
+			//Opgaver.Opgave1(1000000, 16);
 
-			//Opgaver.Opgave3(1000000, 31);
+			//Opgaver.Opgave3(3000000, 31);
+			int[] arr = new int[] { 4, 16, 64, 2048 };
+			Opgaver.Opgave7(100000, 13, arr);
 
-			Opgaver.Opgave7(1000000, 29, 64);
 		}
 	}
 }

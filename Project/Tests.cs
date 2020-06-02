@@ -41,23 +41,24 @@ namespace Project
 		public static (ulong sum, long time) TestSqredSum(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int size)
 		{
 			stopwatch.Start();
-			ulong sum = SquaredSum.SquareSum(stream, f, size);
+			ChainedHashTable table = SquaredSum.FillHashtable(stream, f, size);
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
-
+			ulong sum = SquaredSum.SquareSum(table, size);
 			return (sum, time);
 		}
 
-		public static ulong[] TestCount(IEnumerable<Tuple<ulong, int>> stream, int m)
+		public static (ulong[] arr, long time) TestCount(IEnumerable<Tuple<ulong, int>> stream, int m)
 		{
 			ulong[] res = new ulong[100];
-
 			for (int j = 0; j < 100; j++)
 			{
 				//Countsketch
 				HashFuncts.ChangeRandArray(randGen);
-				ulong[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, m);
+				stopwatch.Start();
+				int[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, m);
+				stopwatch.Stop();
 				res[j] = CountSketch.Estimate(arr);
 
 				if (verbatim)
@@ -67,12 +68,14 @@ namespace Project
 				}
 				else
 				{
-					string str = "Count Sketch Estimates";
+					string str = $"Count Sketch Estimates: m = {m}";
 					PrettyPrint.ProgressBar(str, j + 1, 100);
 				}
 			}
 
-			return res;
+			time = stopwatch.ElapsedMilliseconds;
+			stopwatch.Reset();
+			return (res, time);
 		}
 	}
 }
