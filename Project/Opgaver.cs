@@ -14,12 +14,22 @@ namespace Project
 
 			long a = Tests.HashFunctionTest(stream, HashFuncts.MultiShift, l);
 			long b = Tests.HashFunctionTest(stream, HashFuncts.MultiModPrime, l);
+			long c = Tests.HashFunctionTest(stream, HashFuncts.FourUniversal);
 
 			PrettyPrint.Body("Shift time :", a.ToString());
 			PrettyPrint.Body("Mod P time :", b.ToString());
+			PrettyPrint.Body("4 Uni time :", c.ToString());
 
 			float res = (float)b / (float)a;
 
+			string docPath = Directory.GetCurrentDirectory();
+
+			// Write the string array to a new file named "WriteLines.txt".
+			StreamWriter outputFile1 = new StreamWriter(Path.Combine(docPath, "Opgave1Times.txt"));
+			outputFile1.WriteLine($"MultiShift, {a}");
+			outputFile1.WriteLine($"MultiModPrime, {b}");
+			outputFile1.WriteLine($"FourUniversal, {c}");
+			outputFile1.Close();
 			PrettyPrint.Body("Difference :", res.ToString());
 
 			PrettyPrint.Footer("Assignment 1 Is Done");
@@ -36,10 +46,8 @@ namespace Project
 			// Write the string array to a new file named "WriteLines.txt".
 
 			StreamWriter outputFile1 = new StreamWriter(Path.Combine(docPath, "Opgave3Shift.txt"));
-			outputFile1.WriteLine("Multi Shift hello");
 
 			StreamWriter outputFile2 = new StreamWriter(Path.Combine(docPath, "Opgave3ModP.txt"));
-			outputFile2.WriteLine("Mod Prime hello");
 
 			for (int i = 1; i < maxL; i++)
 			{
@@ -77,21 +85,17 @@ namespace Project
 		public static void Opgave7(int n, int l, int[] ms)
 		{
 			PrettyPrint.Header("Running Assignment 7 & 8");
+			IEnumerable<Tuple<ulong, int>> stream = Stream.CreateStream(n, l);
+			Tests.verbatim = false; //this is just to stop it from printing the estimates.
+			string docPath = Directory.GetCurrentDirectory();
 			foreach (int m in ms)
 			{
-				IEnumerable<Tuple<ulong, int>> stream = Stream.CreateStream(n, l);
-
-
-				Tests.verbatim = false; //this is just to stop it from printing the estimates.
-
 				//Estimate values from count sketch
 				(ulong[] Xarr, long time1) = Tests.TestCount(stream, m);
 
 				//Create new array for the purpose of writing 100 points to file to compare with S
 				ulong[] SortedXarr = Xarr;
 				Array.Sort(SortedXarr);
-
-				string docPath = Directory.GetCurrentDirectory();
 
 				// Write the string array to a new file named "Opgave7.1.txt".
 				using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, $"Opgave7.1m{m}.txt")))

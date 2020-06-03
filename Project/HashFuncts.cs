@@ -67,9 +67,10 @@ namespace Project
 
 		public static Tuple<int, int> Hash4Count(BigInteger hashoutput, int m)
 		{
-			int h = (int)(hashoutput & (BigInteger)(m - 1));    //hashoutput & (k-1)
-																	//89 is the power in p = 2**89 - 1
-			int b = (int)(hashoutput >> (89 - 1));              // b is either 0 or 1, its the first bit
+			int h = (int)(hashoutput & (BigInteger)(m - 1));
+			//89 is the power in p = 2**89 - 1
+			// b is either 0 or 1, its the first bit
+			int b = (int)(hashoutput >> (89 - 1));
 			int s = 1 - (2 * b);
 			return Tuple.Create(s, h);
 		}

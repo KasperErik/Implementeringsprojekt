@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Numerics;
 
 namespace Project
 {
@@ -14,26 +15,30 @@ namespace Project
 
 		public static long HashFunctionTest(IEnumerable<Tuple<ulong, int>> stream, Func<ulong, int, ulong> f, int l)
 		{
-			List<ulong> hashValues = new List<ulong>();
-
+			ulong sum = 0;
 			stopwatch.Start();
-
 			foreach (Tuple<ulong, int> item in stream)
 			{
-				hashValues.Add(f(item.Item1, l));
+				sum += f(item.Item1, l);
 			}
-
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
+			Debug.WriteLine(sum.ToString("N0"));
+			return time;
+		}
 
-			ulong sum = 0;
-
-			for (int i = 0; i < hashValues.Count; i++)
+		public static long HashFunctionTest(IEnumerable<Tuple<ulong, int>> stream, Func<ulong,  BigInteger> f)
+		{
+			BigInteger sum = 0;
+			stopwatch.Start();
+			foreach (Tuple<ulong, int> item in stream)
 			{
-				sum += hashValues[i];
+				sum += f(item.Item1);
 			}
-
+			stopwatch.Stop();
+			time = stopwatch.ElapsedMilliseconds;
+			stopwatch.Reset();
 			Debug.WriteLine(sum.ToString("N0"));
 			return time;
 		}
@@ -42,10 +47,10 @@ namespace Project
 		{
 			stopwatch.Start();
 			ChainedHashTable table = SquaredSum.FillHashtable(stream, f, size);
+			ulong sum = SquaredSum.SquareSum(table, size);
 			stopwatch.Stop();
 			time = stopwatch.ElapsedMilliseconds;
 			stopwatch.Reset();
-			ulong sum = SquaredSum.SquareSum(table, size);
 			return (sum, time);
 		}
 
@@ -58,9 +63,8 @@ namespace Project
 				HashFuncts.ChangeRandArray(randGen);
 				stopwatch.Start();
 				int[] arr = CountSketch.Sketch(HashFuncts.FourUniversal, HashFuncts.Hash4Count, stream, m);
-				stopwatch.Stop();
 				res[j] = CountSketch.Estimate(arr);
-
+				stopwatch.Stop();
 				if (verbatim)
 				{
 					string str = String.Format("Count Sketch Estimate : {0,10}", res[j]);
