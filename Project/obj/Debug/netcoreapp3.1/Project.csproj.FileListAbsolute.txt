@@ -18,7 +18,6 @@ C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\bin\Debug\netcoreapp3.1\Pr
 C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\bin\Debug\netcoreapp3.1\Project.runtimeconfig.dev.json
 C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\bin\Debug\netcoreapp3.1\Project.dll
 C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\bin\Debug\netcoreapp3.1\Project.pdb
-C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\obj\Debug\netcoreapp3.1\Project.csproj.ResolveComReference.cache
 C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\obj\Debug\netcoreapp3.1\Project.csproj.CoreCompileInputs.cache
 C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\obj\Debug\netcoreapp3.1\Project.AssemblyInfoInputs.cache
 C:\Users\Kaspito\Dropbox\KU\4.sem\RAD\Projekt\Project\obj\Debug\netcoreapp3.1\Project.AssemblyInfo.cs

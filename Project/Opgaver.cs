@@ -25,7 +25,7 @@ namespace Project
 			string docPath = Directory.GetCurrentDirectory();
 
 			// Write the string array to a new file named "WriteLines.txt".
-			StreamWriter outputFile1 = new StreamWriter(Path.Combine(docPath, "Opgave1Times.txt"));
+			StreamWriter outputFile1 = new StreamWriter(Path.Combine(docPath, "pythonPlotting/Opgave1Times.txt"));
 			outputFile1.WriteLine($"MultiShift, {a}");
 			outputFile1.WriteLine($"MultiModPrime, {b}");
 			outputFile1.WriteLine($"FourUniversal, {c}");
@@ -45,9 +45,9 @@ namespace Project
 
 			// Write the string array to a new file named "WriteLines.txt".
 
-			StreamWriter outputFile1 = new StreamWriter(Path.Combine(docPath, "Opgave3Shift.txt"));
+			StreamWriter outputFile1 = new StreamWriter(Path.Combine(docPath, "pythonPlotting/Opgave3Shift.txt"));
 
-			StreamWriter outputFile2 = new StreamWriter(Path.Combine(docPath, "Opgave3ModP.txt"));
+			StreamWriter outputFile2 = new StreamWriter(Path.Combine(docPath, "pythonPlotting/Opgave3ModP.txt"));
 
 			for (int i = 1; i < maxL; i++)
 			{
@@ -98,7 +98,7 @@ namespace Project
 				Array.Sort(SortedXarr);
 
 				// Write the string array to a new file named "Opgave7.1.txt".
-				using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, $"Opgave7.1m{m}.txt")))
+				using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, $"pythonPlotting/Opgave7.1m{m}.txt")))
 				{
 					for (int i = 0; i < SortedXarr.Length; i++)
 					{
@@ -109,7 +109,7 @@ namespace Project
 				//Our S value from our MultiShift hashfunction
 				(ulong S, long time2) = Tests.TestSqredSum(stream, HashFuncts.MultiShift, l);
 				float timeres = (float)time1 / 100.0f;
-				using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, $"Opgave7.1m{m}.txt"), true))
+				using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, $"pythonPlotting/Opgave7.1m{m}.txt"), true))
 				{
 					outputFile.WriteLine($"\nCount Sketch Time = {timeres} from {time1}/100");
 					outputFile.WriteLine($"\nS = {S}");
@@ -125,7 +125,7 @@ namespace Project
 				float[] MedianArr = CountSketch.GetMediaArray(Xarr);
 
 				// Write the string array to a new file named "Opgave7.2.txt".
-				using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, $"Opgave7.2m{m}.txt")))
+				using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, $"pythonPlotting/Opgave7.2m{m}.txt")))
 				{
 					for (int i = 0; i < MedianArr.Length; i++)
 					{

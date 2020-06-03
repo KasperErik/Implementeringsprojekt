@@ -1,3 +1,0 @@
-MultiShift, 52
-MultiModPrime, 861
-FourUniversal, 1529

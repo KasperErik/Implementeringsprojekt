@@ -1,0 +1,426 @@
+ ╔════════════════════════════════════╗
+ ║        Running Assignment 1        ║
+ ╠════════════════════════════════════╣
+ ║                                    ║
+ ║ Shift time :                    35 ║
+ ║ Mod P time :                   541 ║
+ ║ 4 Uni time :                  1000 ║
+ ║ Difference :             15.457143 ║
+ ║                                    ║
+ ╠════════════════════════════════════╣
+ ║        Assignment 1 Is Done        ║
+ ╚════════════════════════════════════╝
+
+ ╔════════════════════════════════════╗
+ ║        Running Assignment 3        ║
+ ╠════════════════════════════════════╣
+ ║                                    ║
+ ║                                    ║
+ ╠═══════════ Using L = 1 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :            1783793664 ║
+ ║ Time in ms :                  1262 ║
+ ║                                    ║
+ ║ Mod p sum  :            1783793664 ║
+ ║ Time in ms :                  4164 ║
+ ║                                    ║
+ ║ Difference :                  3.30 ║
+ ║                                    ║
+ ╠═══════════ Using L = 2 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :  18446744066011513856 ║
+ ║ Time in ms :                  1251 ║
+ ║                                    ║
+ ║ Mod p sum  :  18446744066011513856 ║
+ ║ Time in ms :                  4080 ║
+ ║                                    ║
+ ║ Difference :                  3.26 ║
+ ║                                    ║
+ ╠═══════════ Using L = 3 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :  18446744061270598144 ║
+ ║ Time in ms :                  1206 ║
+ ║                                    ║
+ ║ Mod p sum  :  18446744061270598144 ║
+ ║ Time in ms :                  4177 ║
+ ║                                    ║
+ ║ Difference :                  3.46 ║
+ ║                                    ║
+ ╠═══════════ Using L = 4 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :  18446744067490074880 ║
+ ║ Time in ms :                  1193 ║
+ ║                                    ║
+ ║ Mod p sum  :  18446744067490074880 ║
+ ║ Time in ms :                  4216 ║
+ ║                                    ║
+ ║ Difference :                  3.53 ║
+ ║                                    ║
+ ╠═══════════ Using L = 5 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :           31250000000 ║
+ ║ Time in ms :                  1249 ║
+ ║                                    ║
+ ║ Mod p sum  :           31250000000 ║
+ ║ Time in ms :                  4183 ║
+ ║                                    ║
+ ║ Difference :                  3.35 ║
+ ║                                    ║
+ ╠═══════════ Using L = 6 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :           15625000000 ║
+ ║ Time in ms :                  1217 ║
+ ║                                    ║
+ ║ Mod p sum  :           15625000000 ║
+ ║ Time in ms :                  4169 ║
+ ║                                    ║
+ ║ Difference :                  3.43 ║
+ ║                                    ║
+ ╠═══════════ Using L = 7 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :            7812500288 ║
+ ║ Time in ms :                  1198 ║
+ ║                                    ║
+ ║ Mod p sum  :            7812500288 ║
+ ║ Time in ms :                  4183 ║
+ ║                                    ║
+ ║ Difference :                  3.49 ║
+ ║                                    ║
+ ╠═══════════ Using L = 8 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :            3906250176 ║
+ ║ Time in ms :                  1226 ║
+ ║                                    ║
+ ║ Mod p sum  :            3906250176 ║
+ ║ Time in ms :                  4255 ║
+ ║                                    ║
+ ║ Difference :                  3.47 ║
+ ║                                    ║
+ ╠═══════════ Using L = 9 ════════════╣
+ ║                                    ║
+ ║ Shift sum  :            1953125184 ║
+ ║ Time in ms :                  1309 ║
+ ║                                    ║
+ ║ Mod p sum  :            1953125184 ║
+ ║ Time in ms :                  4264 ║
+ ║                                    ║
+ ║ Difference :                  3.26 ║
+ ║                                    ║
+ ╠═══════════ Using L = 10 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :             976564288 ║
+ ║ Time in ms :                  1246 ║
+ ║                                    ║
+ ║ Mod p sum  :             976564288 ║
+ ║ Time in ms :                  4304 ║
+ ║                                    ║
+ ║ Difference :                  3.45 ║
+ ║                                    ║
+ ╠═══════════ Using L = 11 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :             488282816 ║
+ ║ Time in ms :                  1246 ║
+ ║                                    ║
+ ║ Mod p sum  :             488282816 ║
+ ║ Time in ms :                  4725 ║
+ ║                                    ║
+ ║ Difference :                  3.79 ║
+ ║                                    ║
+ ╠═══════════ Using L = 12 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :             244142272 ║
+ ║ Time in ms :                  1336 ║
+ ║                                    ║
+ ║ Mod p sum  :             244142272 ║
+ ║ Time in ms :                  4866 ║
+ ║                                    ║
+ ║ Difference :                  3.64 ║
+ ║                                    ║
+ ╠═══════════ Using L = 13 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :             122072000 ║
+ ║ Time in ms :                  1380 ║
+ ║                                    ║
+ ║ Mod p sum  :             122072000 ║
+ ║ Time in ms :                  5067 ║
+ ║                                    ║
+ ║ Difference :                  3.67 ║
+ ║                                    ║
+ ╠═══════════ Using L = 14 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :              61036864 ║
+ ║ Time in ms :                  1600 ║
+ ║                                    ║
+ ║ Mod p sum  :              61036864 ║
+ ║ Time in ms :                  5424 ║
+ ║                                    ║
+ ║ Difference :                  3.39 ║
+ ║                                    ║
+ ╠═══════════ Using L = 15 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :              30586688 ║
+ ║ Time in ms :                  1896 ║
+ ║                                    ║
+ ║ Mod p sum  :              30586688 ║
+ ║ Time in ms :                  6619 ║
+ ║                                    ║
+ ║ Difference :                  3.49 ║
+ ║                                    ║
+ ╠═══════════ Using L = 16 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :              15305280 ║
+ ║ Time in ms :                  2210 ║
+ ║                                    ║
+ ║ Mod p sum  :              15305280 ║
+ ║ Time in ms :                  6922 ║
+ ║                                    ║
+ ║ Difference :                  3.13 ║
+ ║                                    ║
+ ╠═══════════ Using L = 17 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               7786432 ║
+ ║ Time in ms :                  2694 ║
+ ║                                    ║
+ ║ Mod p sum  :               7786432 ║
+ ║ Time in ms :                  6844 ║
+ ║                                    ║
+ ║ Difference :                  2.54 ║
+ ║                                    ║
+ ╠═══════════ Using L = 18 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3951424 ║
+ ║ Time in ms :                  2813 ║
+ ║                                    ║
+ ║ Mod p sum  :               3951424 ║
+ ║ Time in ms :                  7136 ║
+ ║                                    ║
+ ║ Difference :                  2.54 ║
+ ║                                    ║
+ ╠═══════════ Using L = 19 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               2048576 ║
+ ║ Time in ms :                  3435 ║
+ ║                                    ║
+ ║ Mod p sum  :               2048576 ║
+ ║ Time in ms :                  7338 ║
+ ║                                    ║
+ ║ Difference :                  2.14 ║
+ ║                                    ║
+ ╠═══════════ Using L = 20 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               1097152 ║
+ ║ Time in ms :                  3433 ║
+ ║                                    ║
+ ║ Mod p sum  :               1097152 ║
+ ║ Time in ms :                  7109 ║
+ ║                                    ║
+ ║ Difference :                  2.07 ║
+ ║                                    ║
+ ╠═══════════ Using L = 21 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               4805696 ║
+ ║ Time in ms :                  2866 ║
+ ║                                    ║
+ ║ Mod p sum  :               4805696 ║
+ ║ Time in ms :                  8145 ║
+ ║                                    ║
+ ║ Difference :                  2.84 ║
+ ║                                    ║
+ ╠═══════════ Using L = 22 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  3250 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                  8877 ║
+ ║                                    ║
+ ║ Difference :                  2.73 ║
+ ║                                    ║
+ ╠═══════════ Using L = 23 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  3073 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                  8658 ║
+ ║                                    ║
+ ║ Difference :                  2.82 ║
+ ║                                    ║
+ ╠═══════════ Using L = 24 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  4368 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                 10387 ║
+ ║                                    ║
+ ║ Difference :                  2.38 ║
+ ║                                    ║
+ ╠═══════════ Using L = 25 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  4861 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                 11350 ║
+ ║                                    ║
+ ║ Difference :                  2.33 ║
+ ║                                    ║
+ ╠═══════════ Using L = 26 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  4697 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                 12033 ║
+ ║                                    ║
+ ║ Difference :                  2.56 ║
+ ║                                    ║
+ ╠═══════════ Using L = 27 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  5923 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                 12668 ║
+ ║                                    ║
+ ║ Difference :                  2.14 ║
+ ║                                    ║
+ ╠═══════════ Using L = 28 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  6923 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                 15370 ║
+ ║                                    ║
+ ║ Difference :                  2.22 ║
+ ║                                    ║
+ ╠═══════════ Using L = 29 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                  7246 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                 18370 ║
+ ║                                    ║
+ ║ Difference :                  2.54 ║
+ ║                                    ║
+ ╠═══════════ Using L = 30 ═══════════╣
+ ║                                    ║
+ ║ Shift sum  :               3000000 ║
+ ║ Time in ms :                 23570 ║
+ ║                                    ║
+ ║ Mod p sum  :               3000000 ║
+ ║ Time in ms :                 36964 ║
+ ║                                    ║
+ ║ Difference :                  1.57 ║
+ ║                                    ║
+ ╠════════════════════════════════════╣
+ ║        Assignment 3 Is Done        ║
+ ╚════════════════════════════════════╝
+
+ ╔════════════════════════════════════╗
+ ║      Running Assignment 7 & 8      ║
+ ╠════════════════════════════════════╣
+ ║                                    ║
+ ║   Count Sketch Estimates: m = 4    ║
+ ║  [■■■■■■■■■■■■■■■■■■■■■■■■■] 100%  ║
+ ║                                    ║
+ ╠═══════════ MSE and Var ════════════╣
+ ║                                    ║
+ ║ MSE :                7.0454096E+15 ║
+ ║ Var :                 7.450787E+15 ║
+ ║                                    ║
+ ╠══════════ Median values ═══════════╣
+ ║                                    ║
+ ║ MedianArr :               20940162 ║
+ ║ MedianArr :               38141692 ║
+ ║ MedianArr :               55807360 ║
+ ║ MedianArr :               70312600 ║
+ ║ MedianArr :               90583150 ║
+ ║ MedianArr :              107882160 ║
+ ║ MedianArr :              142148800 ║
+ ║ MedianArr :              171268930 ║
+ ║ MedianArr :              245924720 ║
+ ║                                    ║
+ ║ Median    :               90583150 ║
+ ║                                    ║
+ ║ Real sum  :              122072000 ║
+ ║                                    ║
+ ║   Count Sketch Estimates: m = 16   ║
+ ║  [■■■■■■■■■■■■■■■■■■■■■■■■■] 100%  ║
+ ║                                    ║
+ ╠═══════════ MSE and Var ════════════╣
+ ║                                    ║
+ ║ MSE :                1.7772083E+15 ║
+ ║ Var :                1.8626967E+15 ║
+ ║                                    ║
+ ╠══════════ Median values ═══════════╣
+ ║                                    ║
+ ║ MedianArr :               61951844 ║
+ ║ MedianArr :               72249744 ║
+ ║ MedianArr :               90549530 ║
+ ║ MedianArr :              100603816 ║
+ ║ MedianArr :              110911936 ║
+ ║ MedianArr :              120451920 ║
+ ║ MedianArr :              131083470 ║
+ ║ MedianArr :              158563620 ║
+ ║ MedianArr :              181510660 ║
+ ║                                    ║
+ ║ Median    :              110911936 ║
+ ║                                    ║
+ ║ Real sum  :              122072000 ║
+ ║                                    ║
+ ║   Count Sketch Estimates: m = 64   ║
+ ║  [■■■■■■■■■■■■■■■■■■■■■■■■■] 100%  ║
+ ║                                    ║
+ ╠═══════════ MSE and Var ════════════╣
+ ║                                    ║
+ ║ MSE :                 6.289212E+14 ║
+ ║ Var :                4.6567418E+14 ║
+ ║                                    ║
+ ╠══════════ Median values ═══════════╣
+ ║                                    ║
+ ║ MedianArr :               84878480 ║
+ ║ MedianArr :               95401170 ║
+ ║ MedianArr :              103726950 ║
+ ║ MedianArr :              108100056 ║
+ ║ MedianArr :              118853600 ║
+ ║ MedianArr :              126066450 ║
+ ║ MedianArr :              130248160 ║
+ ║ MedianArr :              138701020 ║
+ ║ MedianArr :              159345180 ║
+ ║                                    ║
+ ║ Median    :              118853600 ║
+ ║                                    ║
+ ║ Real sum  :              122072000 ║
+ ║                                    ║
+ ║  Count Sketch Estimates: m = 2048  ║
+ ║  [■■■■■■■■■■■■■■■■■■■■■■■■■] 100%  ║
+ ║                                    ║
+ ╠═══════════ MSE and Var ════════════╣
+ ║                                    ║
+ ║ MSE :                1.4054584E+13 ║
+ ║ Var :                1.4552318E+13 ║
+ ║                                    ║
+ ╠══════════ Median values ═══════════╣
+ ║                                    ║
+ ║ MedianArr :              116413650 ║
+ ║ MedianArr :              118546010 ║
+ ║ MedianArr :              120023704 ║
+ ║ MedianArr :              120813264 ║
+ ║ MedianArr :              121783850 ║
+ ║ MedianArr :              123041984 ║
+ ║ MedianArr :              124074256 ║
+ ║ MedianArr :              125358376 ║
+ ║ MedianArr :              127928240 ║
+ ║                                    ║
+ ║ Median    :              121783850 ║
+ ║                                    ║
+ ║ Real sum  :              122072000 ║
+ ║                                    ║
+ ║                                    ║
+ ╠════════════════════════════════════╣
+ ║      Assignment 7 & 8 Is Done      ║
+ ╚════════════════════════════════════╝
